@@ -1,0 +1,188 @@
+[
+  {
+    "id": "A01",
+    "name": "1 分鐘想十個策展人",
+    "path": "methods/A01.md",
+    "status": "draft-adaptation"
+  },
+  {
+    "id": "A02",
+    "name": "635 動腦法",
+    "path": "methods/A02.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B01",
+    "name": "星爆法",
+    "path": "methods/B01.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B02",
+    "name": "五個「為什麼」法，又名「為什麼」分析",
+    "path": "methods/B02.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B03",
+    "name": "SWOT 分析",
+    "path": "methods/B03.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B04",
+    "name": "How Now Wow 法",
+    "path": "methods/B04.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B05",
+    "name": "驅動分析",
+    "path": "methods/B05.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B06",
+    "name": "心智圖",
+    "path": "methods/B06.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B07",
+    "name": "填空法，又名空隙分析",
+    "path": "methods/B07.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B08",
+    "name": "腦力書寫法，又名紙條書寫法",
+    "path": "methods/B08.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B09",
+    "name": "協作式的腦力書寫法",
+    "path": "methods/B09.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B10",
+    "name": "腦力網羅法，又名線上腦力激盪",
+    "path": "methods/B10.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B11",
+    "name": "SCAMPER 法",
+    "path": "methods/B11.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B12",
+    "name": "閃電決策果醬",
+    "path": "methods/B12.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B13",
+    "name": "想法餐巾紙",
+    "path": "methods/B13.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B14",
+    "name": "六頂思考帽",
+    "path": "methods/B14.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B15",
+    "name": "人物風暴",
+    "path": "methods/B15.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B16",
+    "name": "角色風暴",
+    "path": "methods/B16.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B17",
+    "name": "反向式腦力激盪",
+    "path": "methods/B17.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B18",
+    "name": "反向思考法",
+    "path": "methods/B18.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B19",
+    "name": "直觀意像法",
+    "path": "methods/B19.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B20",
+    "name": "快速構思法",
+    "path": "methods/B20.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B21",
+    "name": "循環賽腦力激盪法",
+    "path": "methods/B21.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B22",
+    "name": "階梯腦力激盪法",
+    "path": "methods/B22.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B23",
+    "name": "Charrette 法",
+    "path": "methods/B23.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B24",
+    "name": "「如果」腦力激盪法",
+    "path": "methods/B24.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B25",
+    "name": "改變場景法",
+    "path": "methods/B25.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B26",
+    "name": "隨機選字法",
+    "path": "methods/B26.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B27",
+    "name": "故事板法",
+    "path": "methods/B27.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B28",
+    "name": "許願法",
+    "path": "methods/B28.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B29",
+    "name": "瘋狂 8 法",
+    "path": "methods/B29.md",
+    "status": "facilitation-draft"
+  }
+]
