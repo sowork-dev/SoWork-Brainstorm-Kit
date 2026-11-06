@@ -1,3 +1,7 @@
+# TEACHING 真人練習模式示例
+
+只有使用者明確要求教學或自己練習時才使用以下節奏；預設懶人名人共創見 [persona-council.md](persona-council.md)。
+
 # 個人動腦｜虛構示範
 
 **這是作者編寫的示意對話，不是 ChatGPT 或其他平台實測紀錄。**

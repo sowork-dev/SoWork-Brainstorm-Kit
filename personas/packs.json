@@ -1,0 +1,60 @@
+[
+  {
+    "id": "mixed",
+    "name": "古今綜合組",
+    "aliases": [
+      "古今組",
+      "綜合組",
+      "自動",
+      "你選"
+    ],
+    "members": [
+      "qin-shi-huang",
+      "yang-guifei",
+      "david-bowie"
+    ],
+    "purpose": "規則、體驗與身份敘事互相補位；沒有偏好時的預設組合。"
+  },
+  {
+    "id": "rock",
+    "name": "熱門搖滾組",
+    "aliases": [
+      "搖滾組",
+      "熱門搖滾"
+    ],
+    "members": [
+      "david-bowie",
+      "freddie-mercury",
+      "joan-jett"
+    ],
+    "purpose": "打破慣例、群眾參與與低成本試演；組名不是即時榜單。"
+  },
+  {
+    "id": "beauty",
+    "name": "美美女組",
+    "aliases": [
+      "美女組",
+      "魅力組"
+    ],
+    "members": [
+      "yang-guifei",
+      "cleopatra-vii",
+      "coco-chanel"
+    ],
+    "purpose": "感官體驗、互惠結盟與精準刪減；不將人物能力簡化為外貌。"
+  },
+  {
+    "id": "ruthless",
+    "name": "殘暴組",
+    "aliases": [
+      "強勢組",
+      "殘暴"
+    ],
+    "members": [
+      "qin-shi-huang",
+      "genghis-khan",
+      "napoleon"
+    ],
+    "purpose": "尖銳資源取捨、分散擴張與壓力測試；不輸出暴力或脅迫方案。"
+  }
+]
