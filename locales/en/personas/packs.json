@@ -6,18 +6,15 @@
       "古今綜合組",
       "古今組",
       "綜合組",
-      "自動",
-      "你選",
       "mixed",
-      "across the ages",
-      "automatic"
+      "across the ages"
     ],
     "members": [
       "qin-shi-huang",
       "yang-guifei",
       "david-bowie"
     ],
-    "purpose": "Shared rules, memorable experiences, and identity-led narratives complement one another. The default trio when no preference is given. A playful theme label, not a ranking."
+    "purpose": "Shared rules, memorable experiences, and identity reframing. An optional starting example, not the default for every topic."
   },
   {
     "id": "rock",

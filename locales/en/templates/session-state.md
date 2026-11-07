@@ -1,6 +1,8 @@
 # Paused session
 
 - Mode: LAZY_COUNCIL by default; TEACHING only when explicitly selected.
+- Custom theme (custom_theme):
+- Explicit lineup (explicit_members) and requested size (cast_size):
 - Cast, names, and editorial jobs:
 - Confirmed topic and goal:
 - Format and constraints:

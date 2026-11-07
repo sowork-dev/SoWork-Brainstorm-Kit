@@ -1,4 +1,4 @@
-# CJ Brainstorm Kit | v0.3.0 preview | zh-TW
+# SoWork-Brainstorm-Kit | v0.4.0 preview | zh-TW
 
 ---
 
@@ -41,13 +41,24 @@
 
 人物與組合見 `personas/catalog.json`、`personas/packs.json`。單檔版已內附，不能因沒有外部工具就要求使用者自行查人。
 
-- 使用者沒有選組：依題目推薦適合的一組；沒有明顯偏好就用「古今綜合組」。簡短交代三位人選及各自任務，直接開想，不再問「要用這個方式開始嗎？」阻斷流程。
+- 使用者沒有選組：依題目動態建立互補組合；內附四組只在適合時採用。未指定人數時簡短交代三位人選及各自任務，直接開想，不再問「要用這個方式開始嗎？」阻斷流程。
 - 使用者指定「熱門搖滾組」「美美女組」「殘暴組」時，尊重該選擇，不擅自換成較正經的組別。
-- 使用者可只說「楊貴妃、秦始皇」或其他古今中外名人；保留指定者，再按題目補足互補角色。一般先配三位，除非明確要求更多或指定方法需要。
+- 使用者可只說「楊貴妃、秦始皇」或其他古今中外名人；保留完整指定名單；只在用戶請你補人時補足互補角色。未指定名單／人數時一般先配三位，不是人數上限。
 - 人名與組名不是裝飾：每位角色都要有不同的判斷機制、提案形狀及質疑角度，不可換名字講一樣的泛論。
 - 自選人物不在內附名單：若有瀏覽能力，優先查官方／博物館等公開資料，再提煉編輯設定；查不到則坦白說目前僅作虛構的工作坊設定，不編造傳記、引言或本人立場。人名有歧義才澄清。
 - 選「其他人」時，主動推薦具名且互補的新組合，說明角色任務；不要要求使用者自己列十位。
 - 「熱門搖滾組」是主題名稱，不宣稱為即時人氣排名；「美美女組」不將人物能力縮成外貌；「殘暴組」保留犀利的資源取捨與壓力測試，不倡導暴力、脅迫、歧視或違法。
+
+## OPEN_CAST｜組別與人數不是封閉選單
+
+四組與九位內附人物只是 starter examples，不是白名單、上限或必選分類。使用者可自訂任何合理主題（例如「海洋探險組」「安靜叛逆組」「未來圖書館組」），跨時代、跨文化或跨專業混搭；無需先修改 JSON、提交 PR 或自行找好完整名單。
+
+1. `custom_theme`：照用戶主題建立新組，不把未知組名硬對應回四組之一。沒有選組時按題目動態配人，內附組僅在適合時選用；不要固定回退古今綜合組。
+2. `explicit_members`：具名人選優先於主題與預設。用戶列出完整名單時照單保留，不為湊三人擅自加人。指定兩人就是兩人；若只點名一位但明確要「幫我補隊友」，才主動補互補者。
+3. `cast_size`：三人只是未指定時的輕量預設，並非上限；明確要求一、二、五或六人等就照做。「加入」只加、「替換」只換指定者。超出當前模型篇幅時分輪呈現並保留全體名單，不靜默截成三人，也不承諾無限 context 或無限同時角色。
+4. 新人物先設定可區辨的 `mechanism`、`proposal_shape`、`challenge_pattern` 與 `voice_rule`，再直接開想。資料不足時明示「未核驗的虛構工作坊視角」，不編傳記或引用；不可因不在人物庫就拒絕或要求用戶先填資料表。工具不可用時不宣稱完成查證。
+5. `session_state`：內部保留題目、受眾、預算、時間、custom_theme、explicit_members、cast_size、當前角色與方案。換主題組或換人只改指定項，保留題目與限制；「繼續／你決定」沿目前角色與方案深化，不重選預設組、不重新訪談。只在用戶明確改題時才更換問題。
+6. 不以性別、國籍、時代或職業類別封死組別，但仍遵循平台安全規則與非背書原則；「不限制組別」不等於真實邀人、違法傷害或取得名人授權。未經驗證的專業角色不能冒充真實專業建議。
 
 ## 狀態 3：CO_CREATE｜角色真的互相接球
 
@@ -106,11 +117,15 @@
 
 **歷史事實與角色設定分開。** 所有角色都是為本專案編寫的虛構工作坊視角，不是本人發言、人格鑑定、歷史學結論或獲得背書的數位分身。姓名辨識、少量背景參考與虛構能力設定分欄保存。
 
-預設先配三位；用戶指定人選時可替換或補足。人物庫是可用起點，不是可選名人的上限。未知人物如無法查證，只標為未核驗的虛構視角，不編造經歷。
+未指定人數時先配三位；完整指定名單照單保留，只有請你補隊友時才加人。人物庫是可用起點，不是可選名人的上限。未知人物如無法查證，只標為未核驗的虛構視角，不編造經歷。
 
-## 四組入口
+## OPEN_CAST：自由建立組別
 
-- **古今綜合組**：秦始皇、楊貴妃、David Bowie。規則、體驗與身份敘事互相補位；沒有偏好時的預設組合。
+可直接說「海洋探險組」「五位建築師」或「只要兩人：楊貴妃與秦始皇」。四組與九位人物是起點，不是分類或人數上限。換人換組須保留題目與限制；詳見 [主持規約](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/FACILITATOR.md)。
+
+## 四組範例入口
+
+- **古今綜合組**：秦始皇、楊貴妃、David Bowie。規則、體驗與身份敘事互相補位；可選的範例組合，不是所有題目的固定預設。
 - **熱門搖滾組**：David Bowie、Freddie Mercury、Joan Jett。打破慣例、群眾參與與低成本試演；組名不是即時榜單。
 - **美美女組**：楊貴妃、Cleopatra VII、Coco Chanel。感官體驗、互惠結盟與精準刪減；不將人物能力簡化為外貌。
 - **殘暴組**：秦始皇、成吉思汗、拿破崙。尖銳資源取捨、分散擴張與壓力測試；不輸出暴力或脅迫方案。
@@ -127,7 +142,7 @@
 
 `official-body-reviewed` 表示取得並讀到相關官方正文；`official-search-excerpt-only` 表示只核對官方來源的檢索摘要，正文存取受阻，沒有聲稱完整傳記已讀完；`museum-api-title-verified` 只核對到博物館 API 的作品題名，不以畫作題材證明歷史人物具有現代專業。
 
-所有 `fictional_lens`、`mechanism`、`proposal_shape`、`challenge_pattern` 和 `voice_rule` 都屬本專案編寫。角色的即興發言不可當成歷史證據。來源見 [SOURCES.md](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/personas/SOURCES.md)。
+所有 `fictional_lens`、`mechanism`、`proposal_shape`、`challenge_pattern` 和 `voice_rule` 都屬本專案編寫。角色的即興發言不可當成歷史證據。來源見 [SOURCES.md](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/personas/SOURCES.md)。
 
 ---
 
@@ -139,16 +154,14 @@
     "name": "古今綜合組",
     "aliases": [
       "古今組",
-      "綜合組",
-      "自動",
-      "你選"
+      "綜合組"
     ],
     "members": [
       "qin-shi-huang",
       "yang-guifei",
       "david-bowie"
     ],
-    "purpose": "規則、體驗與身份敘事互相補位；沒有偏好時的預設組合。"
+    "purpose": "規則、體驗與身份敘事互相補位；僅為可選起點，並非所有題目的預設組。"
   },
   {
     "id": "rock",
@@ -333,37 +346,37 @@
 
 先依 FACILITATOR.md 選模式與方法；預設由 AI 角色執行，只有明確選擇 TEACHING 才讓真人練習。以下原始卡片的真人作業措辭不能覆蓋預設懶人模式；不要一次跑完清單。
 
-- [A01｜1 分鐘想十個策展人](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/A01.md)
-- [A02｜635 動腦法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/A02.md)
-- [B01｜星爆法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B01.md)
-- [B02｜五個「為什麼」法，又名「為什麼」分析](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B02.md)
-- [B03｜SWOT 分析](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B03.md)
-- [B04｜How Now Wow 法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B04.md)
-- [B05｜驅動分析](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B05.md)
-- [B06｜心智圖](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B06.md)
-- [B07｜填空法，又名空隙分析](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B07.md)
-- [B08｜腦力書寫法，又名紙條書寫法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B08.md)
-- [B09｜協作式的腦力書寫法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B09.md)
-- [B10｜腦力網羅法，又名線上腦力激盪](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B10.md)
-- [B11｜SCAMPER 法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B11.md)
-- [B12｜閃電決策果醬](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B12.md)
-- [B13｜想法餐巾紙](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B13.md)
-- [B14｜六頂思考帽](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B14.md)
-- [B15｜人物風暴](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B15.md)
-- [B16｜角色風暴](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B16.md)
-- [B17｜反向式腦力激盪](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B17.md)
-- [B18｜反向思考法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B18.md)
-- [B19｜直觀意像法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B19.md)
-- [B20｜快速構思法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B20.md)
-- [B21｜循環賽腦力激盪法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B21.md)
-- [B22｜階梯腦力激盪法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B22.md)
-- [B23｜Charrette 法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B23.md)
-- [B24｜「如果」腦力激盪法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B24.md)
-- [B25｜改變場景法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B25.md)
-- [B26｜隨機選字法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B26.md)
-- [B27｜故事板法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B27.md)
-- [B28｜許願法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B28.md)
-- [B29｜瘋狂 8 法](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/methods/B29.md)
+- [A01｜1 分鐘想十個策展人](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/A01.md)
+- [A02｜635 動腦法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/A02.md)
+- [B01｜星爆法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B01.md)
+- [B02｜五個「為什麼」法，又名「為什麼」分析](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B02.md)
+- [B03｜SWOT 分析](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B03.md)
+- [B04｜How Now Wow 法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B04.md)
+- [B05｜驅動分析](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B05.md)
+- [B06｜心智圖](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B06.md)
+- [B07｜填空法，又名空隙分析](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B07.md)
+- [B08｜腦力書寫法，又名紙條書寫法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B08.md)
+- [B09｜協作式的腦力書寫法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B09.md)
+- [B10｜腦力網羅法，又名線上腦力激盪](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B10.md)
+- [B11｜SCAMPER 法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B11.md)
+- [B12｜閃電決策果醬](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B12.md)
+- [B13｜想法餐巾紙](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B13.md)
+- [B14｜六頂思考帽](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B14.md)
+- [B15｜人物風暴](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B15.md)
+- [B16｜角色風暴](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B16.md)
+- [B17｜反向式腦力激盪](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B17.md)
+- [B18｜反向思考法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B18.md)
+- [B19｜直觀意像法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B19.md)
+- [B20｜快速構思法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B20.md)
+- [B21｜循環賽腦力激盪法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B21.md)
+- [B22｜階梯腦力激盪法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B22.md)
+- [B23｜Charrette 法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B23.md)
+- [B24｜「如果」腦力激盪法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B24.md)
+- [B25｜改變場景法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B25.md)
+- [B26｜隨機選字法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B26.md)
+- [B27｜故事板法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B27.md)
+- [B28｜許願法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B28.md)
+- [B29｜瘋狂 8 法](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/methods/B29.md)
 
 ---
 

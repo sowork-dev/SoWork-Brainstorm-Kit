@@ -1,96 +1,204 @@
-# CJ Brainstorm Kit
+# SoWork-Brainstorm-Kit
 
-### Your topic. A council of famous perspectives. Ideas without the homework.
+### Your topic. Any cast. Ideas without the homework.
 
 **English · [繁體中文](README.zh-TW.md)**
 
-Give the AI a topic and let it pick a fictional cast, choose a brainstorming method, develop proposals, challenge them, and turn them into useful options. You can simply say **“Continue,” “Swap the cast,” or “You decide.”**
+[![Validate text bundle](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/actions/workflows/validate.yml/badge.svg)](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/actions/workflows/validate.yml)
+**v0.4.0 · Public preview · Text workflow**
 
-> **Public preview—not a validated production release.** Includes 31 method cards with overlapping variants, nine editorial persona profiles, and four themed casts. These are fictional interpretations within one AI conversation, not real people, authentic quotations, endorsements, or independently running agents. End-to-end ChatGPT web testing is still incomplete. A repository-wide reuse license is still pending; see [LICENSE](LICENSE).
+Turn a one-line question into an AI-led brainstorming session. Ask for **any theme or group**, name the people you want, or let the AI assemble a complementary cast. It proposes ideas, challenges its own proposals through different perspectives, and recommends a direction—while you just say **“Continue,” “Swap the cast,” or “You decide.”**
 
-## Start in one minute
+**Not a nine-person roster with a four-option menu.** The bundled profiles and groups are starting examples. Ask for one person, two, five, six or more; **three is the default, not a hard maximum**. New people are fictional editorial lenses, not newly verified biographies. Cast size and output depth still depend on the AI tool's context and response limits.
 
-1. Download **[START-HERE.en.txt — English](https://github.com/contentincubator2-ops/cj-brainstorm-kit/releases/download/v0.3.0/START-HERE.en.txt)** or **[START-HERE.txt — 繁體中文](https://github.com/contentincubator2-ops/cj-brainstorm-kit/releases/download/v0.3.0/START-HERE.txt)**.
-2. Upload the chosen file to an AI tool that can actually read text attachments.
-3. Paste this:
+[Get started](#quick-start) · [Try a topic](#things-to-try) · [See evidence](#examples-and-test-evidence) · [FAQ](#faq) · [Roadmap](docs/roadmap.zh-en.md)
+
+> The cast is fictional role-play inside one AI conversation—not the actual people, authentic quotations, endorsements, or independently deployed agents. This preview is not a native plugin. [Licensing is pending](LICENSE); ChatGPT web acceptance remains incomplete.
+
+## Contents
+
+- [Why use it?](#why-use-it)
+- [Quick start](#quick-start)
+- [Things to try](#things-to-try)
+- [Build your own cast](#build-your-own-cast)
+- [Steer the session](#steer-the-session)
+- [What a round delivers](#what-a-round-delivers)
+- [Examples and test evidence](#examples-and-test-evidence)
+- [FAQ](#faq)
+- [Repository map](#repository-map)
+- [Contribute and validate](#contribute-and-validate)
+- [Sources, credits, and rights](#sources-credits-and-rights)
+
+## Why use it?
+
+- **Start with the problem, not a prompt-writing project.** Give a topic; the facilitator selects a method and starts proposing instead of handing you an intake questionnaire.
+- **Get contrasting mechanisms, not renamed generic advisers.** Each character has a job: propose, challenge a specific idea, or improve how it works.
+- **Change the room without starting over.** Swapping people keeps your topic, constraints, and useful progress.
+- **Move from possibilities to a choice.** Compare directions, see a recommendation and its assumptions, then develop a small first experiment.
+- **Use the language you work in.** Separate English and Traditional Chinese text packs share stable method and persona IDs.
+
+The reference library contains **31 method cards**, including related variants—not 31 independent theories. In the default **LAZY_COUNCIL** mode, the AI uses these methods to do the ideation. Human practice is available only when you explicitly request **TEACHING**.
+
+## Quick start
+
+**No local installation, Python, or API key is needed to try the text pack.** You need an AI tool/account that can actually read the attachment; the tool's own access requirements still apply.
+
+1. Download one v0.4.0 language pack:
+   - **[English · START-HERE.en.txt](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/releases/download/v0.4.0/START-HERE.en.txt)**
+   - **[繁體中文 · START-HERE.txt](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/releases/download/v0.4.0/START-HERE.txt)**
+   - [Release notes and assets](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/releases/tag/v0.4.0)
+2. Upload **one** complete language pack to a new AI conversation. Ask the AI to confirm it can read it; do not accept a claim based only on the filename.
+3. Paste this and replace the topic:
 
 ```text
-Use the attached kit in LAZY_COUNCIL mode.
-Pick a complementary cast of fictional famous-persona perspectives, choose a method, and start generating proposals. Let the characters challenge and improve one another, then recommend a direction.
-Do not ask me to write five or ten ideas first. If you need a noncritical detail, state a reasonable assumption and keep going.
-My topic is: ____. Pick the cast for me and begin.
+Use the attached SoWork-Brainstorm-Kit in LAZY_COUNCIL mode.
+My topic: How can a neighborhood bookstore attract repeat visits on a small budget?
+Choose a complementary named cast and a method. Start proposing now,
+let the characters challenge and improve specific ideas, then recommend a direction.
+State reasonable assumptions for noncritical gaps. Do not give me idea-list homework.
 ```
 
-No topic yet? Say **“Start.”** The intended first response is one short topic question—not a questionnaire.
+Have no topic yet? Say **“Start.”** The intended first response is one short topic question, not a form.
 
-**Already using v0.1.0 or v0.2.0?** Download the new attachment and start a fresh conversation, or explicitly replace the old attachment and instructions. Publishing a new release does not update a file already loaded in your chat.
+**Replacing an older release?** Download the new pack and start a fresh conversation, or explicitly replace the old attachment and instructions. A repository update does not update a file already in your chat. See [setup](SETUP.md) for attachment and URL-entry alternatives. If release assets are not available yet, use the repository copies of [English](START-HERE.en.txt) or [Traditional Chinese](START-HERE.txt), checking their version headers.
 
-## Pick a cast—or let the AI choose
+## Things to try
 
-| Cast | Starting lineup | Editorial jobs |
+These are **sample inputs**, not reported outcomes:
+
+| Your task | Give the AI this starting point |
+| --- | --- |
+| Campaign concepts | “Build a space-scientist council for a low-budget refill campaign. Choose five named people.” |
+| Product ideas | “Give Ada Lovelace and Leonardo da Vinci a fictional design workshop for a screen-free family game. Exactly two people.” |
+| Content angles | “Assemble a Renaissance-artists group for a series about everyday creativity. You pick the people.” |
+| Experience design | “Make a Taiwanese-chefs council for a neighborhood food event. Keep it affordable and accessible.” |
+| Stress-testing | “Use six fictional perspectives to challenge this launch plan. Keep my budget and deadline.” |
+| Solo thinking | “Use just David Bowie as a fictional reinvention lens. Propose, self-critique, and refine.” |
+
+You can request a new theme without knowing its members. The AI should choose named, complementary people rather than send you away to build the roster. Safety and factual uncertainty still apply.
+
+## Build your own cast
+
+Specify a **theme**, **people**, **count**, or any combination:
+
+```text
+Choose a group of women scientists for my topic; pick the people yourself.
+Use Yang Guifei and Qin Shi Huang only. Do not add a third person.
+Give me five filmmakers, not the starter casts.
+Expand to six people and keep everyone I already named.
+Swap to an architecture council. Keep the same topic, budget, and deadline.
+```
+
+For people outside the bundled profiles, the AI creates clearly labeled **fictional editorial thinking roles**. It must not invent quotations, research, life events, or personal positions. When verification is unavailable, the role remains fiction—not a sourced biographical profile. Ambiguous identities may need clarification.
+
+### Optional starter groups
+
+Use these as shortcuts, not the limits of the product:
+
+| Group | Starting lineup | Workshop roles |
 | --- | --- | --- |
 | **Across the Ages** · 古今綜合組 | Qin Shi Huang · Yang Guifei · David Bowie | Repeatable rules · memorable experiences · identity reframing |
 | **Rock Legends** · 熱門搖滾組 | David Bowie · Freddie Mercury · Joan Jett | Reinvention · shared participation · DIY execution |
 | **The Glamour Council** · 美美女組 | Yang Guifei · Cleopatra VII · Coco Chanel | Sensory moments · reciprocal alliances · precise editing |
 | **The Ruthless Strategists** · 殘暴組 | Qin Shi Huang · Genghis Khan · Napoleon | Hard trade-offs · distributed nodes · focused stress tests |
 
-These English cast labels are proposed localizations for the preview; the original Chinese aliases and machine IDs are retained. These are playful workshop themes, not popularity charts, beauty rankings, historical personality claims, or approval of violence. Each profile separates its limited public reference context from its author-created thinking mechanism.
+The English labels are preview localizations; Chinese aliases and stable IDs are retained. These are playful editorial themes—not popularity charts, beauty rankings, historical personality claims, or approval of violence. [Persona guide](locales/en/personas/README.md) · [Bilingual map](docs/bilingual-map.md)
 
-Want someone else? Name a famous figure—or a combination such as **Yang Guifei and Qin Shi Huang**. The bundled nine are a starting library, not the limit. Unknown background claims must be labeled rather than invented.
+## Steer the session
 
-## What a round should look like
+| Say | Intended behavior |
+| --- | --- |
+| **Continue** | Develop the recommended direction with a new mechanism or concrete detail. |
+| **Swap the cast / replace a member** | Change the requested people, preserve the topic and constraints, then continue ideating. |
+| **Make it five people / just two people** | Respect the requested count instead of automatically restoring three. |
+| **Go bolder** | Change an assumption or interaction mechanism, not just the adjectives. |
+| **Make it practical** | Reduce cost, dependencies, and steps. |
+| **Direction 2** | Develop that option without restarting discovery. |
+| **You decide** | Choose and expand a direction; do not reset the cast or bounce the choice back. |
+| **Teach me to practice brainstorming** | Explicitly enter TEACHING and wait for real human exercises. |
 
-1. A named cast with different jobs—not three copies of the same adviser.
-2. One or two specific proposals per character.
-3. At least two concrete cross-improvements: one character revises a specific part of another's idea.
-4. Three comparable directions, with an AI recommendation and its assumptions.
-5. A few low-effort controls so you can keep going without producing ideas yourself.
+Ordinary council use should not require you to write five or ten ideas first. The topic, known constraints, chosen direction, and current cast should survive short follow-ups.
 
-See the **[English fictional example](locales/en/examples/persona-council.md)** or **[中文示例](examples/persona-council.md)**. They are authored demonstrations, **not platform test transcripts**.
+## What a round delivers
 
-## Keep it effortless
+The intended experience is **cast → proposals → concrete challenges and revisions → comparable directions → a recommendation**.
 
-- **Continue** — take the recommended direction further.
-- **Swap the cast / replace a member** — keep the topic, change the perspectives.
-- **Go bolder** — change the mechanism, not just the adjectives.
-- **Make it practical** — cut dependencies, cost, and steps.
-- **You decide** — let the facilitator choose and expand a direction.
+- A named cast with different jobs, not a long biography for each person.
+- One or two concrete proposals per character, with the mechanism explained.
+- In a multi-person round, at least two specific cross-improvements—not just “I agree.” A one-person request uses self-critique and refinement rather than invented extra speakers.
+- Normally three comparable directions, a recommendation, and any unverified assumptions.
+- Simple next-step controls so you can keep going without supplying new ideas.
 
-Want to practice brainstorming yourself? Explicitly ask for **TEACHING** mode. Human exercises are opt-in; ordinary council users should not be sent away to write idea lists.
+Larger casts may need shorter contributions or multiple rounds. This is not a promise of unlimited context, unlimited output, verified commercial results, or real expert consensus.
 
-## Use a repository URL instead?
+## Examples and test evidence
 
-Ask the AI to read the appropriate facilitator protocol, persona catalog, cast definitions, and selected method card. **It must confirm it actually retrieved the needed content.** If it cannot, use the complete text attachment. Pasting a repository URL is not installation and does not guarantee that every file will be fetched.
+**Keep demonstrations and execution evidence separate:**
 
-## English and Chinese editions
+- **Authored fiction:** [English council walkthrough](locales/en/examples/persona-council.md) · [中文共創示例](examples/persona-council.md). These illustrate the intended format; they are not recorded model runs.
+- **Model-run transcripts:** [English open-cast run](examples/test-runs/open-cast-en.md) · [繁中開放組隊實測](examples/test-runs/open-cast-zh.md). The engine is **GPT-6.1-sol via Hermes provider prompt evaluation**, not ChatGPT web or file-upload acceptance. Read each record for its exact inputs, outputs, source version, and limitations; a linked run is not a universal pass claim.
+- **Acceptance criteria and scope:** [Testing guide](tests/README.md) · [Behavioral cases](tests/BEHAVIORAL-ACCEPTANCE.zh-en.md) · [Public-launch review](docs/public-launch-review.zh-en.md).
 
-Use one runtime language pack at a time. The paired documents and stable method IDs make comparison possible without doubling the prompt with two complete languages.
+In this small trial set, a separate AI review marked seven turns as meeting expectations and one Chinese closing brief as partial: the plan is useful, but the five current names are not explicitly visible and the output remains dense. This is not a human rating or a universal pass rate. [Read the full assessment](examples/test-runs/review.zh-en.md).
 
-- [English core protocol](locales/en/FACILITATOR.md) · [中文主持規約](FACILITATOR.md)
-- [English method index](locales/en/methods/index.md) · [中文方法索引](methods/index.md)
-- [English persona guide](locales/en/personas/README.md) · [中文人物指南](personas/README.md)
-- [Bilingual comparison map](docs/bilingual-map.md)
-- [Public-launch review / 公開前逐項檢查](docs/public-launch-review.zh-en.md)
+The badge above reports the repository's **static validation workflow**, not model quality. **ChatGPT browser acceptance remains incomplete: access was blocked by human verification.** Model prompt evaluation does not prove browser attachment handling, repository retrieval, or equivalent behavior in another product/account.
 
-## What is—and is not—verified
+## FAQ
 
-The build and validation scripts check packaging, IDs, references, language coverage, and common sensitive-data patterns. **They do not measure brainstorming quality or prove ChatGPT behavior.** Platform access, actual file retrieval, persona differentiation, low-effort controls, and multi-turn results need real testing.
+**Is this a native ChatGPT/Claude plugin or an installed agent framework?**
 
-This kit is a text workflow, not a native plugin, external tool authorization, background timer, live meeting room, or real-person invitation service. Do not put private client or participant information in public Issues or pull requests.
+No. It is a portable text workflow. Uploading instructions does not install a plugin, authorize tools, or create background workers. See [compatibility](locales/en/docs/compatibility.md).
 
-## Maintain the kit
+**Are the characters independent agents or the real people?**
 
-Python 3.10 or later; standard library only:
+Neither. One AI simulates contrasting fictional perspectives in one conversation. They do not run as separately deployed agents, attend your meeting, vote as real participants, or endorse the output.
+
+**Am I limited to the nine profiles, four groups, or three people?**
+
+No. Request any theme, name other people, or let the AI choose them. One, two, five, six or more are valid requests; three is only the default. Actual context, response limits, safety restrictions, and uncertainty can require a smaller or staged round—not a fixed four-group menu.
+
+**Will it ask me to do brainstorming homework?**
+
+Not in default LAZY_COUNCIL mode. The AI proposes and improves ideas. Human exercises are opt-in through [TEACHING](locales/en/TEACHING.md).
+
+**Can I just paste the repository URL?**
+
+Only if the AI can retrieve the actual needed files and confirms what it read. A landing page is not the entire kit. If retrieval fails, use a complete text attachment; see [setup](SETUP.md).
+
+**Is my session private?**
+
+The kit cannot guarantee an AI provider's confidentiality, retention settings, or account policies. Use fictional or anonymized inputs. Never post client data, personal information, private URLs, credentials, or raw private conversations in public Issues or PRs. See [security and privacy](SECURITY.md).
+
+**Can I redistribute or use it commercially under MIT or Creative Commons?**
+
+No project-wide reuse license has been selected. This is a publicly readable preview, not an MIT- or CC-licensed release. Broader redistribution and commercial terms need the owner's decision; third-party references retain their own rights. See [LICENSE](LICENSE).
+
+## Repository map
+
+| Area | English | 繁體中文 / shared |
+| --- | --- | --- |
+| Start and setup | [Text pack](START-HERE.en.txt) · [Setup](SETUP.md) | [文字包](START-HERE.txt) · [使用說明](SETUP.zh-TW.md) |
+| Facilitator | [Protocol](locales/en/FACILITATOR.md) | [主持規約](FACILITATOR.md) |
+| Methods | [Index](locales/en/methods/index.md) · [Sources](locales/en/SOURCES.md) | [索引](methods/index.md) · [來源](SOURCES.md) |
+| Personas and starters | [Guide](locales/en/personas/README.md) · [Sources](locales/en/personas/SOURCES.md) | [人物指南](personas/README.md) · [組合資料](personas/packs.json) · [來源](personas/SOURCES.md) |
+| Session templates | [Brief](locales/en/templates/meeting-brief.md) · [State](locales/en/templates/session-state.md) · [Outcome](locales/en/templates/outcome.md) | [準備](templates/meeting-brief.md) · [狀態](templates/session-state.md) · [成果](templates/outcome.md) |
+| Quality and direction | [Testing](tests/README.md) · [Changelog](CHANGELOG.md) | [中英對照](docs/bilingual-map.md) · [Roadmap](docs/roadmap.zh-en.md) · [Presentation research](docs/repository-presentation.zh-en.md) |
+
+## Contribute and validate
+
+Useful contributions include **small reproducible behavior reports, clearer translations, source-backed method corrections, and focused tests**. Start with [CONTRIBUTING](CONTRIBUTING.md), [community expectations](CODE_OF_CONDUCT.md), or [open an issue](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/issues/new/choose). Use synthetic examples; do not upload private work sessions.
+
+For local maintenance, use Python 3.10+ and the standard library:
 
 ```sh
 python3 scripts/build.py
 python3 scripts/validate.py
 ```
 
-The build creates separate English and Traditional Chinese text packs from their corresponding source files. See [setup](SETUP.md), [compatibility](locales/en/docs/compatibility.md), [public-material policy](locales/en/docs/sanitization-policy.md), [contributing](CONTRIBUTING.md), [security](SECURITY.md), and the [changelog](CHANGELOG.md).
+The build produces separate language packs. Validation checks package consistency, IDs, links, language coverage, and common sensitive-data patterns; it does **not** establish AI quality or platform acceptance. Record actual behavioral evidence separately. See the [roadmap](docs/roadmap.zh-en.md) for priorities and acceptance gates, not promised delivery dates.
 
-## Credits and reuse
+## Sources, credits, and rights
 
-Concept and product direction: **CJ Wang**. The methods and source materials are credited separately in [method sources](locales/en/SOURCES.md) and [persona sources](locales/en/personas/SOURCES.md). Editorial role-play is not a claim that these figures actually held the proposed views.
+Concept and product direction: **CJ Wang**. Method references and persona background sources are credited separately in [method sources](locales/en/SOURCES.md) and [persona sources](locales/en/personas/SOURCES.md). Public reference context is distinct from author-created thinking mechanisms; improvised dialogue is not historical evidence. Do not invent quotations, imitate large passages of copyrighted works, or present proposals as events that already happened.
 
-**Publicly readable does not yet mean openly licensed.** No project-wide redistribution or commercial reuse license has been selected. Do not describe this preview as MIT-licensed, CC-licensed, officially certified, or endorsed by the cited people and institutions. See [LICENSE](LICENSE).
+[Public-material policy](locales/en/docs/sanitization-policy.md) · [Security](SECURITY.md) · [License decision pending](LICENSE)

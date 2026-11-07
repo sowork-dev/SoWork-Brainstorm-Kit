@@ -1,0 +1,67 @@
+name: Behavior report / 行為問題
+description: A small synthetic reproduction helps us improve the kit. / 用小型虛構案例協助改進。
+title: "[Behavior] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping. English or 繁體中文 is welcome.
+        Use invented names and a synthetic topic. Do not paste private chats, client data, credentials, account IDs, or private URLs.
+        歡迎中英文。請用虛構題目，不貼私人對話、客戶資料、帳密、帳號識別或私人網址。
+        For sensitive reports, follow SECURITY.md; do not disclose details here. / 敏感事件請依 SECURITY.md，不在此公開細節。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Safe to publish / 可公開確認
+      options:
+        - label: This report contains no secrets, personal/client data, private links, or raw private conversations. / 不含機密、個資、客戶資料、私人連結或原始私人對話。
+          required: true
+  - type: input
+    id: version
+    attributes:
+      label: Kit version or commit / 工具包版本或 commit
+      placeholder: "For example: v0.4.0; use unknown if unavailable. / 不確定可填 unknown。"
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language pack / 語言包
+      options:
+        - English
+        - 繁體中文
+        - Other or mixed / 其他或混用
+    validations:
+      required: true
+  - type: dropdown
+    id: entry
+    attributes:
+      label: Entry route / 使用路徑
+      options:
+        - Text attachment / 文字附件
+        - Pasted instructions / 貼上內容
+        - Repository URL retrieval / 網址擷取
+        - Model API or provider prompt evaluation / 模型提示評估
+        - Other or unknown / 其他或未知
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: AI product and model, if known / AI 產品與模型（若知道）
+      description: Public product/model names only; no account details, cookies, or API keys. / 只填公開產品與模型名稱，不填帳號資料、cookie 或金鑰。
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Small synthetic reproduction / 小型虛構重現步驟
+      description: Include the invented topic and short follow-ups needed to reproduce it. Say which content was actually read. / 列虛構題目與必要短指令，說明實際讀入哪些內容。
+      placeholder: "Topic → requested cast/count → follow-up → observed behavior / 題目 → 指定組別與人數 → 追問 → 實際行為"
+    validations:
+      required: true
+  - type: textarea
+    id: expected_actual
+    attributes:
+      label: Expected vs. actual / 預期與實際
+      description: A short sanitized excerpt from a synthetic test is enough. Label actual output versus your summary; do not invent a transcript. / 虛構測試的去識別化短摘錄即可；分清實際輸出與摘要，不編逐字稿。
+    validations:
+      required: true

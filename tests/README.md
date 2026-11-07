@@ -6,6 +6,10 @@
 
 Run `python3 scripts/build.py` and `python3 scripts/validate.py`. These check method/persona identities, source/evidence parity, separate language packs, context-preserving links, licensing-notice inclusion, mode guards and common sensitive patterns. They are not a model-quality score.
 
+## Recorded open-cast model trials
+
+See [the execution protocol and evidence](OPEN-CAST-TRIALS.zh-en.md): two four-turn conversations against GPT-6.1-sol through the Hermes provider, with exact text and hashes retained. These are actual model outputs, not native-platform acceptance or a universal quality score. New open-cast static contracts run with `python3 -m unittest discover -s scripts -p "test_*.py" -v`.
+
 ## Real platform status
 
 **Complete ChatGPT web acceptance has not passed.** The prior access attempt stopped at human verification. Neither CI, authored examples, translated documents nor a sandbox response proves that the web product retrieves the repo or sustains the intended multi-turn experience. Other platforms remain unverified.

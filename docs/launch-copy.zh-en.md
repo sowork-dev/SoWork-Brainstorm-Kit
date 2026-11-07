@@ -8,11 +8,11 @@ I built a brainstorming kit for people who do not want another blank page.
 
 Give it a topic. The AI assembles a fictional council of famous perspectives, proposes ideas, lets the characters challenge one another, and turns the discussion into options you can use. You can just say “Continue,” “Swap the cast,” or “You decide.”
 
-Try Across the Ages, Rock Legends, the Glamour Council, or the Ruthless Strategists—or name your own people. This is fictional role-play, not authentic speech or endorsement.
+Create any theme or lineup: Ocean Explorers, Quiet Rebels, a two-person debate, or your own five-person council. The four starter themes are examples, not the menu. This is fictional role-play, not authentic speech or endorsement.
 
 The public preview has separate English and Traditional Chinese text packs. No app backend or native plugin is required by the pack itself; actual behavior depends on the AI tool and remains under testing.
 
-Repository: https://github.com/contentincubator2-ops/cj-brainstorm-kit
+Repository: https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit
 
 Start with the README, check the current licensing notice, and tell me where the experience still makes you work too hard.
 
@@ -22,10 +22,10 @@ Start with the README, check the current licensing notice, and tell me where the
 
 丟一個題目，AI 就會組成一桌虛構名人視角，先提案、互相接球，再整理成可選方向。你可以只說「繼續」「換組」「你決定」。
 
-古今綜合、搖滾、美美女、殘暴四組，也能自己指定人物。這是 AI 虛構演繹，不是本人發言或背書。
+不只古今、搖滾、美美女、殘暴四組：海洋探險組、安靜叛逆組、雙人對談、五人混搭都能直接指定。四組是起點，不是選單上限。這是 AI 虛構演繹，不是本人發言或背書。
 
 目前是公開試用稿，提供英文與繁中獨立文字包；工具包本身不要求另外架後端或安裝原生插件。實際表現仍依所用 AI 工具測試。
 
-Repo：https://github.com/contentincubator2-ops/cj-brainstorm-kit
+Repo：https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit
 
 先看 README 和現有授權說明，也歡迎告訴我：哪一步還讓你太費力？

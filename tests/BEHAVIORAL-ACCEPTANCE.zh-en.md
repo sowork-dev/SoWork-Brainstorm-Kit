@@ -4,6 +4,8 @@
 
 Record version/commit, file hash, language, attachment versus URL, platform/model, and actual redacted outputs. Test English and Chinese separately. / 每次記錄版本、雜湊、語言、附件／網址入口、平台／模型與去識別真實輸出；中英分開測。
 
+Separate v0.4.0 open-cast model executions are documented in [OPEN-CAST-TRIALS.zh-en.md](OPEN-CAST-TRIALS.zh-en.md). They do not mark this ten-case target-platform suite complete. / v0.4.0另有自由組隊模型試跑，不代表本十案平台驗收已完成。
+
 ## L01 — Minimal start | 最少開場
 
 - EN input: “Start.”

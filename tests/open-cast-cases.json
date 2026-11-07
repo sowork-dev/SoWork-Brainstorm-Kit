@@ -1,0 +1,52 @@
+{
+  "suite": "open-cast-v0.4.0",
+  "purpose": "Frozen scripted prompt trials; not ChatGPT web or a representative success-rate benchmark.",
+  "cases": [
+    {
+      "id": "open-cast-zh",
+      "language": "zh-TW",
+      "bundle": "START-HERE.txt",
+      "turns": [
+        {
+          "prompt": "使用這份工具包。我要一個『海洋探險組』，由你選人，不要給我四組選單。幫社區圖書館想一個讓18歲青年願意帶朋友來的30分鐘活動；預算新台幣3000元、兩位工作人員，不用App。直接開想。",
+          "expectations": ["Creates the requested custom theme without a menu gate", "Picks named complementary people outside the initial nine when appropriate", "Produces ideas, at least two concrete cross-improvements and a recommendation", "Respects 30 minutes, TWD 3000, two staff and no app", "Does not demand user idea homework or claim verified biography"]
+        },
+        {
+          "prompt": "換人：只要楊貴妃與秦始皇，其他人都退出，不補第三人。其餘條件不變，直接再想一輪。",
+          "expectations": ["Exactly two active personas: Yang Guifei and Qin Shi Huang", "No silent third member", "Retains the topic and all constraints", "Develops concrete changes rather than repeating the first round"]
+        },
+        {
+          "prompt": "再加入達文西、瑪麗居禮與卓別林，五人一起想；不要退回三人，活動條件都不變。",
+          "expectations": ["Exactly five active personas including the existing two", "New out-of-catalog figures get differentiated editorial jobs", "Retains the original practical constraints", "Includes substantive cross-improvement rather than only separate monologues"]
+        },
+        {
+          "prompt": "你決定，更務實一點，直接整理成能試辦的一頁方案。",
+          "expectations": ["Keeps the five-person cast rather than defaulting it", "Selects a direction without asking for another approval", "Produces a usable pilot with a 30-minute schedule, TWD 3000 ceiling, two staff and no app", "Does not claim the event has already happened"]
+        }
+      ]
+    },
+    {
+      "id": "open-cast-en",
+      "language": "en",
+      "bundle": "START-HERE.en.txt",
+      "turns": [
+        {
+          "prompt": "Use this kit. Create my Quiet Rebels council with exactly Ada Lovelace, Marie Curie, Zaha Hadid, Frida Kahlo, and Hedy Lamarr. Help a small community library attract 18-year-olds who bring a friend. The pilot is 30 minutes, a USD 100 budget, two staff, no app and no paid advertising. Choose a method and start; do not make me brainstorm first.",
+          "expectations": ["Uses the custom theme and all five specified out-of-catalog figures", "No reduction to the starter three", "Distinct editorial jobs and at least two concrete cross-improvements", "Concrete recommendation with original constraints", "No false claims of genuine attendance, endorsement or completed research"]
+        },
+        {
+          "prompt": "Replace only Zaha Hadid with Jane Austen. Keep everyone else, the same topic and all constraints. Make the ideas less like a classroom assignment.",
+          "expectations": ["Replaces only the requested member, retaining exactly five", "Preserves the topic, USD 100, 30 minutes, two staff, no app and no paid ads", "Changes an actual mechanism rather than only a title", "Does not restart discovery"]
+        },
+        {
+          "prompt": "Now swap the whole cast to an Ocean Explorers group. Pick five new named people yourself. Keep the library topic and all constraints, and immediately show how this changes the proposed activity.",
+          "expectations": ["Creates a second custom group rather than choosing a starter", "Picks five new named people and differentiates their jobs", "Preserves the topic and constraints", "Shows actual concept changes and cross-improvement"]
+        },
+        {
+          "prompt": "You decide. Keep this cast and give me the simplest pilot we can run.",
+          "expectations": ["Retains current Ocean Explorers rather than resetting to a starter", "Makes and develops a recommendation without another interview", "Provides a practical 30-minute USD 100 pilot for two staff without an app or paid ads", "Clearly separates proposals and assumptions from measured outcomes"]
+        }
+      ]
+    }
+  ]
+}

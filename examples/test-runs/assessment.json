@@ -1,0 +1,1038 @@
+{
+  "schema_version": "1.0",
+  "title": "Open-cast zh/en actual-response assessment",
+  "review_type": "Independent qualitative reading of all recorded responses against prewritten expectations",
+  "scope": {
+    "cases": 2,
+    "responses_read": 8,
+    "turns_per_case": 4,
+    "all_assistant_text_read": true,
+    "source_read_method": "Parsed complete JSON strings after line-based reader abbreviated long single lines; source strings contain no literal truncation marker.",
+    "no_lexical_or_numeric_quality_scoring": true,
+    "not_a_success_rate_or_readiness_score": true,
+    "source_files_read_only": true,
+    "repository_modified": false,
+    "human_acceptance_performed": false,
+    "chatgpt_website_upload_test_performed": false,
+    "external_event_execution_verified": false,
+    "mobile_or_print_rendering_performed": false,
+    "catalog_membership_independently_verified": false,
+    "catalog_note": "The frozen expectations describe figures as out-of-catalog. These transcript files record bundle hashes but not the attachment text; no independent catalog audit is claimed."
+  },
+  "status_definitions": {
+    "pass": "Recorded text adequately satisfies the stated expectation at its requested planning level.",
+    "partial": "Some requested behavior is delivered, with a material format or evidence limitation; not automatically a demonstrated failure.",
+    "fail": "Recorded text contradicts or misses a stated requirement.",
+    "not-observable": "Available text does not settle the full claim; do not infer hidden state or silently treat it as a failure."
+  },
+  "provenance": [
+    {
+      "case_id": "open-cast-zh",
+      "language": "zh-TW",
+      "source": "open-cast-zh.json",
+      "source_file_sha256": "10e4ebacd0011aabc2a55b73c1eec8f3d5b053a845c8a70d1bb0e6469bca9eb9",
+      "bundle": "START-HERE.txt",
+      "bundle_sha256": "aad10418ea60d707d89cd910c61769353e17cdf845cc459fbfdc74dcc1216544",
+      "suite_sha256": "19b7ff8c3facaae6938ae3f93efacab3b8bbb3be4a2fa87d56aeafd705d9c6f4",
+      "recorded_transport": "Hermes agent.auxiliary_client.call_llm",
+      "recorded_provider": "openai-codex",
+      "recorded_model": "gpt-6.1-sol",
+      "recorded_effective_models": [
+        "gpt-6.1-sol"
+      ],
+      "external_tools": [],
+      "attachment_delivery": "Full text included in the first user message; subsequent calls replay actual history",
+      "chatgpt_web_acceptance": false,
+      "provenance_boundary": "Model/provider/attachment replay are recorded trial metadata, not an independent provider audit."
+    },
+    {
+      "case_id": "open-cast-en",
+      "language": "en",
+      "source": "open-cast-en.json",
+      "source_file_sha256": "a9f3f1db799568a5e1854e2fdf37a1611a4c60ed6947e50526c19cb3aff9865d",
+      "bundle": "START-HERE.en.txt",
+      "bundle_sha256": "0bf0258f07d56f9bcfb160e48a9db841d44f260b17577e8262db12c41383bcbe",
+      "suite_sha256": "19b7ff8c3facaae6938ae3f93efacab3b8bbb3be4a2fa87d56aeafd705d9c6f4",
+      "recorded_transport": "Hermes agent.auxiliary_client.call_llm",
+      "recorded_provider": "openai-codex",
+      "recorded_model": "gpt-6.1-sol",
+      "recorded_effective_models": [
+        "gpt-6.1-sol"
+      ],
+      "external_tools": [],
+      "attachment_delivery": "Full text included in the first user message; subsequent calls replay actual history",
+      "chatgpt_web_acceptance": false,
+      "provenance_boundary": "Model/provider/attachment replay are recorded trial metadata, not an independent provider audit."
+    }
+  ],
+  "summary": {
+    "turn_outcomes": {
+      "pass": 7,
+      "partial": 1
+    },
+    "prewritten_expectation_outcomes": {
+      "pass": 33,
+      "not-observable": 1
+    },
+    "interpretation": "Seven turns meet their frozen expectations on visible text. Chinese turn four is qualified partial overall: a practical plan is present, but exact retained names are not observable and the one-page brief remains dense. No demonstrated cast-reset failure or observed false execution claim.",
+    "zh": "七輪依可見文字符合預寫期待；中文第四輪整體為部分符合：試辦規劃具體，但未列出五人姓名，且一頁稿仍偏密。這不等於角色已被重設，也不是普遍成功或上線驗收。"
+  },
+  "turn_reviews": [
+    {
+      "case_id": "open-cast-zh",
+      "turn": 1,
+      "overall": "pass",
+      "user_request": "使用這份工具包。我要一個『海洋探險組』，由你選人，不要給我四組選單。幫社區圖書館想一個讓18歲青年願意帶朋友來的30分鐘活動；預算新台幣3000元、兩位工作人員，不用App。直接開想。",
+      "response_sha256": "232aa4f6864b39eff6a42b16028e76282153eef93464db431f237affe9c26534",
+      "cast_observation": {
+        "explicit_named_personas": [
+          "雅克・庫斯托",
+          "鄭和",
+          "席爾薇亞・厄爾"
+        ],
+        "operation": "self-select custom theme",
+        "explicit_persona_count": 3
+      },
+      "criteria": [
+        {
+          "expectation_number": 1,
+          "expectation": "Creates the requested custom theme without a menu gate",
+          "status": "pass",
+          "reason": "Immediately creates the requested Ocean Explorers theme; no starter-group selection gate. The later A/B/C table compares activities, not compulsory cast choices.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "海洋探險組｜直接開想"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "方法：B20 快速構思 → 交叉改版。"
+            }
+          ]
+        },
+        {
+          "expectation_number": 2,
+          "expectation": "Picks named complementary people outside the initial nine when appropriate",
+          "status": "pass",
+          "reason": "Self-selects three named, complementary perspectives for discovery, exchange and consequences. Out-of-catalog classification follows the frozen test description; original catalog membership is not independently verifiable from these two transcripts.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "**雅克・庫斯托**"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "**鄭和**"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "**席爾薇亞・厄爾**"
+            }
+          ]
+        },
+        {
+          "expectation_number": 3,
+          "expectation": "Produces ideas, at least two concrete cross-improvements and a recommendation",
+          "status": "pass",
+          "reason": "Three proposals, three specific cross-improvements and a selected direction: distribute evidence, remove mandatory cross-team dependency, add a meaningful ending.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "把證據拆成『海圖、航行紀錄、符號表』三份"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "另加一張可交換的額外情報"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "推薦 A《深海失聯檔案》"
+            }
+          ]
+        },
+        {
+          "expectation_number": 4,
+          "expectation": "Respects 30 minutes, TWD 3000, two staff and no app",
+          "status": "pass",
+          "reason": "Paper-based library activity for friend pairs; full contiguous 30-minute schedule, two staff roles and TWD 3000 allocations. Prices and capacity are assumptions, not validated costs.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "兩位工作人員、不用 App"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "以 18 人、6 隊估算"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "合計上限"
+            }
+          ]
+        },
+        {
+          "expectation_number": 5,
+          "expectation": "Does not demand user idea homework or claim verified biography",
+          "status": "pass",
+          "reason": "Provides ideas before any request for input, expressly labels fictional viewpoints and unverified local appeal. Optional Continue is not a prerequisite to receiving the current ideas.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "AI 虛構角色共創，非本人或史實引言"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "未作外部查證"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/0/assistant",
+              "excerpt": "最大未驗證假設"
+            }
+          ]
+        }
+      ],
+      "mechanical_checks": {
+        "budget_allocation_total": 3000,
+        "scheduled_minutes": 30,
+        "schedule_contiguous": true
+      },
+      "quality_notes": [
+        "Long workshop-plus-plan response; headings help, but mobile scanning is a qualitative concern, not a device-tested finding.",
+        "Actual puzzle text and answer keys remain future work; this is a concept and operational plan, not a ready-to-print event kit.",
+        "Suggested staff-run pretest is implementation work, not asking the user to supply brainstorming ideas."
+      ]
+    },
+    {
+      "case_id": "open-cast-zh",
+      "turn": 2,
+      "overall": "pass",
+      "user_request": "換人：只要楊貴妃與秦始皇，其他人都退出，不補第三人。其餘條件不變，直接再想一輪。",
+      "response_sha256": "6da0aa861e63277ac048ff546debcadc7b014712363ce082f5f537c71872bc70",
+      "cast_observation": {
+        "explicit_named_personas": [
+          "楊貴妃",
+          "秦始皇"
+        ],
+        "operation": "replace entire prior cast with exactly two",
+        "explicit_persona_count": 2
+      },
+      "criteria": [
+        {
+          "expectation_number": 1,
+          "expectation": "Exactly two active personas: Yang Guifei and Qin Shi Huang",
+          "status": "pass",
+          "reason": "Exactly the two requested named personas propose and cross-improve; all original ocean figures are removed.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/1/assistant",
+              "excerpt": "只留楊貴妃、秦始皇"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/1/assistant",
+              "excerpt": "其餘角色退出，不補第三人"
+            }
+          ]
+        },
+        {
+          "expectation_number": 2,
+          "expectation": "No silent third member",
+          "status": "pass",
+          "reason": "No extra named persona speaks. The generic moderator synthesis is a facilitation label, not evidence of a third cast member; participant navigator/recorder jobs are not council personas.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/1/assistant",
+              "excerpt": "交叉接球：兩人互改"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/1/assistant",
+              "excerpt": "主持人整合｜三個方向"
+            }
+          ]
+        },
+        {
+          "expectation_number": 3,
+          "expectation": "Retains the topic and all constraints",
+          "status": "pass",
+          "reason": "Restates the library audience, time, currency, staff and no-app constraints and develops a matching paper-only run plan.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/1/assistant",
+              "excerpt": "社區圖書館、18 歲青年願意帶朋友、30 分鐘、NT$3,000、兩位工作人員、不用 App"
+            }
+          ]
+        },
+        {
+          "expectation_number": 4,
+          "expectation": "Develops concrete changes rather than repeating the first round",
+          "status": "pass",
+          "reason": "Changes the actual play: complementary map/signal data, role swap, two solved legs then a non-graded island choice and paired bookmark. Cross-edits add naming scaffolds and remove a third test-like answer.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/1/assistant",
+              "excerpt": "第二關交換職務，避免一人全程主導"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/1/assistant",
+              "excerpt": "把第三關改成共同選擇"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/1/assistant",
+              "excerpt": "單張能當書籤，合起來才是完整海圖"
+            }
+          ]
+        }
+      ],
+      "mechanical_checks": {
+        "budget_allocation_total": 3000,
+        "scheduled_minutes": 30,
+        "schedule_contiguous": true
+      },
+      "quality_notes": [
+        "Substantial long-form revision rather than a short mobile update.",
+        "No false claim of tested effectiveness; printable puzzles are still offered as a subsequent deliverable."
+      ]
+    },
+    {
+      "case_id": "open-cast-zh",
+      "turn": 3,
+      "overall": "pass",
+      "user_request": "再加入達文西、瑪麗居禮與卓別林，五人一起想；不要退回三人，活動條件都不變。",
+      "response_sha256": "88dbcf2b54f20be6ca06ba3064ace1d66df35e3a6515de345e81994352b4ca3c",
+      "cast_observation": {
+        "explicit_named_personas": [
+          "楊貴妃",
+          "秦始皇",
+          "達文西",
+          "瑪麗居禮",
+          "卓別林"
+        ],
+        "operation": "add three; retain existing two",
+        "explicit_persona_count": 5
+      },
+      "criteria": [
+        {
+          "expectation_number": 1,
+          "expectation": "Exactly five active personas including the existing two",
+          "status": "pass",
+          "reason": "Adds three to the existing two and explicitly names all five; five proposal sections and a five-way cross-edit chain make participation visible.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/2/assistant",
+              "excerpt": "五人：楊貴妃、秦始皇、達文西、瑪麗居禮、卓別林"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/2/assistant",
+              "excerpt": "保留前兩位、不退回三人"
+            }
+          ]
+        },
+        {
+          "expectation_number": 2,
+          "expectation": "New out-of-catalog figures get differentiated editorial jobs",
+          "status": "pass",
+          "reason": "New members have distinguishable mechanisms: manipulable paper, predict/test/revise and low-verbal interaction. This is editorial differentiation, not verified biography; catalog classification is supplied by the test.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/2/assistant",
+              "excerpt": "達文西**：把資訊變成可操作紙模型"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/2/assistant",
+              "excerpt": "瑪麗居禮**：把猜測變成可測試的選擇"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/2/assistant",
+              "excerpt": "卓別林**：降低文字與開口門檻"
+            }
+          ]
+        },
+        {
+          "expectation_number": 3,
+          "expectation": "Retains the original practical constraints",
+          "status": "pass",
+          "reason": "Explicit original constraints plus matching schedule, staff split and TWD 3000 allocation; keeps the library-compatible tabletop design.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/2/assistant",
+              "excerpt": "社區圖書館、吸引18歲青年帶朋友、30分鐘、NT$3,000、兩位工作人員、不用App"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/2/assistant",
+              "excerpt": "全部桌上完成、不用水、不吹氣推船、不跨館奔跑"
+            }
+          ]
+        },
+        {
+          "expectation_number": 4,
+          "expectation": "Includes substantive cross-improvement rather than only separate monologues",
+          "status": "pass",
+          "reason": "Not isolated monologues: specific cross-edits pre-fold or flatten the mechanism, add reasons to answer cards, replace written predictions with boat placement, make silence optional and connect preferences to route choice.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/2/assistant",
+              "excerpt": "改成平面遮片，保留選路、不執著機關"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/2/assistant",
+              "excerpt": "每張驗證卡只留一句證據"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/2/assistant",
+              "excerpt": "不用填寫推論"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/2/assistant",
+              "excerpt": "可以口頭描述"
+            }
+          ]
+        }
+      ],
+      "mechanical_checks": {
+        "budget_allocation_total": 3000,
+        "scheduled_minutes": 30,
+        "schedule_contiguous": true
+      },
+      "quality_notes": [
+        "More mechanisms increase preparation burden; the response recognizes this and proposes a flat-paper pretest before fabricating folds.",
+        "It calls the silent challenge 60 seconds but allocates a five-minute block for that segment; this can accommodate setup, but the distinction could be clearer.",
+        "Staff preparation labor is acknowledged, not priced into the materials budget. Real staffing capacity remains untested."
+      ]
+    },
+    {
+      "case_id": "open-cast-zh",
+      "turn": 4,
+      "overall": "partial",
+      "user_request": "你決定，更務實一點，直接整理成能試辦的一頁方案。",
+      "response_sha256": "55a972754ec8093cbf7b78486f209c4d1b00a30c96ff11731a1b95494fc77aab",
+      "cast_observation": {
+        "explicit_named_personas": [],
+        "operation": "acknowledges five-person continuity, no named reset",
+        "declared_persona_count": 5,
+        "exact_roster_status": "not-observable",
+        "prior_explicit_roster_reference": "open-cast-zh.json#/turns/2/assistant"
+      },
+      "criteria": [
+        {
+          "expectation_number": 1,
+          "expectation": "Keeps the five-person cast rather than defaulting it",
+          "status": "not-observable",
+          "reason": "Acknowledges retaining five-person co-creation and continues the prior mechanics, but does not enumerate current names or individual contributions. Exact roster retention is not fully observable; this is NOT evidence of a reset or forgotten member. Repeating introductions was not the user request.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/3/assistant",
+              "excerpt": "保留五人共創的核心"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/3/assistant",
+              "excerpt": "資訊分工、一次試錯、共同選擇、帶走紀念"
+            }
+          ]
+        },
+        {
+          "expectation_number": 2,
+          "expectation": "Selects a direction without asking for another approval",
+          "status": "pass",
+          "reason": "Selects a flat paper version immediately and removes folds, silence and roaming. No further approval/interview gate.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/3/assistant",
+              "excerpt": "決定採用：平面紙本合作版。"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/3/assistant",
+              "excerpt": "不做折疊機關、不設無聲挑戰、不跨館找線索"
+            }
+          ]
+        },
+        {
+          "expectation_number": 3,
+          "expectation": "Produces a usable pilot with a 30-minute schedule, TWD 3000 ceiling, two staff and no app",
+          "status": "pass",
+          "reason": "A usable planning-level pilot specifies 12 people/six pairs, full 30-minute schedule, staff A/B, TWD 3000 ceiling, materials, feedback and no app. It is not a ready-to-print kit; the two puzzles and local logistics still need preparation.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/3/assistant",
+              "excerpt": "時間／人力：**30分鐘；2位工作人員"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/3/assistant",
+              "excerpt": "不用App、手機、投影或水"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/3/assistant",
+              "excerpt": "只製作兩道題，6隊使用相同版本"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/3/assistant",
+              "excerpt": "完成兩題黑白草稿"
+            }
+          ]
+        },
+        {
+          "expectation_number": 4,
+          "expectation": "Does not claim the event has already happened",
+          "status": "pass",
+          "reason": "Clearly prospective, unpriced and unexecuted: local arrangements remain pending, thresholds are provisional and recruitment is not declared effective.",
+          "evidence": [
+            {
+              "source": "open-cast-zh.json#/turns/3/assistant",
+              "excerpt": "非已查價報價"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/3/assistant",
+              "excerpt": "負責人、日期與報名管道待館方確認"
+            },
+            {
+              "source": "open-cast-zh.json#/turns/3/assistant",
+              "excerpt": "不代表已證明招募有效"
+            }
+          ]
+        }
+      ],
+      "mechanical_checks": {
+        "budget_allocation_total": 3000,
+        "scheduled_minutes": 30,
+        "schedule_contiguous": true
+      },
+      "quality_notes": [
+        "Overall partial is an evidence/format caveat, not a demonstrated cast-state failure.",
+        "The one-page request is only partly met as a concise brief: six-plus sections, a schedule, a budget and recruitment copy remain dense. No page rendering was performed, so literal one-page fit is not observable.",
+        "Pilot planning is concrete, but puzzle content, answer keys, actual prices and staffing/date confirmation are not supplied. Fairly distinguish a plan from a fully produced kit.",
+        "Existing staff time is expressly excluded from cash allocations; a full-cost budget has not been validated."
+      ]
+    },
+    {
+      "case_id": "open-cast-en",
+      "turn": 1,
+      "overall": "pass",
+      "user_request": "Use this kit. Create my Quiet Rebels council with exactly Ada Lovelace, Marie Curie, Zaha Hadid, Frida Kahlo, and Hedy Lamarr. Help a small community library attract 18-year-olds who bring a friend. The pilot is 30 minutes, a USD 100 budget, two staff, no app and no paid advertising. Choose a method and start; do not make me brainstorm first.",
+      "response_sha256": "bd2539ed4021f6f9ef51bebabccdd9d662837c0cf1f4b7a382f41ee5b86ce02f",
+      "cast_observation": {
+        "explicit_named_personas": [
+          "Ada Lovelace",
+          "Marie Curie",
+          "Zaha Hadid",
+          "Frida Kahlo",
+          "Hedy Lamarr"
+        ],
+        "operation": "exact specified five in custom theme",
+        "explicit_persona_count": 5
+      },
+      "criteria": [
+        {
+          "expectation_number": 1,
+          "expectation": "Uses the custom theme and all five specified out-of-catalog figures",
+          "status": "pass",
+          "reason": "Uses Quiet Rebels and exactly the five specified names in proposal rows. Out-of-catalog classification is supplied by the frozen test, not independently rechecked against the missing attachment text.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "Quiet Rebels: bring a friend, change the library"
+            },
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "Ada Lovelace — design complementary rules."
+            },
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "Marie Curie — make curiosity testable."
+            },
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "Zaha Hadid — change how the room is used."
+            },
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "Frida Kahlo — protect personal expression."
+            },
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "Hedy Lamarr — create connections without technology."
+            }
+          ]
+        },
+        {
+          "expectation_number": 2,
+          "expectation": "No reduction to the starter three",
+          "status": "pass",
+          "reason": "All five requested members contribute; the three comparison rows are activity options, not a reduction to a three-person cast.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "The council’s first proposals"
+            },
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "Three directions, compared"
+            }
+          ]
+        },
+        {
+          "expectation_number": 3,
+          "expectation": "Distinct editorial jobs and at least two concrete cross-improvements",
+          "status": "pass",
+          "reason": "Distinct editorial jobs produce different mechanisms; four concrete cross-edits add folded hints/alternating handlers, replace pitches, offer nonpersonal prompts and limit collection search.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "Give each envelope a folded hint"
+            },
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "Replace pitches with anonymous cards"
+            },
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "Start with twelve displayed items"
+            }
+          ]
+        },
+        {
+          "expectation_number": 4,
+          "expectation": "Concrete recommendation with original constraints",
+          "status": "pass",
+          "reason": "Chooses Two Clues, One Library, then gives a complete 30-minute flow, two staff roles, USD 100 allocations and proposed free recruitment, without app or paid ads.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "Recommendation: **Two Clues, One Library**"
+            },
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "USD 100, two staff, no app, and no paid advertising"
+            },
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "A runnable first pilot"
+            }
+          ]
+        },
+        {
+          "expectation_number": 5,
+          "expectation": "No false claims of genuine attendance, endorsement or completed research",
+          "status": "pass",
+          "reason": "Explicit fictional-persona and untested-demand caveats; no completed outreach or research claim.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "not the real people, authentic quotations, or endorsements"
+            },
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "Attendance and local interest are untested."
+            },
+            {
+              "source": "open-cast-en.json#/turns/0/assistant",
+              "excerpt": "No outreach has been performed."
+            }
+          ]
+        }
+      ],
+      "mechanical_checks": {
+        "budget_allocation_total": 100,
+        "scheduled_minutes": 30,
+        "schedule_contiguous": true
+      },
+      "quality_notes": [
+        "Some early experiments/redesign pitches feel classroom-like; the next user turn explicitly requests a less-classroom mechanism. This is not an unmet turn-one expectation.",
+        "Long tables plus proposals, cross-edits and a full plan increase mobile scanning burden; not tested on a handset.",
+        "Three paired puzzles must still be authored. No user brainstorming homework is required before useful output."
+      ]
+    },
+    {
+      "case_id": "open-cast-en",
+      "turn": 2,
+      "overall": "pass",
+      "user_request": "Replace only Zaha Hadid with Jane Austen. Keep everyone else, the same topic and all constraints. Make the ideas less like a classroom assignment.",
+      "response_sha256": "3d501efe0a8c20314f824aff7fe81623bcc35c62b8eb53c3194a7e6ba2e9cf7d",
+      "cast_observation": {
+        "explicit_named_personas": [
+          "Jane Austen",
+          "Ada Lovelace",
+          "Marie Curie",
+          "Frida Kahlo",
+          "Hedy Lamarr"
+        ],
+        "operation": "replace only Zaha Hadid with Jane Austen",
+        "explicit_persona_count": 5
+      },
+      "criteria": [
+        {
+          "expectation_number": 1,
+          "expectation": "Replaces only the requested member, retaining exactly five",
+          "status": "pass",
+          "reason": "Precisely replaces Zaha with Jane while retaining the other four, and all five appear in the revision.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/1/assistant",
+              "excerpt": "Jane Austen replaces only Zaha Hadid."
+            },
+            {
+              "source": "open-cast-en.json#/turns/1/assistant",
+              "excerpt": "Ada Lovelace, Marie Curie, Frida Kahlo, and Hedy Lamarr remain."
+            }
+          ]
+        },
+        {
+          "expectation_number": 2,
+          "expectation": "Preserves the topic, USD 100, 30 minutes, two staff, no app and no paid ads",
+          "status": "pass",
+          "reason": "Restates every constraint and supports it with a 3/22/5-minute flow, two staff roles, USD 100 allocation and free channels.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/1/assistant",
+              "excerpt": "18-year-olds bringing a friend; 30 minutes; USD 100; two staff; no app or paid advertising."
+            }
+          ]
+        },
+        {
+          "expectation_number": 3,
+          "expectation": "Changes an actual mechanism rather than only a title",
+          "status": "pass",
+          "reason": "Substantively drops worksheets, required completion and rotations in favor of concealed-cover choices, free browsing and an optional bookmark corner; cross-edits address awkwardness rather than merely retitling.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/1/assistant",
+              "excerpt": "eliminate worksheets and presentations"
+            },
+            {
+              "source": "open-cast-en.json#/turns/1/assistant",
+              "excerpt": "No required route or finish line."
+            },
+            {
+              "source": "open-cast-en.json#/turns/1/assistant",
+              "excerpt": "one central book display and one optional bookmark corner"
+            },
+            {
+              "source": "open-cast-en.json#/turns/1/assistant",
+              "excerpt": "Revised pilot: one welcome, no rotations"
+            }
+          ]
+        },
+        {
+          "expectation_number": 4,
+          "expectation": "Does not restart discovery",
+          "status": "pass",
+          "reason": "Directly revises the previous activity and selects Blind-Date Books without restarting intake or requiring the user to supply ideas.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/1/assistant",
+              "excerpt": "Method: SCAMPER."
+            },
+            {
+              "source": "open-cast-en.json#/turns/1/assistant",
+              "excerpt": "Recommendation: **Blind-Date Books, Best-Friend Picks**"
+            }
+          ]
+        }
+      ],
+      "mechanical_checks": {
+        "budget_allocation_total": 100,
+        "scheduled_minutes": 30,
+        "schedule_contiguous": true
+      },
+      "quality_notes": [
+        "Response demonstrates lower task pressure, but whether local young adults actually prefer it is untested.",
+        "Length remains considerable for a cast-and-mechanism change; the answer still contains a full workshop and plan."
+      ]
+    },
+    {
+      "case_id": "open-cast-en",
+      "turn": 3,
+      "overall": "pass",
+      "user_request": "Now swap the whole cast to an Ocean Explorers group. Pick five new named people yourself. Keep the library topic and all constraints, and immediately show how this changes the proposed activity.",
+      "response_sha256": "ad34920b144227f84b4a6a6c10d04568afb8e4f1c85097ebdf0920b703952801",
+      "cast_observation": {
+        "explicit_named_personas": [
+          "Sylvia Earle",
+          "Jacques Cousteau",
+          "Marie Tharp",
+          "Tupaia",
+          "Matthew Henson"
+        ],
+        "operation": "replace entire previous five with five new names",
+        "explicit_persona_count": 5
+      },
+      "criteria": [
+        {
+          "expectation_number": 1,
+          "expectation": "Creates a second custom group rather than choosing a starter",
+          "status": "pass",
+          "reason": "Makes Ocean Explorers a new custom group, not a return to a starter selection menu.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/2/assistant",
+              "excerpt": "Ocean Explorers: a library for getting pleasantly lost"
+            },
+            {
+              "source": "open-cast-en.json#/turns/2/assistant",
+              "excerpt": "Entire cast replaced:"
+            }
+          ]
+        },
+        {
+          "expectation_number": 2,
+          "expectation": "Picks five new named people and differentiates their jobs",
+          "status": "pass",
+          "reason": "Names five new people, none retained from the preceding council, with distinct attention/reveal/connection/navigation/obstacle-removal jobs.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/2/assistant",
+              "excerpt": "Sylvia Earle, Jacques Cousteau, ocean cartographer Marie Tharp, navigator Tupaia, and explorer Matthew Henson."
+            },
+            {
+              "source": "open-cast-en.json#/turns/2/assistant",
+              "excerpt": "Five explorers, five different mechanisms"
+            }
+          ]
+        },
+        {
+          "expectation_number": 3,
+          "expectation": "Preserves the topic and constraints",
+          "status": "pass",
+          "reason": "Keeps the library, 18-year-old friend audience and all time/money/staff/app/advertising constraints; also preserves the previous low-classroom-pressure request.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/2/assistant",
+              "excerpt": "30-minute pilot, USD 100, two staff, no app, and no paid advertising"
+            },
+            {
+              "source": "open-cast-en.json#/turns/2/assistant",
+              "excerpt": "Still a relaxed hangout—not a classroom exercise."
+            }
+          ]
+        },
+        {
+          "expectation_number": 4,
+          "expectation": "Shows actual concept changes and cross-improvement",
+          "status": "pass",
+          "reason": "Immediately contrasts concealed book picks with linked discoveries, three clusters, optional reveals and seating. Four cross-edits reduce branches, add seating, remove enforced turns and replace competitive wording.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/2/assistant",
+              "excerpt": "Before:** Friends choose concealed books for each other."
+            },
+            {
+              "source": "open-cast-en.json#/turns/2/assistant",
+              "excerpt": "replace the single book reveal with branching discoveries"
+            },
+            {
+              "source": "open-cast-en.json#/turns/2/assistant",
+              "excerpt": "Limit each reveal to **one nearby suggestion**"
+            },
+            {
+              "source": "open-cast-en.json#/turns/2/assistant",
+              "excerpt": "Show your friend one detail you like."
+            }
+          ]
+        }
+      ],
+      "mechanical_checks": {
+        "budget_allocation_total": 100,
+        "scheduled_minutes": 30,
+        "schedule_contiguous": true
+      },
+      "quality_notes": [
+        "There is a real interaction/layout change, though it remains a browsing-based hangout; this is not evidence of a wholly new activity category.",
+        "The editorial metaphor is not nautical-trivia expertise and does not require biographical authenticity. No cultural sayings are fabricated.",
+        "Detailed mechanism/shape/challenge/voice labels add substantial length; simpler output is requested next."
+      ]
+    },
+    {
+      "case_id": "open-cast-en",
+      "turn": 4,
+      "overall": "pass",
+      "user_request": "You decide. Keep this cast and give me the simplest pilot we can run.",
+      "response_sha256": "b63457c6d71f2d800331d02314361fb0fee2c1aba664dbc5531c9f73fbe08464",
+      "cast_observation": {
+        "explicit_named_personas": [
+          "Sylvia Earle",
+          "Jacques Cousteau",
+          "Marie Tharp",
+          "Tupaia",
+          "Matthew Henson"
+        ],
+        "operation": "retain current five while simplifying implementation",
+        "explicit_persona_count": 5
+      },
+      "criteria": [
+        {
+          "expectation_number": 1,
+          "expectation": "Retains current Ocean Explorers rather than resetting to a starter",
+          "status": "pass",
+          "reason": "Explicitly names the same five Ocean Explorers and ties each to a contribution. No reset is visible.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/3/assistant",
+              "excerpt": "Keep the Ocean Explorers cast: **Sylvia Earle, Jacques Cousteau, Marie Tharp, Tupaia, and Matthew Henson**."
+            },
+            {
+              "source": "open-cast-en.json#/turns/3/assistant",
+              "excerpt": "The cast’s contribution stays recognizable:"
+            }
+          ]
+        },
+        {
+          "expectation_number": 2,
+          "expectation": "Makes and develops a recommendation without another interview",
+          "status": "pass",
+          "reason": "Makes a clear decision and removes optional complexities without another interview. Simplest is judged relative to its earlier version, not proven globally optimal.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/3/assistant",
+              "excerpt": "Decision: run **Drift Together—One Table, Two Friends**"
+            },
+            {
+              "source": "open-cast-en.json#/turns/3/assistant",
+              "excerpt": "No flaps, maps, stations, crafts, puzzles, or scheduled rotations."
+            }
+          ]
+        },
+        {
+          "expectation_number": 3,
+          "expectation": "Provides a practical 30-minute USD 100 pilot for two staff without an app or paid ads",
+          "status": "pass",
+          "reason": "Eight existing items, one sign, seats, concrete staff roles and contiguous 30-minute schedule; planned spend USD 20 with USD 80 unspent within the USD 100 ceiling; free recruitment only, no app.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/3/assistant",
+              "excerpt": "eight books or other borrowable items"
+            },
+            {
+              "source": "open-cast-en.json#/turns/3/assistant",
+              "excerpt": "Planned maximum spend"
+            },
+            {
+              "source": "open-cast-en.json#/turns/3/assistant",
+              "excerpt": "Unspent contingency within the $100 ceiling"
+            },
+            {
+              "source": "open-cast-en.json#/turns/3/assistant",
+              "excerpt": "No new platform or paid promotion is needed."
+            }
+          ]
+        },
+        {
+          "expectation_number": 4,
+          "expectation": "Clearly separates proposals and assumptions from measured outcomes",
+          "status": "pass",
+          "reason": "Clearly labels proposed capacity, local costs, unconfirmed staffing/date and future measurement. No successful event or demand validation is asserted.",
+          "evidence": [
+            {
+              "source": "open-cast-en.json#/turns/3/assistant",
+              "excerpt": "planning estimates, not verified local prices"
+            },
+            {
+              "source": "open-cast-en.json#/turns/3/assistant",
+              "excerpt": "staffing assignments and the event date remain unconfirmed"
+            },
+            {
+              "source": "open-cast-en.json#/turns/3/assistant",
+              "excerpt": "One small session cannot establish overall demand."
+            }
+          ]
+        }
+      ],
+      "mechanical_checks": {
+        "budget_allocation_total": 100,
+        "scheduled_minutes": 30,
+        "schedule_contiguous": true
+      },
+      "quality_notes": [
+        "Operationally simpler and needs no puzzle production, but invitation appeal and attendance remain untested.",
+        "Still a multi-section answer, not a mobile usability test. There was no explicit one-page constraint in this English turn.",
+        "Existing collection, furniture, printing access and staff availability are assumptions, not verified resources."
+      ]
+    }
+  ],
+  "cross_cutting_findings": [
+    {
+      "topic": "custom themes and roster operations",
+      "status": "pass",
+      "reason": "Visible custom Ocean Explorers and Quiet Rebels groups avoid a mandatory four-group menu. Chinese changes visibly perform full replacement to exactly two, then addition to five; English changes visibly perform one-member replacement, then whole-cast replacement to five. Generic moderator, staff and participant jobs are not counted as extra personas.",
+      "references": [
+        "open-cast-zh.json#/turns/0/assistant",
+        "open-cast-zh.json#/turns/1/assistant",
+        "open-cast-zh.json#/turns/2/assistant",
+        "open-cast-en.json#/turns/1/assistant",
+        "open-cast-en.json#/turns/2/assistant"
+      ]
+    },
+    {
+      "topic": "constraint continuity",
+      "status": "pass",
+      "reason": "All eight recorded plans preserve the library and 18-year-old friend audience, a 30-minute schedule, the applicable currency ceiling, two staff and no app. English also preserves no paid advertising. Chinese never requested an added no-paid-advertising rule; do not invent that requirement. Arithmetic and interval continuity checked, not actual purchasing or workforce feasibility.",
+      "references": [
+        "open-cast-zh.json",
+        "open-cast-en.json"
+      ]
+    },
+    {
+      "topic": "substantive collaboration",
+      "status": "pass",
+      "reason": "Early rounds contain concrete changes to others’ mechanisms, not just praise or separate speeches. Final turns synthesize and simplify instead of replaying every member; this is appropriate to the practical-plan request.",
+      "references": [
+        "open-cast-zh.json#/turns/2/assistant",
+        "open-cast-en.json#/turns/2/assistant"
+      ]
+    },
+    {
+      "topic": "no idea-homework gate",
+      "status": "pass",
+      "reason": "Useful ideas and decisions precede optional Continue controls. Staff pretesting, choosing local books and confirming logistics are ordinary execution tasks, not a demand that the user brainstorm before help is provided. Chinese final plan still leaves actual puzzle production to preparation.",
+      "references": [
+        "open-cast-zh.json#/turns/0/assistant",
+        "open-cast-zh.json#/turns/3/assistant",
+        "open-cast-en.json#/turns/3/assistant"
+      ]
+    },
+    {
+      "topic": "fictional viewpoints versus impersonation or execution",
+      "status": "pass",
+      "reason": "Conversation-level framing identifies fictional editorial roles, not authentic speech/endorsement. Recorded responses do not claim real people attended, that outreach or events happened, or that local prices/demand were verified. Historical roles and cultural authenticity were not fact-checked in this text-only review.",
+      "references": [
+        "open-cast-zh.json#/turns/0/assistant",
+        "open-cast-zh.json#/turns/2/assistant",
+        "open-cast-en.json#/turns/0/assistant",
+        "open-cast-en.json#/turns/3/assistant"
+      ]
+    },
+    {
+      "topic": "mobile scanning and literal one-page fit",
+      "status": "partial",
+      "reason": "Multi-stage workshop output is long; headings/tables help but repeat proposals, comparison and full plan. Chinese final output remains dense despite a one-page request. This is qualitative editorial feedback; device usability and actual pagination are not observable without rendering.",
+      "references": [
+        "open-cast-zh.json#/turns/3/assistant",
+        "open-cast-en.json#/turns/0/assistant"
+      ]
+    },
+    {
+      "topic": "Chinese final exact cast retention",
+      "status": "not-observable",
+      "reason": "The final answer explicitly acknowledges five-person co-creation and continues earlier mechanics but does not list current names. No reset is shown. Do not infer hidden role state, penalize missing introductions as certain failure, or claim all five names were visibly retained.",
+      "references": [
+        "open-cast-zh.json#/turns/3/assistant"
+      ]
+    },
+    {
+      "topic": "real-world readiness and acceptance",
+      "status": "not-observable",
+      "reason": "No actual pilot, human acceptance, device test, paid/unpaid outreach execution or ChatGPT website attachment activation was performed. Chinese pilot needs puzzle assets; both pilots need local staffing/date/resource confirmation. Do not claim the small sample establishes demand or universal behavior.",
+      "references": [
+        "open-cast-zh.json#/turns/3/assistant",
+        "open-cast-en.json#/turns/3/assistant"
+      ]
+    }
+  ],
+  "recommended_follow_up": [
+    "If one-page delivery matters, evaluate a fixed rendered page and a phone-sized viewport; do not equate a heading saying one-page with verified fit.",
+    "If exact final roster observability is required, test a compact five-name continuity line rather than demanding repeated biographies or a fresh workshop.",
+    "Evaluate the authored Chinese puzzle materials separately before describing the plan as print-ready.",
+    "Run actual target-user acceptance and native website attachment tests separately; retain real outputs and do not conflate these with this recorded API-style trial."
+  ],
+  "artifact_paths": {
+    "assessment": "assessment.json",
+    "bilingual_review": "review/review.zh-en.md"
+  },
+  "reviewer_type": "Separate AI review task; not a human acceptance study or blind human rating"
+}

@@ -2,11 +2,15 @@
 
 **Keep historical references separate from fictional role design.** Every persona is a fictional workshop perspective written for this project, not the real person's statements, a personality assessment, a historical conclusion, or an endorsed digital counterpart. Names, limited background references, and fictional capabilities are stored in separate fields. Neither the people referenced nor their estates, associated organizations, or brands are presented as endorsing the project or its proposals.
 
-Start with three personas by default. Replace members or fill the remaining slots when the user names a preferred cast. The catalog is a starting point, not a limit on whom users may request. If a requested person cannot be verified, label the perspective as unverified fiction; do not invent a biography.
+Start with three personas only when no size or lineup is specified. Preserve a complete requested lineup; add people only when the user delegates filling the team. The catalog is a starting point, not a limit on whom users may request. If a requested person cannot be verified, label the perspective as unverified fiction; do not invent a biography.
 
-## Four Ways In
+## OPEN_CAST: create your own group
 
-- **Across the Ages**: Qin Shi Huang, Yang Guifei, and David Bowie. Shared rules, memorable experiences, and identity-led narratives complement one another. The default trio when no preference is given.
+Ask for “Ocean Explorers,” “five architects,” or “only Yang Guifei and Qin Shi Huang.” The four casts and nine profiles are starting examples, not category or cast-size limits. A swap retains the topic and constraints. See the [facilitator protocol](../FACILITATOR.md).
+
+## Four starting examples
+
+- **Across the Ages**: Qin Shi Huang, Yang Guifei, and David Bowie. Shared rules, memorable experiences, and identity-led narratives complement one another. An optional example rather than the fallback for every topic.
 - **Rock Legends**: David Bowie, Freddie Mercury, and Joan Jett. Breaking conventions, crowd participation, and low-cost pilots. The name is not a current chart or a factual popularity ranking.
 - **The Glamour Council**: Yang Guifei, Cleopatra VII, and Coco Chanel. Sensory experience, reciprocal alliances, and precise simplification. This is not a beauty ranking, and the personas' capabilities are not reduced to appearance.
 - **The Ruthless Strategists**: Qin Shi Huang, Genghis Khan, and Napoleon. Sharp resource trade-offs, distributed expansion, and stress-testing. The name does not praise cruelty; never produce plans based on violence or coercion.
@@ -26,7 +30,7 @@ On first use, give a brief notice: "These are AI-generated fictional personas co
 Users can express the next step in ordinary English, for example:
 
 - **Continue**: build on the current exchange.
-- **Swap cast**: ask for a different trio.
+- **Swap cast**: request any new theme or lineup, retaining the topic and constraints.
 - **Swap member**: ask to replace one persona.
 - **Bolder**: ask for a more adventurous idea, within the same safety boundaries.
 - **More practical**: ask for a more workable version.

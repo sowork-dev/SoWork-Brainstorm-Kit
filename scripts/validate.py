@@ -73,14 +73,15 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(len(lenses), len(set(lenses)))
         self.assertIn('歷史事實與角色設定分開', (ROOT / 'personas/README.md').read_text())
 
-    def test_four_user_requested_packs_resolve(self):
+    def test_required_starter_packs_resolve_without_closing_the_catalog(self):
         packs = json.loads((ROOT / 'personas/packs.json').read_text())
         people = json.loads((ROOT / 'personas/catalog.json').read_text())
         ids = {p['id'] for p in people}
-        self.assertEqual([p['name'] for p in packs], ['古今綜合組', '熱門搖滾組', '美美女組', '殘暴組'])
+        self.assertTrue({'古今綜合組', '熱門搖滾組', '美美女組', '殘暴組'} <= {p['name'] for p in packs})
+        self.assertEqual(len({p['id'] for p in packs}), len(packs))
         for pack in packs:
-            self.assertEqual(len(pack['members']), 3)
-            self.assertEqual(len(set(pack['members'])), 3)
+            self.assertGreaterEqual(len(pack['members']), 1)
+            self.assertEqual(len(set(pack['members'])), len(pack['members']))
             self.assertTrue(set(pack['members']) <= ids)
         self.assertTrue({'楊貴妃', '秦始皇'} <= {p['name'] for p in people})
 

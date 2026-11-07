@@ -1,5 +1,7 @@
 # Public-launch review | 公開前調整清單
 
+> Historical v0.3.0 review. The repository has since been renamed **SoWork-Brainstorm-Kit**. See the [v0.4.0 open-cast trial record](../tests/OPEN-CAST-TRIALS.zh-en.md) for new model evidence. Prior findings and the 60-file frozen baseline are preserved. / 本文為v0.3.0歷史檢查；新命名與實測另見連結，不回寫原稽核。
+
 **Review baseline / 稽核基準：** v0.2.0, commit `81d8720c9a6258a42ad86deb5dd59ad501531176`.
 
 **Coverage / 範圍：** All 60 tracked baseline files were inspected and their hashes independently matched. This includes the complete generated text pack, all 31 method cards, nine persona profiles, four casts, templates, examples, build/validation code, and repository policies. The sanitized [per-file record](reviewed-files.json) retains paths, hashes, line ranges and findings. / 已逐檔檢查基準版全部 60 個追蹤檔案，並獨立核對雜湊；不是只看 README。逐檔紀錄保留相對路徑、雜湊、行號與發現，不包含本機操作資訊。

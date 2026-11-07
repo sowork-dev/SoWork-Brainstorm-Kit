@@ -10,7 +10,7 @@ You do not need Python, a Git checkout, an API key, or a native plugin to try th
 
 ## Replacing an older version
 
-v0.1.0 used a human-practice flow. v0.2.0 introduced AI-led persona councils. v0.3.0 adds parallel English and Traditional Chinese editions and a launch review.
+v0.1.0 used a human-practice flow. v0.2.0 introduced AI-led persona councils. v0.3.0 added parallel English and Traditional Chinese editions and a launch review. v0.4.0 renames the kit to SoWork-Brainstorm-Kit, clarifies open themes/exact lineups, and adds recorded model trials.
 
 An old attachment will not update when the repository changes. Download the new file and use a fresh conversation or explicitly replace old instructions. Do not mix two complete runtime language packs unless you intentionally want bilingual output.
 

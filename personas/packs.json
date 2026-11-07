@@ -4,16 +4,14 @@
     "name": "古今綜合組",
     "aliases": [
       "古今組",
-      "綜合組",
-      "自動",
-      "你選"
+      "綜合組"
     ],
     "members": [
       "qin-shi-huang",
       "yang-guifei",
       "david-bowie"
     ],
-    "purpose": "規則、體驗與身份敘事互相補位；沒有偏好時的預設組合。"
+    "purpose": "規則、體驗與身份敘事互相補位；僅為可選起點，並非所有題目的預設組。"
   },
   {
     "id": "rock",

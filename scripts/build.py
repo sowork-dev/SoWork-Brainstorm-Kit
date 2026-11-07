@@ -10,7 +10,7 @@ from urllib.parse import quote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 LANGUAGES = ('zh-TW', 'en')
-SOURCE_REPOSITORY = 'https://github.com/contentincubator2-ops/cj-brainstorm-kit'
+SOURCE_REPOSITORY = 'https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit'
 
 
 def pin_relative_links(text, source_path, version, root=ROOT):
@@ -73,7 +73,7 @@ def render_bundle(root=ROOT, language='zh-TW'):
         license_heading = '# 授權待決聲明｜公開試用稿；未新增再散布或商用授權'
         closing = '## 最後提醒\n以 LAZY_COUNCIL 為預設，方法卡的人類作業措辭只適用 TEACHING；不要退回要求用戶先列五至十個點子。有題目就用角色提案、交叉接球並整合，最後讓用戶輕鬆選擇。'
     parts = [
-        f'# CJ Brainstorm Kit | v{version} preview | {language}',
+        f'# SoWork-Brainstorm-Kit | v{version} preview | {language}',
         *opening,
         include(locale / 'FACILITATOR.md'),
         include(locale / 'personas/README.md'),

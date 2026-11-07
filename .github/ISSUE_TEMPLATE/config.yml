@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Start here and FAQ / 開始使用與常見問題
+    url: https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit#faq
+    about: Downloads, arbitrary casts, model limits, and license status. / 下載、自由組團、模型限制與授權現況。
+  - name: Security and privacy policy / 安全與隱私政策
+    url: https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/main/SECURITY.md
+    about: Read before reporting sensitive material. Never disclose secrets publicly. / 通報敏感內容前先閱讀，不要公開機密。

@@ -1,0 +1,2 @@
+# Preserve actual model text verbatim, including Markdown hard-break spaces.
+examples/test-runs/open-cast-*.md whitespace=-blank-at-eol

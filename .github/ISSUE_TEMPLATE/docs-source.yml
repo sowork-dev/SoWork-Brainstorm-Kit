@@ -1,0 +1,36 @@
+name: Translation or source correction / 翻譯與來源更正
+description: Help preserve meaning, attribution, and evidence boundaries. / 協助維持語意、來源與證據邊界。
+title: "[Docs] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        English or 繁體中文 is welcome. Link a public primary source where possible; summarize instead of copying long passages.
+        歡迎中英文。盡量附第一方公開來源，以摘要代替大量引用。
+        Do not upload private documents, account data, credentials, or paywall bypass material. / 不上傳私人文件、帳號資料、帳密或繞過付費牆的內容。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Safe to publish / 可公開確認
+      options:
+        - label: This correction uses only public or synthetic information and contains no secrets or private data. / 更正只用公開或虛構資訊，無機密或私人資料。
+          required: true
+  - type: input
+    id: location
+    attributes:
+      label: File and stable ID, if any / 檔案與穩定 ID（若有）
+      placeholder: "For example: locales/en/methods/B11.md / 例如：methods/B11.md"
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Current meaning and proposed correction / 現況與建議更正
+      description: Explain any effect on the language counterpart, constraints, or evidence status. / 說明另一語言、限制或證據狀態是否也需修改。
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Public source and rights notes / 公開來源與權利說明
+      description: Public URLs only. State unknowns; a source reference is not permission to copy its full text. / 只放公開網址；未知就說未知，附來源不代表獲准複製全文。

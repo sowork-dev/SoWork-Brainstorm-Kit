@@ -1,6 +1,8 @@
 # 暫停狀態
 
 - 模式（預設 LAZY_COUNCIL／明確選用 TEACHING）：
+- 自訂組別（custom_theme）：
+- 完整指定名單（explicit_members）與人數（cast_size）：
 - 角色組合、具名人選與各自虛構任務：
 - 已確認的題目與目的：
 - 參與方式與限制：

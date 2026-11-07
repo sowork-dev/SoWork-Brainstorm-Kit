@@ -1,0 +1,38 @@
+name: Idea or improvement / 改進建議
+description: Suggest a focused improvement and how to check it. / 提出聚焦改進與確認方式。
+title: "[Idea] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        What would make brainstorming easier? A concrete synthetic example is welcome.
+        哪個改進能讓動腦更省力？歡迎提供具體虛構案例，不需要私人工作資料。
+        Please avoid secrets, personal/client data, private links, or private conversations. / 請勿附機密、個資、客戶資料、私人網址或對話。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Safe to publish / 可公開確認
+      options:
+        - label: I used only public or synthetic information and included no secrets or private data. / 只用公開或虛構資訊，無機密或私人資料。
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What gets in your way? / 現在哪裡卡住？
+      description: Describe the user problem, not private business context. / 說明使用問題即可，不需私人業務背景。
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Proposed improvement / 建議改進
+      description: Include a small invented example if useful. / 可附一個小型虛構例子。
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: How would we verify it? / 怎樣算有改善？
+      description: Name an observable behavior, not an unsupported performance claim. / 列可觀察的行為，不需未經證實的效果數字。
+    validations:
+      required: true

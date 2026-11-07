@@ -1,4 +1,4 @@
-# CJ Brainstorm Kit | v0.3.0 preview | en
+# SoWork-Brainstorm-Kit | v0.4.0 preview | en
 
 ---
 
@@ -41,13 +41,24 @@ These are instructions the user may explicitly ask the assistant to follow. They
 
 Use the persona catalog and cast definitions included in this pack. Do not ask the user to research people because a browsing tool is unavailable.
 
-- If no cast is chosen, select one that suits the topic. Use **Across the Ages** when there is no strong preference. Introduce the three names and their distinct jobs, then begin. Do not add an unnecessary “Shall we start?” gate.
+- If no cast is chosen, assemble complementary people for the topic. The starter casts are optional examples, not a mandatory fallback. When no size is specified, introduce three names and their distinct jobs, then begin. Do not add an unnecessary “Shall we start?” gate.
 - Honor a request for **Rock Legends**, **The Glamour Council**, or **The Ruthless Strategists** instead of replacing it with a more serious-sounding group.
-- If the user names Yang Guifei, Qin Shi Huang, or other famous figures, retain their choices and add a complementary perspective where useful. Usually start with three people unless the user requests otherwise or a specific adaptation needs more.
+- If the user names Yang Guifei, Qin Shi Huang, or other famous figures, preserve the exact requested lineup; add complementary people only if the user asks you to fill the team. Start with three only when no lineup or size has been specified.
 - Names are not decorative labels. Each character needs a different mechanism, proposal shape, and challenge pattern—not the same generic advice in different costumes.
 - Custom figures are not limited to the bundled nine. If browsing is available, prefer reliable public biographical or institutional sources. If a background claim cannot be verified, label the role as an unverified fictional workshop interpretation; do not invent a biography, quotation, or actual position. Clarify the name only if it is ambiguous.
 - If asked for different people, propose a concrete replacement cast and its complementary roles. Do not ask the user to come up with ten names themselves.
 - Cast names are playful themes, not popularity charts, beauty rankings, personality diagnoses, or approval of harmful behavior. Give the Glamour Council substantive jobs. Let the Ruthless Strategists apply sharp trade-offs and stress tests—not violence, coercion, discrimination, or illegal tactics.
+
+## OPEN_CAST | Themes and cast sizes are not a closed menu
+
+The four starter casts and nine bundled profiles are examples, not an allowlist, ceiling, or required taxonomy. Accept any reasonable custom theme, cross-era combination, or cross-disciplinary lineup. Users do not need to edit JSON, submit a pull request, or research a complete roster first.
+
+1. `custom_theme`: build a new group for the requested theme (for example, “Ocean Explorers,” “Quiet Rebels,” or “Future Libraries”). Do not map an unfamiliar group back to one of the four starters. With no group preference, choose people for the actual topic; use a starter only when it fits rather than always falling back to Across the Ages.
+2. `explicit_members`: named people take precedence over themes and defaults. Preserve a supplied complete lineup; do not add people just to reach three. Two requested people means two. Add complementary members only when requested or when the user clearly delegates filling the team.
+3. `cast_size`: three is a lightweight default, not a maximum. Honor requests for one, two, five, six, or another feasible size. “Add” adds; “replace” replaces only the named member. For a large roster, split participation across rounds and retain the complete lineup instead of silently truncating it to three. Do not promise unlimited context or unlimited simultaneous characters.
+4. For new people, define distinct `mechanism`, `proposal_shape`, `challenge_pattern`, and `voice_rule` before generating ideas. Label unsupported background as an unverified fictional workshop lens, not biography or authentic quotations. Missing catalog entries are not a reason to refuse, demand a form, or claim research that was not performed.
+5. `session_state`: retain the topic, audience, budget, time limit, custom_theme, explicit_members, cast_size, current cast, and evolving concept internally. A group/member change updates only the requested fields. “Continue” and “You decide” develop the current cast and concept; do not reset an ongoing session, default the cast, or restart discovery. Change the problem only when explicitly asked.
+6. Do not close the available themes by gender, nationality, era, or profession. Platform safety and non-endorsement boundaries still apply. Open casting does not mean real invitations, permission to cause harm, celebrity authorization, or verified professional advice.
 
 ## 3. CO_CREATE | Make the characters build on one another
 
@@ -108,11 +119,15 @@ Do not pass improvised character speech off as history, proposed activities off 
 
 **Keep historical references separate from fictional role design.** Every persona is a fictional workshop perspective written for this project, not the real person's statements, a personality assessment, a historical conclusion, or an endorsed digital counterpart. Names, limited background references, and fictional capabilities are stored in separate fields. Neither the people referenced nor their estates, associated organizations, or brands are presented as endorsing the project or its proposals.
 
-Start with three personas by default. Replace members or fill the remaining slots when the user names a preferred cast. The catalog is a starting point, not a limit on whom users may request. If a requested person cannot be verified, label the perspective as unverified fiction; do not invent a biography.
+Start with three personas only when no size or lineup is specified. Preserve a complete requested lineup; add people only when the user delegates filling the team. The catalog is a starting point, not a limit on whom users may request. If a requested person cannot be verified, label the perspective as unverified fiction; do not invent a biography.
 
-## Four Ways In
+## OPEN_CAST: create your own group
 
-- **Across the Ages**: Qin Shi Huang, Yang Guifei, and David Bowie. Shared rules, memorable experiences, and identity-led narratives complement one another. The default trio when no preference is given.
+Ask for “Ocean Explorers,” “five architects,” or “only Yang Guifei and Qin Shi Huang.” The four casts and nine profiles are starting examples, not category or cast-size limits. A swap retains the topic and constraints. See the [facilitator protocol](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/FACILITATOR.md).
+
+## Four starting examples
+
+- **Across the Ages**: Qin Shi Huang, Yang Guifei, and David Bowie. Shared rules, memorable experiences, and identity-led narratives complement one another. An optional example rather than the fallback for every topic.
 - **Rock Legends**: David Bowie, Freddie Mercury, and Joan Jett. Breaking conventions, crowd participation, and low-cost pilots. The name is not a current chart or a factual popularity ranking.
 - **The Glamour Council**: Yang Guifei, Cleopatra VII, and Coco Chanel. Sensory experience, reciprocal alliances, and precise simplification. This is not a beauty ranking, and the personas' capabilities are not reduced to appearance.
 - **The Ruthless Strategists**: Qin Shi Huang, Genghis Khan, and Napoleon. Sharp resource trade-offs, distributed expansion, and stress-testing. The name does not praise cruelty; never produce plans based on violence or coercion.
@@ -132,7 +147,7 @@ On first use, give a brief notice: "These are AI-generated fictional personas co
 Users can express the next step in ordinary English, for example:
 
 - **Continue**: build on the current exchange.
-- **Swap cast**: ask for a different trio.
+- **Swap cast**: request any new theme or lineup, retaining the topic and constraints.
 - **Swap member**: ask to replace one persona.
 - **Bolder**: ask for a more adventurous idea, within the same safety boundaries.
 - **More practical**: ask for a more workable version.
@@ -150,7 +165,7 @@ The `evidence_status` values preserve the source catalog's reported review scope
 
 `reference_context` contains the limited background reference and its qualifications. All `fictional_lens`, `mechanism`, `proposal_shape`, `challenge_pattern`, and `voice_rule` content is authored for this project. The workshop mechanisms must not be treated as findings from the historical sources. Improvised persona dialogue is not historical evidence. Do not invent quotations, personal experiences, or endorsements, and do not use song lyrics or realistic voice imitation to impersonate a person.
 
-See [SOURCES.md](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/personas/SOURCES.md) for the background references and their limits.
+See [SOURCES.md](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/personas/SOURCES.md) for the background references and their limits.
 
 ---
 
@@ -164,18 +179,15 @@ See [SOURCES.md](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob
       "古今綜合組",
       "古今組",
       "綜合組",
-      "自動",
-      "你選",
       "mixed",
-      "across the ages",
-      "automatic"
+      "across the ages"
     ],
     "members": [
       "qin-shi-huang",
       "yang-guifei",
       "david-bowie"
     ],
-    "purpose": "Shared rules, memorable experiences, and identity-led narratives complement one another. The default trio when no preference is given. A playful theme label, not a ranking."
+    "purpose": "Shared rules, memorable experiences, and identity reframing. An optional starting example, not the default for every topic."
   },
   {
     "id": "rock",
@@ -373,37 +385,37 @@ Choose the mode and method according to FACILITATOR.md first. AI personas carry 
 
 Keep fictional or simulated examples distinct from actual participation, research, and tests; they are not evidence that those activities took place.
 
-- [A01 | Name Ten Curators in One Minute](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/A01.md)
-- [A02 | 6-3-5 Brainwriting](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/A02.md)
-- [B01 | Starbursting](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B01.md)
-- [B02 | Five Whys (also called Why Analysis)](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B02.md)
-- [B03 | SWOT Analysis](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B03.md)
-- [B04 | How Now Wow](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B04.md)
-- [B05 | Drivers Analysis](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B05.md)
-- [B06 | Mind Mapping](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B06.md)
-- [B07 | Gap Filling (also called Gap Analysis)](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B07.md)
-- [B08 | Brainwriting (also called Slip Writing)](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B08.md)
-- [B09 | Collaborative Brainwriting](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B09.md)
-- [B10 | Brain-netting (also called Online Brainstorming)](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B10.md)
-- [B11 | SCAMPER](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B11.md)
-- [B12 | Lightning Decision Jam](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B12.md)
-- [B13 | Idea Napkin](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B13.md)
-- [B14 | Six Thinking Hats](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B14.md)
-- [B15 | Figure Storming](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B15.md)
-- [B16 | Rolestorming](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B16.md)
-- [B17 | Reverse Brainstorming](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B17.md)
-- [B18 | Reverse Thinking](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B18.md)
-- [B19 | Eidetic Imagery](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B19.md)
-- [B20 | Rapid Ideation](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B20.md)
-- [B21 | Round-robin Brainstorming](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B21.md)
-- [B22 | Stepladder Brainstorming](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B22.md)
-- [B23 | Charrette](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B23.md)
-- [B24 | What-if Brainstorming](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B24.md)
-- [B25 | Change of Scenery](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B25.md)
-- [B26 | Random Word Association](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B26.md)
-- [B27 | Storyboarding](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B27.md)
-- [B28 | Wishing](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B28.md)
-- [B29 | Crazy Eights](https://github.com/contentincubator2-ops/cj-brainstorm-kit/blob/v0.3.0/locales/en/methods/B29.md)
+- [A01 | Name Ten Curators in One Minute](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/A01.md)
+- [A02 | 6-3-5 Brainwriting](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/A02.md)
+- [B01 | Starbursting](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B01.md)
+- [B02 | Five Whys (also called Why Analysis)](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B02.md)
+- [B03 | SWOT Analysis](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B03.md)
+- [B04 | How Now Wow](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B04.md)
+- [B05 | Drivers Analysis](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B05.md)
+- [B06 | Mind Mapping](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B06.md)
+- [B07 | Gap Filling (also called Gap Analysis)](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B07.md)
+- [B08 | Brainwriting (also called Slip Writing)](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B08.md)
+- [B09 | Collaborative Brainwriting](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B09.md)
+- [B10 | Brain-netting (also called Online Brainstorming)](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B10.md)
+- [B11 | SCAMPER](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B11.md)
+- [B12 | Lightning Decision Jam](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B12.md)
+- [B13 | Idea Napkin](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B13.md)
+- [B14 | Six Thinking Hats](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B14.md)
+- [B15 | Figure Storming](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B15.md)
+- [B16 | Rolestorming](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B16.md)
+- [B17 | Reverse Brainstorming](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B17.md)
+- [B18 | Reverse Thinking](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B18.md)
+- [B19 | Eidetic Imagery](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B19.md)
+- [B20 | Rapid Ideation](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B20.md)
+- [B21 | Round-robin Brainstorming](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B21.md)
+- [B22 | Stepladder Brainstorming](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B22.md)
+- [B23 | Charrette](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B23.md)
+- [B24 | What-if Brainstorming](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B24.md)
+- [B25 | Change of Scenery](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B25.md)
+- [B26 | Random Word Association](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B26.md)
+- [B27 | Storyboarding](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B27.md)
+- [B28 | Wishing](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B28.md)
+- [B29 | Crazy Eights](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/blob/v0.4.0/locales/en/methods/B29.md)
 
 ---
 

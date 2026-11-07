@@ -2,6 +2,13 @@
 
 **English · [繁體中文](CHANGELOG.zh-TW.md)**
 
+## v0.4.0 — SoWork naming, open casts, recorded model trials
+
+- Renamed the repository to **SoWork-Brainstorm-Kit**, with refreshed bilingual landing pages and community contribution entrypoints.
+- OPEN_CAST makes starter groups optional, preserves exact requested lineups, supports custom themes and feasible requested cast sizes, and retains the topic/constraints across swaps. Removed automatic-selection aliases that forced the mixed starter cast.
+- Added frozen scripted trials, a replay runner, full English/Chinese actual model transcripts, reported usage/latency and pack hashes. These eight responses came from GPT-6.1-sol through the Hermes provider adapter, not the ChatGPT website.
+- Added explicit static open-cast contract checks and evaluation limitations. ChatGPT web acceptance and a project-wide reuse license remain pending.
+
 ## v0.3.0 — Parallel languages and launch review
 
 - English landing page with a Traditional Chinese counterpart; complete English facilitator, persona, method, example, and template sources.
