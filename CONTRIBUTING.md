@@ -1,8 +1,12 @@
-# 貢獻方式
+# Contributing
 
-- 方法來源請附可核對的官方或公開出處，說明是原法還是改編。
-- 不貼客戶、學員、參與者姓名、私有文件、真實會議逐字稿或憑證。
-- 新增方法卡時填開場、步驟、追問、收斂、輸出及 AI 能力邊界，並維護 catalog。
-- 不把虛構示範寫成真實實測；測試請註明平台、模型、版本與實際可證明的結論。
-- 修改後執行 `python3 scripts/build.py` 與 `python3 scripts/validate.py`。通過這些檢查仍不等於模型主持品質通過。
-- 授權尚待原作者決定；貢獻前先說明素材來源與可使用範圍，不自行變更第三方材料授權。
+**English · [繁體中文](CONTRIBUTING.zh-TW.md)**
+
+- Cite a verifiable official or public source for methods. Distinguish the original method from an adaptation.
+- Do not submit client or participant identities, private documents, real workshop transcripts, or credentials.
+- Keep stable method and persona IDs across English and Traditional Chinese. Translate meaning, constraints, evidence status, and caveats—not just headings. Preserve source URLs.
+- A method card needs an opening, process, follow-up, convergence/output, and truthful AI/human boundaries. Update the corresponding catalog and language counterpart.
+- Keep LAZY_COUNCIL the default. Human exercises must remain explicit opt-in; an ordinary user must not need to supply an idea list first.
+- Fictional demonstrations are not test evidence. Actual testing must identify the platform, source version, entry route, task, and real outputs. Do not expose private account or participant data.
+- Run `python3 scripts/build.py` and `python3 scripts/validate.py` after changes. Static checks do not establish model quality.
+- A repository-wide reuse license has not been selected. Explain your material's provenance and permitted scope; do not relicense third-party content or silently introduce a broad license.

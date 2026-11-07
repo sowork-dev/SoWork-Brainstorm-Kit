@@ -1,78 +1,96 @@
-# CJ Brainstorm Kit｜AI 名人動腦團
+# CJ Brainstorm Kit
 
-**你出題，AI 找古今中外名人一起想。你只要選組、選方向，或說「繼續」。**
+### Your topic. A council of famous perspectives. Ideas without the homework.
 
-不是先要你寫五到十個點子。AI 會自動選組、配人設、選方法，讓角色分別提案、互相接球，再整理成能比較的方向。
+**English · [繁體中文](README.zh-TW.md)**
 
-> **v0.2.0 公開試用稿。** 四組預設、九個具名角色設定、三十一張方法參考卡。角色是 AI 虛構演繹，非本人、史實發言或背書；也不是九個獨立執行中的代理。尚未完成 ChatGPT 網頁端端對端驗收。
+Give the AI a topic and let it pick a fictional cast, choose a brainstorming method, develop proposals, challenge them, and turn them into useful options. You can simply say **“Continue,” “Swap the cast,” or “You decide.”**
 
-## 直接開始
+> **Public preview—not a validated production release.** Includes 31 method cards with overlapping variants, nine editorial persona profiles, and four themed casts. These are fictional interpretations within one AI conversation, not real people, authentic quotations, endorsements, or independently running agents. End-to-end ChatGPT web testing is still incomplete. A repository-wide reuse license is still pending; see [LICENSE](LICENSE).
 
-1. [下載新版 START-HERE.txt](https://github.com/contentincubator2-ops/cj-brainstorm-kit/releases/download/v0.2.0/START-HERE.txt)。
-2. 在可讀取文字附件的 AI 對話工具上傳，貼下方這句：
+## Start in one minute
+
+1. Download **[START-HERE.en.txt — English](https://github.com/contentincubator2-ops/cj-brainstorm-kit/releases/download/v0.3.0/START-HERE.en.txt)** or **[START-HERE.txt — 繁體中文](https://github.com/contentincubator2-ops/cj-brainstorm-kit/releases/download/v0.3.0/START-HERE.txt)**.
+2. Upload the chosen file to an AI tool that can actually read text attachments.
+3. Paste this:
 
 ```text
-請依附件的 LAZY_COUNCIL 懶人名人動腦模式工作。
-我只要出題或選組，請你自動配名人角色、選方法，先讓他們提案、互相質疑改進，再整合方向。不要先叫我想五到十個點子。
-我想解決的題目是：＿＿＿＿。你先幫我選組，直接開始。
+Use the attached kit in LAZY_COUNCIL mode.
+Pick a complementary cast of fictional famous-persona perspectives, choose a method, and start generating proposals. Let the characters challenge and improve one another, then recommend a direction.
+Do not ask me to write five or ten ideas first. If you need a noncritical detail, state a reasonable assumption and keep going.
+My topic is: ____. Pick the cast for me and begin.
 ```
 
-**如果之前已上傳 v0.1.0，請重新下載新版並新開對話或明確取代舊附件／舊指令。** Repo 更新不會自動替換你已載入的舊檔。
+No topic yet? Say **“Start.”** The intended first response is one short topic question—not a questionnaire.
 
-還沒有題目？只說「開始」即可，AI 應只問一個題目問題，不讓你先填需求表。
+**Already using v0.1.0 or v0.2.0?** Download the new attachment and start a fresh conversation, or explicitly replace the old attachment and instructions. Publishing a new release does not update a file already loaded in your chat.
 
-## 選組，也可以不選
+## Pick a cast—or let the AI choose
 
-- **古今綜合組**：秦始皇 × 楊貴妃 × David Bowie；規則、體驗與身份重構。
-- **熱門搖滾組**：David Bowie × Freddie Mercury × Joan Jett；反常規、群眾互動與 DIY 啟動。名稱不是即時人氣榜。
-- **美美女組**：楊貴妃 × Cleopatra VII × Coco Chanel；感官、結盟與精準刪減，不只是外貌標籤。
-- **殘暴組**：秦始皇 × 成吉思汗 × 拿破崙；尖銳取捨、分散節點與壓力測試，不倡導暴力或脅迫。
-- **自選人物**：直接說「我要楊貴妃和秦始皇」或其他古今中外名人；AI 保留指定者並配互補視角，不限於內附九人。
+| Cast | Starting lineup | Editorial jobs |
+| --- | --- | --- |
+| **Across the Ages** · 古今綜合組 | Qin Shi Huang · Yang Guifei · David Bowie | Repeatable rules · memorable experiences · identity reframing |
+| **Rock Legends** · 熱門搖滾組 | David Bowie · Freddie Mercury · Joan Jett | Reinvention · shared participation · DIY execution |
+| **The Glamour Council** · 美美女組 | Yang Guifei · Cleopatra VII · Coco Chanel | Sensory moments · reciprocal alliances · precise editing |
+| **The Ruthless Strategists** · 殘暴組 | Qin Shi Huang · Genghis Khan · Napoleon | Hard trade-offs · distributed nodes · focused stress tests |
 
-沒選就由 AI 依題目配組；不要因選組再卡一輪批准。每位角色有不同的機制與質疑方式，不能只換名字講同一套話。詳見 [人物設定](personas/README.md)。
+These English cast labels are proposed localizations for the preview; the original Chinese aliases and machine IDs are retained. These are playful workshop themes, not popularity charts, beauty rankings, historical personality claims, or approval of violence. Each profile separates its limited public reference context from its author-created thinking mechanism.
 
-## 用戶可以很懶
+Want someone else? Name a famous figure—or a combination such as **Yang Guifei and Qin Shi Huang**. The bundled nine are a starting library, not the limit. Unknown background claims must be labeled rather than invented.
 
-只回：「繼續」「換組」「換掉某人」「更大膽」「更務實」「第 2 個」「你決定」。
+## What a round should look like
 
-AI 應保留題目和限制，自己提出改版、交叉改進及推薦；不要求用戶重新發想或重新做需求訪談。若真的想自己練習，才說「教我動腦」切到 [TEACHING](TEACHING.md)。
+1. A named cast with different jobs—not three copies of the same adviser.
+2. One or two specific proposals per character.
+3. At least two concrete cross-improvements: one character revises a specific part of another's idea.
+4. Three comparable directions, with an AI recommendation and its assumptions.
+5. A few low-effort controls so you can keep going without producing ideas yourself.
 
-## 一輪看什麼
+See the **[English fictional example](locales/en/examples/persona-council.md)** or **[中文示例](examples/persona-council.md)**. They are authored demonstrations, **not platform test transcripts**.
 
-1. 推薦組別與具名人物，各自的任務。
-2. 各人一至兩個具體提案，不只是人設自介。
-3. 至少兩則針對前一人提案的交叉接球與改版。
-4. 主持人合成三個方向，先推薦一個並說明假設。
-5. 幾個簡單控制指令，讓你不必寫作業也能繼續。
+## Keep it effortless
 
-[完整虛構示範](examples/persona-council.md) 是作者編寫的示意，不是平台測試紀錄。
+- **Continue** — take the recommended direction further.
+- **Swap the cast / replace a member** — keep the topic, change the perspectives.
+- **Go bolder** — change the mechanism, not just the adjectives.
+- **Make it practical** — cut dependencies, cost, and steps.
+- **You decide** — let the facilitator choose and expand a direction.
 
-## 只想貼 GitHub 網址
+Want to practice brainstorming yourself? Explicitly ask for **TEACHING** mode. Human exercises are opt-in; ordinary council users should not be sent away to write idea lists.
 
-請 AI 實際讀取本 repo 的 `FACILITATOR.md`、`personas/catalog.json`、`personas/packs.json` 和選定方法卡。無法讀到必要內容就改用完整附件，不得假裝已讀全部 repo。只貼網址不等於安裝或保證遍歷所有檔案。
+## Use a repository URL instead?
 
-## 檔案與方法
+Ask the AI to read the appropriate facilitator protocol, persona catalog, cast definitions, and selected method card. **It must confirm it actually retrieved the needed content.** If it cannot, use the complete text attachment. Pasting a repository URL is not installation and does not guarantee that every file will be fetched.
 
-- [主持規約](FACILITATOR.md)：預設懶人模式、選人、共創與控制指令。
-- [人物資料](personas/catalog.json)、[四組配置](personas/packs.json)：具名角色與不同的工作機制。
-- [31 張方法卡](methods/index.md)：保留教學版原始流程，作為 AI 選法參考；懶人模式由角色執行，不把任務丟回你。
-- [方法來源](SOURCES.md)、[人物來源與核對邊界](personas/SOURCES.md)。歷史背景和虛構角色能力分開。
-- [準備](templates/meeting-brief.md)、[暫停狀態](templates/session-state.md)、[成果](templates/outcome.md)。
-- [使用說明](SETUP.md)、[測試狀態](tests/README.md)、[貢獻方式](CONTRIBUTING.md)。
+## English and Chinese editions
 
-## 維護
+Use one runtime language pack at a time. The paired documents and stable method IDs make comparison possible without doubling the prompt with two complete languages.
 
-Python 3.10+，標準函式庫即可：
+- [English core protocol](locales/en/FACILITATOR.md) · [中文主持規約](FACILITATOR.md)
+- [English method index](locales/en/methods/index.md) · [中文方法索引](methods/index.md)
+- [English persona guide](locales/en/personas/README.md) · [中文人物指南](personas/README.md)
+- [Bilingual comparison map](docs/bilingual-map.md)
+- [Public-launch review / 公開前逐項檢查](docs/public-launch-review.zh-en.md)
+
+## What is—and is not—verified
+
+The build and validation scripts check packaging, IDs, references, language coverage, and common sensitive-data patterns. **They do not measure brainstorming quality or prove ChatGPT behavior.** Platform access, actual file retrieval, persona differentiation, low-effort controls, and multi-turn results need real testing.
+
+This kit is a text workflow, not a native plugin, external tool authorization, background timer, live meeting room, or real-person invitation service. Do not put private client or participant information in public Issues or pull requests.
+
+## Maintain the kit
+
+Python 3.10 or later; standard library only:
 
 ```sh
 python3 scripts/build.py
 python3 scripts/validate.py
 ```
 
-檢查的是來源檔與下載包一致性、人物／組合引用、方法數量及常見敏感模式，不代表 AI 品質或 ChatGPT 平台實測通過。
+The build creates separate English and Traditional Chinese text packs from their corresponding source files. See [setup](SETUP.md), [compatibility](locales/en/docs/compatibility.md), [public-material policy](locales/en/docs/sanitization-policy.md), [contributing](CONTRIBUTING.md), [security](SECURITY.md), and the [changelog](CHANGELOG.md).
 
-## 能力與資料邊界
+## Credits and reuse
 
-純文字包不是原生插件、真人邀約、背景倒數或多人同步服務。AI 角色可以即興共創，但不把角色發言當史實、外部活動或真人承諾。不把私人會議內容、個資或客戶資料放到公開 Issue。
+Concept and product direction: **CJ Wang**. The methods and source materials are credited separately in [method sources](locales/en/SOURCES.md) and [persona sources](locales/en/personas/SOURCES.md). Editorial role-play is not a claim that these figures actually held the proposed views.
 
-本公開試用稿尚未選定全庫再散布授權，不宣稱 MIT／CC 或第三方認證。詳見 [LICENSE](LICENSE)。
+**Publicly readable does not yet mean openly licensed.** No project-wide redistribution or commercial reuse license has been selected. Do not describe this preview as MIT-licensed, CC-licensed, officially certified, or endorsed by the cited people and institutions. See [LICENSE](LICENSE).

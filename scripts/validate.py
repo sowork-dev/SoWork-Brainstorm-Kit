@@ -5,7 +5,7 @@ import json
 import re
 import sys
 import unittest
-from build import ROOT, render_bundle
+from build import ROOT, render_bundle, pin_relative_links
 
 
 class PackageTests(unittest.TestCase):
@@ -93,6 +93,96 @@ class PackageTests(unittest.TestCase):
         version = json.loads((ROOT / 'version.json').read_text())['version']
         self.assertIn('v' + version, (ROOT / 'START-HERE.txt').read_text())
         self.assertIn('/v' + version + '/START-HERE.txt', (ROOT / 'README.md').read_text())
+
+    def test_english_method_ids_and_source_closure(self):
+        english = json.loads((ROOT / 'locales/en/methods/catalog.json').read_text())
+        self.assertEqual([c['id'] for c in english], [c['id'] for c in self.catalog])
+        for en, zh in zip(english, self.catalog):
+            self.assertEqual(en['status'], zh['status'])
+            path = ROOT / en['path']
+            self.assertTrue(path.resolve().is_relative_to((ROOT / 'locales/en/methods').resolve()))
+            body = path.read_text()
+            self.assertIn(f"## {en['id']} | {en['name']}", body)
+            labels = {part.strip() for heading in re.findall(r'\*\*([^*]+)\*\*', body)
+                      for part in heading.split('/')}
+            for field in ('Opening', 'Process', 'Follow-up', 'Output'):
+                self.assertIn(field, labels)
+            en_urls = set(re.findall(r'https://[^\s)]+', body))
+            zh_urls = set(re.findall(r'https://[^\s)]+', (ROOT / zh['path']).read_text()))
+            self.assertEqual(en_urls, zh_urls)
+
+    def test_english_persona_and_cast_identity_parity(self):
+        zh_people = json.loads((ROOT / 'personas/catalog.json').read_text())
+        en_people = json.loads((ROOT / 'locales/en/personas/catalog.json').read_text())
+        self.assertEqual([p['id'] for p in en_people], [p['id'] for p in zh_people])
+        for en, zh in zip(en_people, zh_people):
+            self.assertEqual(set(en), set(zh))
+            for key in ('id', 'persona_status', 'reference_url', 'evidence_status', 'verification_url'):
+                self.assertEqual(en.get(key), zh.get(key), (en['id'], key))
+        zh_packs = json.loads((ROOT / 'personas/packs.json').read_text())
+        en_packs = json.loads((ROOT / 'locales/en/personas/packs.json').read_text())
+        self.assertEqual([p['id'] for p in en_packs], [p['id'] for p in zh_packs])
+        for en, zh in zip(en_packs, zh_packs):
+            self.assertEqual(en['members'], zh['members'])
+            self.assertIn(zh['name'], en['aliases'])
+
+    def test_english_bundle_is_current_and_separate(self):
+        text = (ROOT / 'START-HERE.en.txt').read_text()
+        self.assertEqual(text, render_bundle(language='en'))
+        self.assertEqual(len(re.findall(r'(?m)^## [AB]\d{2} \| ', text)), 31)
+        self.assertIn('Default: LAZY_COUNCIL', text)
+        self.assertNotIn('# 主持規約', text)
+        self.assertIn('End-to-end ChatGPT web testing remains incomplete', text)
+        for persona in json.loads((ROOT / 'locales/en/personas/catalog.json').read_text()):
+            self.assertIn(persona['name'], text)
+            self.assertIn(persona['mechanism'], text)
+        with self.assertRaises(ValueError):
+            render_bundle(language='not-a-language')
+
+    def test_parallel_landing_and_launch_review_exist(self):
+        for path in ('README.zh-TW.md', 'docs/bilingual-map.md',
+                     'docs/public-launch-review.zh-en.md', 'docs/reviewed-files.json'):
+            self.assertTrue((ROOT / path).is_file(), path)
+        readme = (ROOT / 'README.md').read_text()
+        self.assertIn('START-HERE.en.txt', readme)
+        self.assertIn('README.zh-TW.md', readme)
+        inventory = json.loads((ROOT / 'docs/reviewed-files.json').read_text())
+        self.assertEqual(inventory['baseline_commit'], '81d8720c9a6258a42ad86deb5dd59ad501531176')
+        self.assertEqual(inventory['file_count'], 60)
+        self.assertEqual(len({row['path'] for row in inventory['files']}), 60)
+        self.assertTrue(all(row['inspected'] for row in inventory['files']))
+
+    def test_detached_bundles_keep_license_and_resolve_relative_links(self):
+        notice = (ROOT / 'LICENSE').read_text().strip()
+        for filename in ('START-HERE.txt', 'START-HERE.en.txt'):
+            text = (ROOT / filename).read_text()
+            self.assertIn(notice, text)
+            for target in re.findall(r'\[[^\]]+\]\(([^)]+)\)', text):
+                self.assertTrue(target.startswith(('https://', 'http://', 'mailto:', '#')), target)
+        english = (ROOT / 'START-HERE.en.txt').read_text()
+        self.assertIn('/locales/en/personas/SOURCES.md', english)
+
+    def test_embedded_link_pinning_preserves_file_context(self):
+        version = json.loads((ROOT / 'version.json').read_text())['version']
+        for directory in ('personas', 'locales/en/personas'):
+            result = pin_relative_links('[Sources](SOURCES.md)', Path(directory) / 'README.md', version)
+            self.assertIn(f'/blob/v{version}/{directory}/SOURCES.md', result)
+        with self.assertRaises(ValueError):
+            pin_relative_links('[Bad](../../../../../outside.md)', Path('methods/index.md'), version)
+
+    def test_you_decide_does_not_reset_an_existing_cast(self):
+        packs = json.loads((ROOT / 'locales/en/personas/packs.json').read_text())
+        aliases = {alias.casefold() for pack in packs for alias in pack['aliases']}
+        self.assertNotIn('you decide', aliases)
+        self.assertIn('do not reset an ongoing session', (ROOT / 'locales/en/personas/README.md').read_text())
+
+    def test_default_bundles_do_not_embed_full_human_teaching_protocol(self):
+        zh = (ROOT / 'START-HERE.txt').read_text()
+        en = (ROOT / 'START-HERE.en.txt').read_text()
+        self.assertNotIn('# 主持規約｜先確認目的，再推薦方法', zh)
+        self.assertNotIn('# TEACHING | Opt-in human practice', en)
+        self.assertEqual(zh.count('模式標示：這是方法參考卡。'), 31)
+        self.assertEqual(en.count('Mode guard: this is a reference card.'), 31)
 
     def test_no_internal_runtime_or_credential_artifacts(self):
         prohibited = [r'/Users/', r'/home/azureuser', r'\.hermes/', r'\.openclaw/',

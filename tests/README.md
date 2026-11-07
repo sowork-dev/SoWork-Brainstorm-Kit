@@ -1,26 +1,21 @@
-# 測試與驗收
+# Testing and acceptance
 
-## 檔案／封裝檢查
+**English · [繁體中文](README.zh-TW.md)**
 
-`python3 scripts/validate.py` 檢查 31 張方法、角色與四組引用、兩種模式、來源欄位及單檔包的一致性。這是靜態檢查，不是模型成功率或用戶滿意度。
+## Static package checks
 
-## 真實 ChatGPT 平台
+Run `python3 scripts/build.py` and `python3 scripts/validate.py`. These check method/persona identities, source/evidence parity, separate language packs, context-preserving links, licensing-notice inclusion, mode guards and common sensitive patterns. They are not a model-quality score.
 
-**尚未完成端對端驗收。** 既有前置嘗試停在人機驗證，不能以文件、虛構示範、沙盒輸出或 CI 成功當成 ChatGPT 網頁端測試通過。
+## Real platform status
 
-## v0.2.0 固定行為案例
+**Complete ChatGPT web acceptance has not passed.** The prior access attempt stopped at human verification. Neither CI, authored examples, translated documents nor a sandbox response proves that the web product retrieves the repo or sustains the intended multi-turn experience. Other platforms remain unverified.
 
-- 只說「開始」：只問一句題目，不丟需求表。
-- 已給題目、說你選：自動配具名三人，當輪產出點子、交叉接球、整合，不要求先列五到十個點子。
-- 指定熱門搖滾組／美美女組／殘暴組：尊重組別，有不同的具體機制，非換名重複。
-- 自選楊貴妃＋秦始皇：保留兩人，再配互補角色，不把實際人物當真實到場。
-- 說「繼續」：沿題目增加具體新內容，不重問目的或重新介紹所有人。
-- 說「更務實／你決定」：AI 主動縮減或展開，不把作業丟回使用者。
-- 用戶要角色自己跑 635：清楚標為 AI 角色接力改編，不造真人、倒數、真人票數或獨特點子保證。
-- 明確說「教我、我要自己練習」：才轉 TEACHING，保留真人練習的等待與確認。
-- 一個角色質疑另一個：必須提到具體點子並提出改版，不能只有我同意。
-- 換人或換組：保留已知題目和限制，當輪繼續共創。
-- 未知人名：不編傳記；有歧義才問，資料未核對就標虛構設定。
-- 停止：即時停止並保存模式、人選、方案與待辦，不自行做外部操作。
+## Behavioral cases
 
-測試記錄須固定來源版本／hash、入口、平台、實際輸出及受測案例。有限樣本不能宣稱涵蓋所有組合或整體成功率。
+Use [BEHAVIORAL-ACCEPTANCE.zh-en.md](BEHAVIORAL-ACCEPTANCE.zh-en.md). They are authored test inputs and expected properties, not fabricated model outputs or completed runs. Record release/commit, language pack, URL versus attachment, platform/model and actual redacted responses.
+
+A pass requires meaningful proposals, concrete cross-improvements, consistent topic/cast state and low user burden—not merely a list of names or correct keywords. A few cases cannot establish a universal success rate.
+
+## Frozen launch-review baseline
+
+The review at commit `81d8720c9a6258a42ad86deb5dd59ad501531176` covered all 60 tracked files. The [sanitized per-file record](../docs/reviewed-files.json) is a historical baseline, not a claim that future files were already reviewed then. New English counterparts are checked for source/ID/evidence parity and package closure. The [launch review](../docs/public-launch-review.zh-en.md) separates resolved defects, mitigations and remaining owner decisions.

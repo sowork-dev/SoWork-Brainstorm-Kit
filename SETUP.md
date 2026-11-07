@@ -1,22 +1,32 @@
-# 使用方式
+# Setup
 
-下載新版 `START-HERE.txt`，上傳到能讀取文字附件的 AI 工具，明確要求使用 LAZY_COUNCIL。給一個題目即可；不需先懂方法或自己找人。啟動句見 [README](README.md)。
+**English · [繁體中文](SETUP.zh-TW.md)**
 
-## 舊版換新版
+## Recommended: a complete text attachment
 
-v0.1.0 預設是教學式逐輪提問，v0.2.0 改為 AI 名人主動共創。已載入的舊附件不會因 repo 更新自動改變，請重新下載，最好新開對話並使用新版啟動句。
+Download `START-HERE.en.txt` for English or `START-HERE.txt` for Traditional Chinese. Upload one language pack to an AI tool that can read it and explicitly request **LAZY_COUNCIL** mode. Give it a topic; the AI should choose the cast and do the first round. The launch prompt is in [README](README.md).
 
-## 沒有附件功能
+You do not need Python, a Git checkout, an API key, or a native plugin to try the text attachment. Whether a particular account/tool reads and follows it still needs verification.
 
-依工具能力貼上全文；長度不足時，先提供主持規約、人物與組合資料，再提供選用方法卡。只有真正取得內容才說已載入。
+## Replacing an older version
 
-## Repo 網址入口
+v0.1.0 used a human-practice flow. v0.2.0 introduced AI-led persona councils. v0.3.0 adds parallel English and Traditional Chinese editions and a launch review.
 
-請 AI 讀 FACILITATOR.md、personas/catalog.json、personas/packs.json 及選用方法卡；受阻就改用單檔附件。本入口仍須實際帳號測試，不保證自動爬完整個 repo。
+An old attachment will not update when the repository changes. Download the new file and use a fresh conversation or explicitly replace old instructions. Do not mix two complete runtime language packs unless you intentionally want bilingual output.
 
-## 模式
+## No attachment support
 
-- 預設：AI 名人共創，使用者可只說繼續或你決定。
-- 明確說要自己練習／帶真人工作坊：才切 TEACHING。
+Paste content only within the tool's actual capabilities. If a complete pack is too long, provide the facilitator protocol and persona/cast data first, then the selected method card. Never claim the full repository was read when only its landing page was retrieved.
 
-本版本不提供原生 Skill／Plugin 安裝包，不承諾跨對話自動記憶、背景工作或真人參與。
+## Repository URL entry
+
+For English, the needed sources are under `locales/en/`; for Traditional Chinese, they remain at the root and in `methods/` and `personas/`. Ask the AI to read the facilitator protocol, persona catalog, cast definitions, and selected method card. Use the complete attachment if retrieval fails.
+
+The repository-URL route and complete ChatGPT web interaction have **not** passed end-to-end acceptance testing.
+
+## Modes
+
+- **LAZY_COUNCIL:** the AI proposes and refines ideas. You can just say “Continue” or “You decide.”
+- **TEACHING:** explicitly selected human brainstorming practice or a real human workshop. Here the facilitator waits for real participant input.
+
+This version is not a native Skill/Plugin installation. It does not grant external tool access or promise automatic cross-chat memory, background work, timers, or real participants.

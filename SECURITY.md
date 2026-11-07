@@ -1,7 +1,9 @@
-# 資料與安全
+# Security and privacy
 
-此 repo 只收公開可分享的方法、模板與虛構範例。不要提交個資、真實會議內容、客戶資料、帳密、存取憑證或私人網址。
+**English · [繁體中文](SECURITY.zh-TW.md)**
 
-發現敏感資料時，請勿在公開 Issue 重貼原內容；先透過 GitHub 可用的私人安全回報機制聯絡維護者。若未開放私人回報，可用不含敏感內容的訊息請維護者提供私下管道。
+This repository contains shareable instructions, empty templates, source references, and fictional examples—not real workshop data. Do not submit personal information, client records, passwords, access credentials, or private URLs.
 
-AI 主持稿不取得任何外部服務權限；不因文件裡出現某工具名稱，就代表已授權、可讀寫或有背景執行能力。
+If you find sensitive material, do not repost it in a public Issue. Use a private security-reporting channel if the repository has one enabled. Otherwise, ask the maintainer for a private channel without including the sensitive content.
+
+A text prompt does not grant external service access. Naming a tool does not prove that the assistant can read, write, time, schedule, invite real people, or run work in the background. Character dialogue is fiction, not actual attendance or endorsement.

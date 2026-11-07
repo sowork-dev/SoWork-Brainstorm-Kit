@@ -1,0 +1,86 @@
+# CJ Brainstorm Kit｜AI 名人動腦團
+
+**[English](README.md) · 繁體中文**
+
+**你出題，AI 找古今中外名人一起想。你只要選組、選方向，或說「繼續」。**
+
+不是先要你寫五到十個點子。AI 會自動選組、配人設、選方法，讓角色分別提案、互相接球，再整理成能比較的方向。
+
+> **v0.3.0 公開試用稿。** 四組預設、九個具名角色設定、三十一張方法參考卡。角色是 AI 虛構演繹，非本人、史實發言或背書；也不是九個獨立執行中的代理。尚未完成 ChatGPT 網頁端端對端驗收。
+
+## 直接開始
+
+1. [下載新版 START-HERE.txt](https://github.com/contentincubator2-ops/cj-brainstorm-kit/releases/download/v0.3.0/START-HERE.txt)。
+2. 在可讀取文字附件的 AI 對話工具上傳，貼下方這句：
+
+```text
+請依附件的 LAZY_COUNCIL 懶人名人動腦模式工作。
+我只要出題或選組，請你自動配名人角色、選方法，先讓他們提案、互相質疑改進，再整合方向。不要先叫我想五到十個點子。
+我想解決的題目是：＿＿＿＿。你先幫我選組，直接開始。
+```
+
+**如果之前已上傳 v0.1.0 或 v0.2.0，請重新下載新版並新開對話或明確取代舊附件／舊指令。** Repo 更新不會自動替換你已載入的舊檔。
+
+還沒有題目？只說「開始」即可，AI 應只問一個題目問題，不讓你先填需求表。
+
+## 選組，也可以不選
+
+- **古今綜合組**：秦始皇 × 楊貴妃 × David Bowie；規則、體驗與身份重構。
+- **熱門搖滾組**：David Bowie × Freddie Mercury × Joan Jett；反常規、群眾互動與 DIY 啟動。名稱不是即時人氣榜。
+- **美美女組**：楊貴妃 × Cleopatra VII × Coco Chanel；感官、結盟與精準刪減，不只是外貌標籤。
+- **殘暴組**：秦始皇 × 成吉思汗 × 拿破崙；尖銳取捨、分散節點與壓力測試，不倡導暴力或脅迫。
+- **自選人物**：直接說「我要楊貴妃和秦始皇」或其他古今中外名人；AI 保留指定者並配互補視角，不限於內附九人。
+
+沒選就由 AI 依題目配組；不要因選組再卡一輪批准。每位角色有不同的機制與質疑方式，不能只換名字講同一套話。詳見 [人物設定](personas/README.md)。
+
+## 用戶可以很懶
+
+只回：「繼續」「換組」「換掉某人」「更大膽」「更務實」「第 2 個」「你決定」。
+
+AI 應保留題目和限制，自己提出改版、交叉改進及推薦；不要求用戶重新發想或重新做需求訪談。若真的想自己練習，才說「教我動腦」切到 [TEACHING](TEACHING.md)。
+
+## 一輪看什麼
+
+1. 推薦組別與具名人物，各自的任務。
+2. 各人一至兩個具體提案，不只是人設自介。
+3. 至少兩則針對前一人提案的交叉接球與改版。
+4. 主持人合成三個方向，先推薦一個並說明假設。
+5. 幾個簡單控制指令，讓你不必寫作業也能繼續。
+
+[完整虛構示範](examples/persona-council.md) 是作者編寫的示意，不是平台測試紀錄。
+
+## 只想貼 GitHub 網址
+
+請 AI 實際讀取本 repo 的 `FACILITATOR.md`、`personas/catalog.json`、`personas/packs.json` 和選定方法卡。無法讀到必要內容就改用完整附件，不得假裝已讀全部 repo。只貼網址不等於安裝或保證遍歷所有檔案。
+
+## 中英對照與公開前檢查
+
+- [中英索引對照](docs/bilingual-map.md)：以相同方法與人物 ID 對照。
+- [公開前逐項檢查](docs/public-launch-review.zh-en.md)：已修正、尚待驗證、需要作者決定分開列示。
+- [English pack](https://github.com/contentincubator2-ops/cj-brainstorm-kit/releases/download/v0.3.0/START-HERE.en.txt)：英文獨立包，不將兩個完整語言版本疊進同一提示。
+
+## 檔案與方法
+
+- [主持規約](FACILITATOR.md)：預設懶人模式、選人、共創與控制指令。
+- [人物資料](personas/catalog.json)、[四組配置](personas/packs.json)：具名角色與不同的工作機制。
+- [31 張方法卡](methods/index.md)：保留教學版原始流程，作為 AI 選法參考；懶人模式由角色執行，不把任務丟回你。
+- [方法來源](SOURCES.md)、[人物來源與核對邊界](personas/SOURCES.md)。歷史背景和虛構角色能力分開。
+- [準備](templates/meeting-brief.md)、[暫停狀態](templates/session-state.md)、[成果](templates/outcome.md)。
+- [使用說明](SETUP.md)、[測試狀態](tests/README.md)、[貢獻方式](CONTRIBUTING.md)。
+
+## 維護
+
+Python 3.10+，標準函式庫即可：
+
+```sh
+python3 scripts/build.py
+python3 scripts/validate.py
+```
+
+檢查的是來源檔與下載包一致性、人物／組合引用、方法數量及常見敏感模式，不代表 AI 品質或 ChatGPT 平台實測通過。
+
+## 能力與資料邊界
+
+純文字包不是原生插件、真人邀約、背景倒數或多人同步服務。AI 角色可以即興共創，但不把角色發言當史實、外部活動或真人承諾。不把私人會議內容、個資或客戶資料放到公開 Issue。
+
+本公開試用稿尚未選定全庫再散布授權，不宣稱 MIT／CC 或第三方認證。詳見 [LICENSE](LICENSE)。

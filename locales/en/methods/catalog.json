@@ -1,0 +1,188 @@
+[
+  {
+    "id": "A01",
+    "name": "Name Ten Curators in One Minute",
+    "path": "locales/en/methods/A01.md",
+    "status": "draft-adaptation"
+  },
+  {
+    "id": "A02",
+    "name": "6-3-5 Brainwriting",
+    "path": "locales/en/methods/A02.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B01",
+    "name": "Starbursting",
+    "path": "locales/en/methods/B01.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B02",
+    "name": "Five Whys (also called Why Analysis)",
+    "path": "locales/en/methods/B02.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B03",
+    "name": "SWOT Analysis",
+    "path": "locales/en/methods/B03.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B04",
+    "name": "How Now Wow",
+    "path": "locales/en/methods/B04.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B05",
+    "name": "Drivers Analysis",
+    "path": "locales/en/methods/B05.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B06",
+    "name": "Mind Mapping",
+    "path": "locales/en/methods/B06.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B07",
+    "name": "Gap Filling (also called Gap Analysis)",
+    "path": "locales/en/methods/B07.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B08",
+    "name": "Brainwriting (also called Slip Writing)",
+    "path": "locales/en/methods/B08.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B09",
+    "name": "Collaborative Brainwriting",
+    "path": "locales/en/methods/B09.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B10",
+    "name": "Brain-netting (also called Online Brainstorming)",
+    "path": "locales/en/methods/B10.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B11",
+    "name": "SCAMPER",
+    "path": "locales/en/methods/B11.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B12",
+    "name": "Lightning Decision Jam",
+    "path": "locales/en/methods/B12.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B13",
+    "name": "Idea Napkin",
+    "path": "locales/en/methods/B13.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B14",
+    "name": "Six Thinking Hats",
+    "path": "locales/en/methods/B14.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B15",
+    "name": "Figure Storming",
+    "path": "locales/en/methods/B15.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B16",
+    "name": "Rolestorming",
+    "path": "locales/en/methods/B16.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B17",
+    "name": "Reverse Brainstorming",
+    "path": "locales/en/methods/B17.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B18",
+    "name": "Reverse Thinking",
+    "path": "locales/en/methods/B18.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B19",
+    "name": "Eidetic Imagery",
+    "path": "locales/en/methods/B19.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B20",
+    "name": "Rapid Ideation",
+    "path": "locales/en/methods/B20.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B21",
+    "name": "Round-robin Brainstorming",
+    "path": "locales/en/methods/B21.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B22",
+    "name": "Stepladder Brainstorming",
+    "path": "locales/en/methods/B22.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B23",
+    "name": "Charrette",
+    "path": "locales/en/methods/B23.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B24",
+    "name": "What-if Brainstorming",
+    "path": "locales/en/methods/B24.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B25",
+    "name": "Change of Scenery",
+    "path": "locales/en/methods/B25.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B26",
+    "name": "Random Word Association",
+    "path": "locales/en/methods/B26.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B27",
+    "name": "Storyboarding",
+    "path": "locales/en/methods/B27.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B28",
+    "name": "Wishing",
+    "path": "locales/en/methods/B28.md",
+    "status": "facilitation-draft"
+  },
+  {
+    "id": "B29",
+    "name": "Crazy Eights",
+    "path": "locales/en/methods/B29.md",
+    "status": "facilitation-draft"
+  }
+]

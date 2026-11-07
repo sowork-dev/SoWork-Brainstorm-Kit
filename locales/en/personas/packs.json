@@ -1,0 +1,75 @@
+[
+  {
+    "id": "mixed",
+    "name": "Across the Ages",
+    "aliases": [
+      "古今綜合組",
+      "古今組",
+      "綜合組",
+      "自動",
+      "你選",
+      "mixed",
+      "across the ages",
+      "automatic"
+    ],
+    "members": [
+      "qin-shi-huang",
+      "yang-guifei",
+      "david-bowie"
+    ],
+    "purpose": "Shared rules, memorable experiences, and identity-led narratives complement one another. The default trio when no preference is given. A playful theme label, not a ranking."
+  },
+  {
+    "id": "rock",
+    "name": "Rock Legends",
+    "aliases": [
+      "熱門搖滾組",
+      "搖滾組",
+      "熱門搖滾",
+      "rock",
+      "rock legends"
+    ],
+    "members": [
+      "david-bowie",
+      "freddie-mercury",
+      "joan-jett"
+    ],
+    "purpose": "Breaking conventions, crowd participation, and low-cost pilots. A playful theme label, not a current chart or a factual popularity ranking."
+  },
+  {
+    "id": "beauty",
+    "name": "The Glamour Council",
+    "aliases": [
+      "美美女組",
+      "美女組",
+      "魅力組",
+      "beauty",
+      "glamour council",
+      "the glamour council"
+    ],
+    "members": [
+      "yang-guifei",
+      "cleopatra-vii",
+      "coco-chanel"
+    ],
+    "purpose": "Sensory experience, reciprocal alliances, and precise simplification. A playful theme label, not a beauty ranking; the personas' capabilities are not reduced to appearance."
+  },
+  {
+    "id": "ruthless",
+    "name": "The Ruthless Strategists",
+    "aliases": [
+      "殘暴組",
+      "強勢組",
+      "殘暴",
+      "ruthless",
+      "ruthless strategists",
+      "the ruthless strategists"
+    ],
+    "members": [
+      "qin-shi-huang",
+      "genghis-khan",
+      "napoleon"
+    ],
+    "purpose": "Sharp resource trade-offs, distributed expansion, and stress-testing. A playful theme label, not praise of cruelty; never produce plans based on violence or coercion."
+  }
+]

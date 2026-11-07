@@ -1,0 +1,1959 @@
+{
+  "baseline_commit": "81d8720c9a6258a42ad86deb5dd59ad501531176",
+  "file_count": 60,
+  "scope": "Full-file content review of the frozen v0.2.0 tracked tree. This is not model/platform acceptance. New English counterparts are additionally checked for IDs, evidence metadata, source closure and packaging.",
+  "files": [
+    {
+      "path": ".github/workflows/validate.yml",
+      "sha256": "bdf7dac1c9b63a305183b2bbbadfa27d2c1cac3727d640199e6236f679b2fd53",
+      "bytes": 297,
+      "lines": 13,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "R04",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "README 的主要下載入口依賴 v0.2.0 release 附件；來源只核對 URL 字串，沒有證明遠端資產存在、可匿名取得或 hash 相符。",
+          "summary_en": "The primary README download relies on a v0.2.0 release asset; source checks only compare the URL string and do not establish asset existence, anonymous accessibility or byte identity.",
+          "line_start": 1,
+          "line_end": 13
+        },
+        {
+          "id": "R07",
+          "category": "recommendation",
+          "severity": "low",
+          "summary_zh_TW": "CI 僅跑靜態驗證；第三方 Actions 用主版本標籤，敏感模式檢查排除檢查器本身，不能當成完整秘密掃描或發佈驗證。",
+          "summary_en": "CI runs static validation only; third-party Actions use major-version tags and the sensitive-pattern scanner excludes its own file, so it is neither comprehensive secret scanning nor release validation.",
+          "line_start": 9,
+          "line_end": 13
+        }
+      ]
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "d43365e9228a369d54c05cad3aefdedf2ebb2445676babda5ecfde2e01da60c7",
+      "bytes": 41,
+      "lines": 5,
+      "inspected": true,
+      "findings": []
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "b7862dc60f7965ea6819c54614f45de363a22e5f956071bb2faffb931911052d",
+      "bytes": 892,
+      "lines": 16,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 3,
+          "line_end": 3
+        },
+        {
+          "id": "R02",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "真實 ChatGPT 端對端驗收仍停在人機驗證；靜態套件測試與編寫示例不能證明角色差異、交叉改進或懶人模式真的成功。",
+          "summary_en": "Real ChatGPT end-to-end acceptance remains blocked by human verification; static package tests and authored examples cannot establish persona differentiation, cross-critique or successful lazy-mode behavior.",
+          "line_start": 9,
+          "line_end": 9
+        }
+      ]
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "19de27908a4f3e4804e5aced65cc4805e8e879afac6574983cbcef87337dfa24",
+      "bytes": 677,
+      "lines": 8,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R02",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "真實 ChatGPT 端對端驗收仍停在人機驗證；靜態套件測試與編寫示例不能證明角色差異、交叉改進或懶人模式真的成功。",
+          "summary_en": "Real ChatGPT end-to-end acceptance remains blocked by human verification; static package tests and authored examples cannot establish persona differentiation, cross-critique or successful lazy-mode behavior.",
+          "line_start": 6,
+          "line_end": 7
+        },
+        {
+          "id": "O01",
+          "category": "owner_approval",
+          "severity": "high",
+          "summary_zh_TW": "LICENSE 明確仍待授權決策；下載使用、修改、翻譯、再散布與商用範圍尚未成為清楚的正式授權。",
+          "summary_en": "LICENSE explicitly leaves the licensing decision pending; download/use, modification, translation, redistribution and commercial scope are not stated as a settled license grant.",
+          "line_start": 8,
+          "line_end": 8
+        }
+      ]
+    },
+    {
+      "path": "FACILITATOR.md",
+      "sha256": "c17ef3c01166bdda78d1186d77c29baa79aa2ae0e135f07902fd263849dc3c06",
+      "bytes": 6937,
+      "lines": 80,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 9,
+          "line_end": 13
+        },
+        {
+          "id": "R06",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "明確的輸入不可信／不洩漏資料規則主要放在 TEACHING；以 repo 入口只載入 FACILITATOR 與角色卡時不一定讀到同一套共通規範。",
+          "summary_en": "Explicit untrusted-input and nondisclosure instructions mainly sit in TEACHING; the documented repo-entry path loading FACILITATOR and persona/method data need not receive those shared rules.",
+          "line_start": 78,
+          "line_end": 80
+        },
+        {
+          "id": "O02",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "美美女組／殘暴組的英文直譯可能偏離感官、結盟、刪減與壓力測試的機制；四組的正式英文名稱尚未定案。",
+          "summary_en": "Literal English labels for the beauty/ruthless packs may distract from sensory experience, alliances, reduction and pressure-testing; canonical English pack names remain undecided.",
+          "line_start": 27,
+          "line_end": 33
+        }
+      ]
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "a4dc0d04d484543a498301fe573301b5ec89323ca414d21447977a250e4db03d",
+      "bytes": 604,
+      "lines": 7,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "O01",
+          "category": "owner_approval",
+          "severity": "high",
+          "summary_zh_TW": "LICENSE 明確仍待授權決策；下載使用、修改、翻譯、再散布與商用範圍尚未成為清楚的正式授權。",
+          "summary_en": "LICENSE explicitly leaves the licensing decision pending; download/use, modification, translation, redistribution and commercial scope are not stated as a settled license grant.",
+          "line_start": 1,
+          "line_end": 7
+        },
+        {
+          "id": "O03",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "以具名歷史／公眾人物及第三方方法公開發佈的品牌、商業與授權風險，需要作者確認；虛構／非背書聲明不等於取得權利。",
+          "summary_en": "The owner must review brand, commercial and permission questions around named historical/public figures and third-party methods; fictional/non-endorsement notices are not permission evidence.",
+          "line_start": 3,
+          "line_end": 7
+        }
+      ]
+    },
+    {
+      "path": "README.md",
+      "sha256": "58c0017d6fe38c7756a927eabaffbbe1259556b464616d461f1e5e20c15ae781",
+      "bytes": 4749,
+      "lines": 78,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R02",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "真實 ChatGPT 端對端驗收仍停在人機驗證；靜態套件測試與編寫示例不能證明角色差異、交叉改進或懶人模式真的成功。",
+          "summary_en": "Real ChatGPT end-to-end acceptance remains blocked by human verification; static package tests and authored examples cannot establish persona differentiation, cross-critique or successful lazy-mode behavior.",
+          "line_start": 7,
+          "line_end": 7
+        },
+        {
+          "id": "R04",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "README 的主要下載入口依賴 v0.2.0 release 附件；來源只核對 URL 字串，沒有證明遠端資產存在、可匿名取得或 hash 相符。",
+          "summary_en": "The primary README download relies on a v0.2.0 release asset; source checks only compare the URL string and do not establish asset existence, anonymous accessibility or byte identity.",
+          "line_start": 9,
+          "line_end": 20
+        },
+        {
+          "id": "R06",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "明確的輸入不可信／不洩漏資料規則主要放在 TEACHING；以 repo 入口只載入 FACILITATOR 與角色卡時不一定讀到同一套共通規範。",
+          "summary_en": "Explicit untrusted-input and nondisclosure instructions mainly sit in TEACHING; the documented repo-entry path loading FACILITATOR and persona/method data need not receive those shared rules.",
+          "line_start": 74,
+          "line_end": 76
+        },
+        {
+          "id": "O01",
+          "category": "owner_approval",
+          "severity": "high",
+          "summary_zh_TW": "LICENSE 明確仍待授權決策；下載使用、修改、翻譯、再散布與商用範圍尚未成為清楚的正式授權。",
+          "summary_en": "LICENSE explicitly leaves the licensing decision pending; download/use, modification, translation, redistribution and commercial scope are not stated as a settled license grant.",
+          "line_start": 78,
+          "line_end": 78
+        },
+        {
+          "id": "O02",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "美美女組／殘暴組的英文直譯可能偏離感官、結盟、刪減與壓力測試的機制；四組的正式英文名稱尚未定案。",
+          "summary_en": "Literal English labels for the beauty/ruthless packs may distract from sensory experience, alliances, reduction and pressure-testing; canonical English pack names remain undecided.",
+          "line_start": 24,
+          "line_end": 32
+        }
+      ]
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "ada68ba86bfb334fd1313647d1c164236e03f6f64065c58e12509a4f56ffd47d",
+      "bytes": 555,
+      "lines": 7,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R06",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "明確的輸入不可信／不洩漏資料規則主要放在 TEACHING；以 repo 入口只載入 FACILITATOR 與角色卡時不一定讀到同一套共通規範。",
+          "summary_en": "Explicit untrusted-input and nondisclosure instructions mainly sit in TEACHING; the documented repo-entry path loading FACILITATOR and persona/method data need not receive those shared rules.",
+          "line_start": 3,
+          "line_end": 7
+        }
+      ]
+    },
+    {
+      "path": "SETUP.md",
+      "sha256": "5716b24941f6a122e4c9ba2431120acf228b3d0e542a6f3436f05d6f17c900d2",
+      "bytes": 1119,
+      "lines": 22,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R04",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "README 的主要下載入口依賴 v0.2.0 release 附件；來源只核對 URL 字串，沒有證明遠端資產存在、可匿名取得或 hash 相符。",
+          "summary_en": "The primary README download relies on a v0.2.0 release asset; source checks only compare the URL string and do not establish asset existence, anonymous accessibility or byte identity.",
+          "line_start": 3,
+          "line_end": 15
+        },
+        {
+          "id": "R06",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "明確的輸入不可信／不洩漏資料規則主要放在 TEACHING；以 repo 入口只載入 FACILITATOR 與角色卡時不一定讀到同一套共通規範。",
+          "summary_en": "Explicit untrusted-input and nondisclosure instructions mainly sit in TEACHING; the documented repo-entry path loading FACILITATOR and persona/method data need not receive those shared rules.",
+          "line_start": 13,
+          "line_end": 15
+        }
+      ]
+    },
+    {
+      "path": "SOURCES.md",
+      "sha256": "78323d72c2cf8ec00bc16f28ee3fd4e1de346b6075233bae5ebe579562f828d4",
+      "bytes": 1431,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 3,
+          "line_end": 9
+        },
+        {
+          "id": "O03",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "以具名歷史／公眾人物及第三方方法公開發佈的品牌、商業與授權風險，需要作者確認；虛構／非背書聲明不等於取得權利。",
+          "summary_en": "The owner must review brand, commercial and permission questions around named historical/public figures and third-party methods; fictional/non-endorsement notices are not permission evidence.",
+          "line_start": 8,
+          "line_end": 9
+        },
+        {
+          "id": "O04",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "A01 明示是依練習名稱編寫且仍待原作者校正；是否納入對外正式英文版需作者決定。",
+          "summary_en": "A01 explicitly remains a title-based adaptation awaiting original-author review; inclusion in a formal public English edition needs owner approval.",
+          "line_start": 8,
+          "line_end": 8
+        }
+      ]
+    },
+    {
+      "path": "START-HERE.txt",
+      "sha256": "3b8e78ac9c963c97f4f84404bca547fddfc781ac1878f09578bc18b30a31527e",
+      "bytes": 47959,
+      "lines": 852,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 5,
+          "line_end": 5
+        },
+        {
+          "id": "D02",
+          "category": "verified_defect",
+          "severity": "medium",
+          "summary_zh_TW": "單檔下載包沒有收錄 LICENSE 的授權待決聲明；離開 repo 的下載者看不到全庫再散布／商用條款仍待作者確認。",
+          "summary_en": "The standalone download omits the pending-license notice from LICENSE, so a detached recipient does not see that broader reuse/redistribution/commercial terms remain undecided.",
+          "line_start": 829,
+          "line_end": 847
+        },
+        {
+          "id": "D03",
+          "category": "verified_defect",
+          "severity": "medium",
+          "summary_zh_TW": "單檔包保留 32 個相對 Markdown 連結；31 個方法連結使用 A01.md 等根目錄不存在的路徑，SOURCES.md 在 repo 根目錄則是方法來源而非人物來源。",
+          "summary_en": "The single-file bundle retains 32 relative Markdown links: 31 method links point to absent root-level files such as A01.md, and SOURCES.md at repository root is the method bibliography rather than persona provenance.",
+          "line_start": 399,
+          "line_end": 429
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 320,
+          "line_end": 389
+        }
+      ]
+    },
+    {
+      "path": "TEACHING.md",
+      "sha256": "4191818d85171b53e9ec9096d6aa142992f4222a97edba8a058ae84499d5769f",
+      "bytes": 4624,
+      "lines": 68,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 18,
+          "line_end": 47
+        },
+        {
+          "id": "R06",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "明確的輸入不可信／不洩漏資料規則主要放在 TEACHING；以 repo 入口只載入 FACILITATOR 與角色卡時不一定讀到同一套共通規範。",
+          "summary_en": "Explicit untrusted-input and nondisclosure instructions mainly sit in TEACHING; the documented repo-entry path loading FACILITATOR and persona/method data need not receive those shared rules.",
+          "line_start": 63,
+          "line_end": 68
+        }
+      ]
+    },
+    {
+      "path": "docs/compatibility.md",
+      "sha256": "92e8a2e8bd6f853a0be72e83852f6888469bbfeafa1db6a39852740690c36bd2",
+      "bytes": 611,
+      "lines": 9,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R02",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "真實 ChatGPT 端對端驗收仍停在人機驗證；靜態套件測試與編寫示例不能證明角色差異、交叉改進或懶人模式真的成功。",
+          "summary_en": "Real ChatGPT end-to-end acceptance remains blocked by human verification; static package tests and authored examples cannot establish persona differentiation, cross-critique or successful lazy-mode behavior.",
+          "line_start": 3,
+          "line_end": 9
+        }
+      ]
+    },
+    {
+      "path": "docs/sanitization-policy.md",
+      "sha256": "eef4cc01df4b417788834e46434f7763c0ee95cfe6b2992c86f23b26e05f50ae",
+      "bytes": 370,
+      "lines": 5,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        }
+      ]
+    },
+    {
+      "path": "examples/persona-council.md",
+      "sha256": "e93f4c9b0b62645114e2607b7350da032931f4557fc482f3eab7822e8112f967",
+      "bytes": 2430,
+      "lines": 32,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R02",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "真實 ChatGPT 端對端驗收仍停在人機驗證；靜態套件測試與編寫示例不能證明角色差異、交叉改進或懶人模式真的成功。",
+          "summary_en": "Real ChatGPT end-to-end acceptance remains blocked by human verification; static package tests and authored examples cannot establish persona differentiation, cross-critique or successful lazy-mode behavior.",
+          "line_start": 1,
+          "line_end": 3
+        },
+        {
+          "id": "R08",
+          "category": "recommendation",
+          "severity": "low",
+          "summary_zh_TW": "會議準備模板仍以完整欄位與逐項補缺口呈現，示例的務實化回覆則刪除了前文未曾提出的錄音；都可讓懶人產品敘事更一致。",
+          "summary_en": "The meeting-brief template still presents a full intake form, and the practical follow-up example removes recording that was not proposed earlier; both can be made more consistent with the lazy-product narrative.",
+          "line_start": 30,
+          "line_end": 32
+        }
+      ]
+    },
+    {
+      "path": "examples/solo-session.md",
+      "sha256": "1ec537a9d41a1eed76c571856d3cb8f9aa4e9603b820d3434e422f0d162d88a0",
+      "bytes": 1246,
+      "lines": 25,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R02",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "真實 ChatGPT 端對端驗收仍停在人機驗證；靜態套件測試與編寫示例不能證明角色差異、交叉改進或懶人模式真的成功。",
+          "summary_en": "Real ChatGPT end-to-end acceptance remains blocked by human verification; static package tests and authored examples cannot establish persona differentiation, cross-critique or successful lazy-mode behavior.",
+          "line_start": 5,
+          "line_end": 7
+        }
+      ]
+    },
+    {
+      "path": "methods/A01.md",
+      "sha256": "3ea81cd3098a2d3a18ac5ea8afac6d85d2d4656e11d036c5fd43a7621accf8a4",
+      "bytes": 1962,
+      "lines": 30,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 9,
+          "line_end": 14
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 22,
+          "line_end": 30
+        },
+        {
+          "id": "O04",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "A01 明示是依練習名稱編寫且仍待原作者校正；是否納入對外正式英文版需作者決定。",
+          "summary_en": "A01 explicitly remains a title-based adaptation awaiting original-author review; inclusion in a formal public English edition needs owner approval.",
+          "line_start": 3,
+          "line_end": 20
+        }
+      ]
+    },
+    {
+      "path": "methods/A02.md",
+      "sha256": "16bb116c022ed3f9adf9e486e3952a6e6fe7617cde966f8924971015f229bafe",
+      "bytes": 1945,
+      "lines": 28,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 7,
+          "line_end": 18
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 20,
+          "line_end": 28
+        }
+      ]
+    },
+    {
+      "path": "methods/B01.md",
+      "sha256": "58083ebaff151392a4be99307beffd72495958bf2882958ea1960c22e3c61616",
+      "bytes": 1213,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B02.md",
+      "sha256": "0e8f4e4bcde5b858759bd7224be206a28e0179fca02e5e32c165ce52d5ea58d6",
+      "bytes": 1258,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B03.md",
+      "sha256": "f067b3ef5c2cfac70c18c3e057a883f5c80aa0bb8128cd1e1f8bb2a977219757",
+      "bytes": 1182,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B04.md",
+      "sha256": "982e99743f664066089e324fc11bc18d9d4c12f03aa94f3b889a42618c68dbd2",
+      "bytes": 1247,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B05.md",
+      "sha256": "9642cec78d4dece237eb5767bc24f413355220143daf8ea7579aae40e6c2e29f",
+      "bytes": 1222,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B06.md",
+      "sha256": "fc7a3905ae6183c34782a4d249d50bed5fe932e8ab92e35cf6184915ec9ca6fd",
+      "bytes": 1165,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 7,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B07.md",
+      "sha256": "2a0dbdcf4a3c00f9eee62bf35140b369374a3920bc198dde6b242bf773aa97c5",
+      "bytes": 1171,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B08.md",
+      "sha256": "9ffe9db49b080440debb938ac15b12b529e641265f9de0cc63bf0cc27459b49b",
+      "bytes": 1190,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 5,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B09.md",
+      "sha256": "d6f925ff0a9da4c2906950030cd2e8ffac036ef193d330232ac7063b78f14d0e",
+      "bytes": 1256,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 3,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B10.md",
+      "sha256": "76f718d49ec36a47f5f080d64d5a1dfde35f49b9035ac697250f5f2428f1ac95",
+      "bytes": 1230,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 3,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B11.md",
+      "sha256": "1741147f245a130e4fa3df069025aed1de5cf7b97de885b2a34dce953c2f346f",
+      "bytes": 1194,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B12.md",
+      "sha256": "725d38c1841f1bb1894a118c11173474d6de0601a3745788b82012f448c06103",
+      "bytes": 1333,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 5,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B13.md",
+      "sha256": "aad41ed9d2a7919829531f509c4f462d74ffef02e9a09b48b2c1ca143bf6aa60",
+      "bytes": 1162,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 5,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B14.md",
+      "sha256": "c51a8734eda9624abebb28408f5df06b322d886998d5014031466cc25a97fc52",
+      "bytes": 1502,
+      "lines": 21,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 13,
+          "line_end": 21
+        }
+      ]
+    },
+    {
+      "path": "methods/B15.md",
+      "sha256": "c11209c4001f0b501da33ccf5e31c763daec7e2e59670b3f7b2f72ce84501652",
+      "bytes": 1225,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B16.md",
+      "sha256": "2edcd4ec26f51b0e1fa990cd0a7c0c79feb66e4f4c489b961b0963e6e4c842fb",
+      "bytes": 1198,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B17.md",
+      "sha256": "3a6b2d39acb9914877011e3a8941162216d2da42ef345036aa7530837ded8b10",
+      "bytes": 1219,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B18.md",
+      "sha256": "d3f99bc5760ae1613edd5476df2cf47c801b0de3563a39e79b5d8f7c114cae09",
+      "bytes": 1369,
+      "lines": 21,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 13,
+          "line_end": 21
+        }
+      ]
+    },
+    {
+      "path": "methods/B19.md",
+      "sha256": "873b4f16a00ec0cd313f801f1f01750df2626c72a9ad1d52dc97794289a97822",
+      "bytes": 1195,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B20.md",
+      "sha256": "c6fb9ca8da6bfbba6b278bdad3891545a83f604c6645789453d23d7bcfa8f250",
+      "bytes": 1221,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 5,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B21.md",
+      "sha256": "9d5b2645214c319c9304edd00ed8906cdb812e4d4f6105dc1778efcf6d7ea978",
+      "bytes": 1264,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 5,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B22.md",
+      "sha256": "33e12c12772c647d77a1c534c74788d632e4b93a63375e744ea235392f7e8775",
+      "bytes": 1249,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 5,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B23.md",
+      "sha256": "52d402cb6e25d77219d750c0a3ba8c6b08bf0d71bd2d63fe45c3512f9f24e9f7",
+      "bytes": 1217,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 5,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B24.md",
+      "sha256": "875095c9285c97c917bf18ecbf724c9e57b07c78fca777584e64e81ab2fe623c",
+      "bytes": 1186,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B25.md",
+      "sha256": "10f4b58d746c61dfc8d07014e3a8274da792f8614952d297e26ffc92bbba2996",
+      "bytes": 1216,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 5,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B26.md",
+      "sha256": "44ffc83da44e973057c173c23f4bb60ce0939f4b49e257673f71c08e15aaff58",
+      "bytes": 1225,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 5,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B27.md",
+      "sha256": "48805ccf1ff7e54489fb4a9089105a41e23471df64d6308d94c7ba612f0ad24e",
+      "bytes": 1189,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B28.md",
+      "sha256": "59d7e360c5c89072b131d149818a2f3fbf9af16708f5961fadb348ec07b1df14",
+      "bytes": 1180,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 5,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/B29.md",
+      "sha256": "d27db0a02c71aac5fbbe55d71b04cc3ada6e29d11a3821691c8d0f97e94f433e",
+      "bytes": 1274,
+      "lines": 19,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 5,
+          "line_end": 9
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 11,
+          "line_end": 19
+        }
+      ]
+    },
+    {
+      "path": "methods/catalog.json",
+      "sha256": "1be5b1c3286a26a61459c0128847a654578290c2e0721b1c003a300f022f32e6",
+      "bytes": 3902,
+      "lines": 188,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 4,
+          "line_end": 4
+        },
+        {
+          "id": "R03",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "建置與驗證綁定繁中欄位／組名／標題，且只有單一 START-HERE.txt；直接加入英文檔不能證明英文封裝完整。",
+          "summary_en": "Build and validation logic hard-code Chinese field labels, pack names and headings and produce one START-HERE.txt; adding English files alone will not establish complete English packaging.",
+          "line_start": 1,
+          "line_end": 18
+        },
+        {
+          "id": "O04",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "A01 明示是依練習名稱編寫且仍待原作者校正；是否納入對外正式英文版需作者決定。",
+          "summary_en": "A01 explicitly remains a title-based adaptation awaiting original-author review; inclusion in a formal public English edition needs owner approval.",
+          "line_start": 2,
+          "line_end": 6
+        }
+      ]
+    },
+    {
+      "path": "methods/index.md",
+      "sha256": "f59446de8bfc56ca4c188fdfc054a36c568500caa81af386715c4c1c87a3c69c",
+      "bytes": 1572,
+      "lines": 37,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R01",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "LAZY_COUNCIL 的前後護欄正確，但同一包仍含完整 TEACHING 與真人填寫／等待／投票指令；存在需實測的模式回退風險，尚非已觀察到的模型失敗。",
+          "summary_en": "LAZY_COUNCIL guardrails correctly surround the bundle, but full TEACHING and human-writing/waiting/voting instructions remain embedded; mode regression is a testable risk, not an observed model failure.",
+          "line_start": 3,
+          "line_end": 5
+        },
+        {
+          "id": "O04",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "A01 明示是依練習名稱編寫且仍待原作者校正；是否納入對外正式英文版需作者決定。",
+          "summary_en": "A01 explicitly remains a title-based adaptation awaiting original-author review; inclusion in a formal public English edition needs owner approval.",
+          "line_start": 3,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "path": "personas/README.md",
+      "sha256": "78c91bbbc6d6d1bb19f8183b1b991369b2fa601dda2693d4326b63b53dcf543a",
+      "bytes": 2201,
+      "lines": 26,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 22,
+          "line_end": 26
+        },
+        {
+          "id": "O02",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "美美女組／殘暴組的英文直譯可能偏離感官、結盟、刪減與壓力測試的機制；四組的正式英文名稱尚未定案。",
+          "summary_en": "Literal English labels for the beauty/ruthless packs may distract from sensory experience, alliances, reduction and pressure-testing; canonical English pack names remain undecided.",
+          "line_start": 7,
+          "line_end": 12
+        },
+        {
+          "id": "O03",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "以具名歷史／公眾人物及第三方方法公開發佈的品牌、商業與授權風險，需要作者確認；虛構／非背書聲明不等於取得權利。",
+          "summary_en": "The owner must review brand, commercial and permission questions around named historical/public figures and third-party methods; fictional/non-endorsement notices are not permission evidence.",
+          "line_start": 3,
+          "line_end": 5
+        }
+      ]
+    },
+    {
+      "path": "personas/SOURCES.md",
+      "sha256": "c7e85a66159e64e13370ad25648fa2b0bd07abc81756192aa2108827cec8e99c",
+      "bytes": 2877,
+      "lines": 58,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 12,
+          "line_end": 16
+        },
+        {
+          "id": "O03",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "以具名歷史／公眾人物及第三方方法公開發佈的品牌、商業與授權風險，需要作者確認；虛構／非背書聲明不等於取得權利。",
+          "summary_en": "The owner must review brand, commercial and permission questions around named historical/public figures and third-party methods; fictional/non-endorsement notices are not permission evidence.",
+          "line_start": 1,
+          "line_end": 3
+        }
+      ]
+    },
+    {
+      "path": "personas/catalog.json",
+      "sha256": "9d6b9eeed08fc9475d0d99a854f9287a3c38bffb679db89e4e95cbdb2a8cde11",
+      "bytes": 8892,
+      "lines": 120,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 4,
+          "line_end": 4
+        },
+        {
+          "id": "R03",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "建置與驗證綁定繁中欄位／組名／標題，且只有單一 START-HERE.txt；直接加入英文檔不能證明英文封裝完整。",
+          "summary_en": "Build and validation logic hard-code Chinese field labels, pack names and headings and produce one START-HERE.txt; adding English files alone will not establish complete English packaging.",
+          "line_start": 3,
+          "line_end": 14
+        },
+        {
+          "id": "R05",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "人物背景與虛構能力已清楚分開，但部分證據明示只讀檢索摘要；各方法卡則重列同七筆來源，缺乏逐項主張對應。",
+          "summary_en": "Persona background is clearly separated from editorial mechanisms, but some evidence explicitly stops at search excerpts; method cards repeat the same seven references without claim-level mapping.",
+          "line_start": 19,
+          "line_end": 21
+        },
+        {
+          "id": "O03",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "以具名歷史／公眾人物及第三方方法公開發佈的品牌、商業與授權風險，需要作者確認；虛構／非背書聲明不等於取得權利。",
+          "summary_en": "The owner must review brand, commercial and permission questions around named historical/public figures and third-party methods; fictional/non-endorsement notices are not permission evidence.",
+          "line_start": 3,
+          "line_end": 14
+        }
+      ]
+    },
+    {
+      "path": "personas/packs.json",
+      "sha256": "753e18a678f9d248738816537489cd4cdaaf796c7a7c9065ace90e7178e300ea",
+      "bytes": 1249,
+      "lines": 60,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 4,
+          "line_end": 4
+        },
+        {
+          "id": "R03",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "建置與驗證綁定繁中欄位／組名／標題，且只有單一 START-HERE.txt；直接加入英文檔不能證明英文封裝完整。",
+          "summary_en": "Build and validation logic hard-code Chinese field labels, pack names and headings and produce one START-HERE.txt; adding English files alone will not establish complete English packaging.",
+          "line_start": 3,
+          "line_end": 16
+        },
+        {
+          "id": "O02",
+          "category": "owner_approval",
+          "severity": "medium",
+          "summary_zh_TW": "美美女組／殘暴組的英文直譯可能偏離感官、結盟、刪減與壓力測試的機制；四組的正式英文名稱尚未定案。",
+          "summary_en": "Literal English labels for the beauty/ruthless packs may distract from sensory experience, alliances, reduction and pressure-testing; canonical English pack names remain undecided.",
+          "line_start": 33,
+          "line_end": 58
+        }
+      ]
+    },
+    {
+      "path": "scripts/build.py",
+      "sha256": "e0f19bf056374a81fd408e02edba3e82d0084dd4e1b6fec7c92915b75c4aa8af",
+      "bytes": 3127,
+      "lines": 54,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D02",
+          "category": "verified_defect",
+          "severity": "medium",
+          "summary_zh_TW": "單檔下載包沒有收錄 LICENSE 的授權待決聲明；離開 repo 的下載者看不到全庫再散布／商用條款仍待作者確認。",
+          "summary_en": "The standalone download omits the pending-license notice from LICENSE, so a detached recipient does not see that broader reuse/redistribution/commercial terms remain undecided.",
+          "line_start": 17,
+          "line_end": 35
+        },
+        {
+          "id": "D03",
+          "category": "verified_defect",
+          "severity": "medium",
+          "summary_zh_TW": "單檔包保留 32 個相對 Markdown 連結；31 個方法連結使用 A01.md 等根目錄不存在的路徑，SOURCES.md 在 repo 根目錄則是方法來源而非人物來源。",
+          "summary_en": "The single-file bundle retains 32 relative Markdown links: 31 method links point to absent root-level files such as A01.md, and SOURCES.md at repository root is the method bibliography rather than persona provenance.",
+          "line_start": 23,
+          "line_end": 28
+        },
+        {
+          "id": "R03",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "建置與驗證綁定繁中欄位／組名／標題，且只有單一 START-HERE.txt；直接加入英文檔不能證明英文封裝完整。",
+          "summary_en": "Build and validation logic hard-code Chinese field labels, pack names and headings and produce one START-HERE.txt; adding English files alone will not establish complete English packaging.",
+          "line_start": 18,
+          "line_end": 27
+        }
+      ]
+    },
+    {
+      "path": "scripts/validate.py",
+      "sha256": "e9bf95e3b91378e5b756825f6f87bbe19213242a33bf65bd2a7f4c114a2128f8",
+      "bytes": 6697,
+      "lines": 128,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D03",
+          "category": "verified_defect",
+          "severity": "medium",
+          "summary_zh_TW": "單檔包保留 32 個相對 Markdown 連結；31 個方法連結使用 A01.md 等根目錄不存在的路徑，SOURCES.md 在 repo 根目錄則是方法來源而非人物來源。",
+          "summary_en": "The single-file bundle retains 32 relative Markdown links: 31 method links point to absent root-level files such as A01.md, and SOURCES.md at repository root is the method bibliography rather than persona provenance.",
+          "line_start": 115,
+          "line_end": 124
+        },
+        {
+          "id": "R03",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "建置與驗證綁定繁中欄位／組名／標題，且只有單一 START-HERE.txt；直接加入英文檔不能證明英文封裝完整。",
+          "summary_en": "Build and validation logic hard-code Chinese field labels, pack names and headings and produce one START-HERE.txt; adding English files alone will not establish complete English packaging.",
+          "line_start": 27,
+          "line_end": 45
+        },
+        {
+          "id": "R03",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "建置與驗證綁定繁中欄位／組名／標題，且只有單一 START-HERE.txt；直接加入英文檔不能證明英文封裝完整。",
+          "summary_en": "Build and validation logic hard-code Chinese field labels, pack names and headings and produce one START-HERE.txt; adding English files alone will not establish complete English packaging.",
+          "line_start": 76,
+          "line_end": 90
+        },
+        {
+          "id": "R04",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "README 的主要下載入口依賴 v0.2.0 release 附件；來源只核對 URL 字串，沒有證明遠端資產存在、可匿名取得或 hash 相符。",
+          "summary_en": "The primary README download relies on a v0.2.0 release asset; source checks only compare the URL string and do not establish asset existence, anonymous accessibility or byte identity.",
+          "line_start": 92,
+          "line_end": 95
+        },
+        {
+          "id": "R07",
+          "category": "recommendation",
+          "severity": "low",
+          "summary_zh_TW": "CI 僅跑靜態驗證；第三方 Actions 用主版本標籤，敏感模式檢查排除檢查器本身，不能當成完整秘密掃描或發佈驗證。",
+          "summary_en": "CI runs static validation only; third-party Actions use major-version tags and the sensitive-pattern scanner excludes its own file, so it is neither comprehensive secret scanning nor release validation.",
+          "line_start": 97,
+          "line_end": 113
+        }
+      ]
+    },
+    {
+      "path": "templates/meeting-brief.md",
+      "sha256": "3604b9fbb8c269a449b5fa6df7c8e18b3996962d2d6dcd213f2d58139f231bcc",
+      "bytes": 249,
+      "lines": 12,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R08",
+          "category": "recommendation",
+          "severity": "low",
+          "summary_zh_TW": "會議準備模板仍以完整欄位與逐項補缺口呈現，示例的務實化回覆則刪除了前文未曾提出的錄音；都可讓懶人產品敘事更一致。",
+          "summary_en": "The meeting-brief template still presents a full intake form, and the practical follow-up example removes recording that was not proposed earlier; both can be made more consistent with the lazy-product narrative.",
+          "line_start": 3,
+          "line_end": 12
+        }
+      ]
+    },
+    {
+      "path": "templates/outcome.md",
+      "sha256": "2521074a425441cb7ca7cd7933a36636c1b6b43a42d68120532aa2b373382720",
+      "bytes": 460,
+      "lines": 16,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        }
+      ]
+    },
+    {
+      "path": "templates/session-state.md",
+      "sha256": "1521337930de433f03b8be0d847db1f137f3bb8a8f9d9c9fc127c839a6ed75fd",
+      "bytes": 466,
+      "lines": 14,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        }
+      ]
+    },
+    {
+      "path": "tests/README.md",
+      "sha256": "8fd68bea12528c5a31c762dd395030a314672fc551720fb1183c0c20efe81ad8",
+      "bytes": 1821,
+      "lines": 26,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "D01",
+          "category": "verified_defect",
+          "severity": "high",
+          "summary_zh_TW": "凍結版本沒有完整英文入口、主持規約、角色／組別、方法卡、模板與示例；目前不是可獨立使用的英文版。",
+          "summary_en": "The frozen tree has no complete English onboarding, facilitator, persona/pack content, method cards, templates or examples; it is not a standalone English edition.",
+          "line_start": 1,
+          "line_end": 1
+        },
+        {
+          "id": "R02",
+          "category": "recommendation",
+          "severity": "high",
+          "summary_zh_TW": "真實 ChatGPT 端對端驗收仍停在人機驗證；靜態套件測試與編寫示例不能證明角色差異、交叉改進或懶人模式真的成功。",
+          "summary_en": "Real ChatGPT end-to-end acceptance remains blocked by human verification; static package tests and authored examples cannot establish persona differentiation, cross-critique or successful lazy-mode behavior.",
+          "line_start": 7,
+          "line_end": 26
+        }
+      ]
+    },
+    {
+      "path": "version.json",
+      "sha256": "ccae198273154d66aeee64228af866295394ad823956837ed357544afcef5f62",
+      "bytes": 82,
+      "lines": 5,
+      "inspected": true,
+      "findings": [
+        {
+          "id": "R03",
+          "category": "recommendation",
+          "severity": "medium",
+          "summary_zh_TW": "建置與驗證綁定繁中欄位／組名／標題，且只有單一 START-HERE.txt；直接加入英文檔不能證明英文封裝完整。",
+          "summary_en": "Build and validation logic hard-code Chinese field labels, pack names and headings and produce one START-HERE.txt; adding English files alone will not establish complete English packaging.",
+          "line_start": 2,
+          "line_end": 4
+        }
+      ]
+    }
+  ]
+}

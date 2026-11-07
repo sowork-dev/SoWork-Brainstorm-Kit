@@ -1,16 +1,26 @@
 # Changelog
 
-## v0.2.0 — 懶人名人共創
+**English · [繁體中文](CHANGELOG.zh-TW.md)**
 
-- 預設 LAZY_COUNCIL：AI 選組、配角色、選法、主動提案並交叉改進，用戶不先交點子作業。
-- 四組預設、九個具名虛構角色，自選古今中外人物可擴充。
-- 支援繼續、換組、換人、更大膽、更務實、你決定；真人教學改成明確選用。
-- 歷史背景與虛構思考機制分開，保留來源核對範圍。
-- 新下載包與舊版不同；舊附件不會自動更新。ChatGPT 平台端對端測試仍待完成。
+## v0.3.0 — Parallel languages and launch review
 
-## v0.1.0 — 公開試用稿
+- English landing page with a Traditional Chinese counterpart; complete English facilitator, persona, method, example, and template sources.
+- Separate English and Traditional Chinese downloadable text packs; stable IDs for comparison without combining two full runtime languages.
+- Licensing notices are included in detached packs, relative links are pinned with their source-file context, and the full teaching protocol is no longer embedded in the default runtime pack.
+- Shared safety guidance, optional briefs, example continuity, and the state-preserving “You decide” control are clarified.
+- A public-launch review, per-file baseline inventory, and bilingual draft sharing copy.
+- Licensing decisions and real-platform behavioral testing remain open. Documentation coverage and static checks are not evidence of brainstorming quality.
 
-- 31 張方法卡（含相近變體）、主持規約及目的導向選法建議。
-- 單檔 START-HERE.txt，避免依賴 AI 自動遍歷 repo。
-- 模板、明確標示的虛構示範、標準函式庫建置與靜態檢查。
-- 尚未完成 ChatGPT 網頁端端對端實測；不得宣稱原生安裝或已驗證主持品質。
+## v0.2.0 — Low-effort persona councils
+
+- LAZY_COUNCIL became the default: the AI chooses the cast and method, proposes ideas, cross-improves them, and synthesizes directions. No initial idea-list homework.
+- Four predefined casts and nine fictional editorial profiles, with custom famous figures supported as a workflow instruction.
+- Continue, swap cast/member, bolder, more practical, and you decide controls. Human practice became explicit opt-in.
+- Historical reference context separated from fictional mechanisms, with evidence limitations retained.
+- New attachments do not update old conversations automatically. Complete ChatGPT web testing remained outstanding.
+
+## v0.1.0 — Initial public preview
+
+- 31 method cards with variants, a facilitator protocol, and goal-based selection guidance.
+- One complete text attachment, templates, labeled fictional examples, a standard-library build, and static checks.
+- No claim of native installation or verified ChatGPT web behavior.
