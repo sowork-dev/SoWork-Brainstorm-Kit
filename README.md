@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 **v0.4.0 · Public preview · Text workflow · Built for ChatGPT- and Claude-style chats**
 
-<img width="1200" height="760" alt="SoWork-Brainstorm-Kit-color" src="https://github.com/user-attachments/assets/a21fbadb-9e1c-4e6c-8bd5-2c5258c27d52" />
+<p align="center"><img src="docs/demo.gif" alt="SoWork Brainstorm Kit: download the text pack, bring a question, let the council begin" width="800"></p>
 
 Drop one text file into an AI chat and name a topic. A cast of famous **fictional** personas proposes ideas, challenges each other's proposals, and hands you a practical plan. You just say **"Continue," "Swap the cast," or "You decide."**
 
