@@ -7,7 +7,7 @@
 [![Validate text bundle](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/actions/workflows/validate.yml/badge.svg)](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 **v0.4.0 · Public preview · Text workflow · Built for ChatGPT- and Claude-style chats**
-<img width="1200" height="760" alt="image" src="https://github.com/user-attachments/assets/6a4854b3-8500-4486-9b16-c8868091db0c" />
+<img width="1200" height="760" alt="SoWork Brainstorm Kit: one topic, a council of fictional personas, a practical plan" src="https://github.com/user-attachments/assets/6a4854b3-8500-4486-9b16-c8868091db0c" />
 
 Drop one text file into an AI chat and name a topic. A cast of famous **fictional** personas proposes ideas, challenges each other's proposals, and hands you a practical plan. You just say **"Continue," "Swap the cast," or "You decide."**
 
@@ -27,7 +27,7 @@ No install, Python, or API key. No prompt-writing project.
 
 ## Try it in 30 seconds
 
-1. Download **[START-HERE.en.txt](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/releases/latest/download/START-HERE.en.txt)** and attach it to a new ChatGPT or Claude conversation. Ask the AI to confirm it can read the file.
+1. Download **[START-HERE.en.txt](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/raw/main/START-HERE.en.txt)** and attach it to a new ChatGPT or Claude conversation. Ask the AI to confirm it can read the file.
 2. Paste this and replace the topic:
 
 ```text
@@ -78,8 +78,8 @@ The reference library contains **31 method cards**, including related variants�
 **No local installation, Python, or API key is needed to try the text pack.** You need an AI tool/account that can actually read the attachment; the tool's own access requirements still apply.
 
 1. Download one v0.4.0 language pack:
-   - **[English · START-HERE.en.txt](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/releases/download/v0.4.0/START-HERE.en.txt)**
-   - **[繁體中文 · START-HERE.txt](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/releases/download/v0.4.0/START-HERE.txt)**
+   - **[English · START-HERE.en.txt](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/raw/main/START-HERE.en.txt)**
+   - **[繁體中文 · START-HERE.txt](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/raw/main/START-HERE.txt)**
    - [Release notes and assets](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/releases/tag/v0.4.0)
 2. Upload **one** complete language pack to a new AI conversation. Ask the AI to confirm it can read it; do not accept a claim based only on the filename.
 3. Paste this and replace the topic:
