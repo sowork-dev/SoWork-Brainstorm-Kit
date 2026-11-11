@@ -7,7 +7,8 @@
 [![Validate text bundle](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/actions/workflows/validate.yml/badge.svg)](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 **v0.4.0 · Public preview · Text workflow · Built for ChatGPT- and Claude-style chats**
-<img width="1200" height="760" alt="SoWork Brainstorm Kit: one topic, a council of fictional personas, a practical plan" src="https://github.com/user-attachments/assets/6a4854b3-8500-4486-9b16-c8868091db0c" />
+
+<img width="1200" height="760" alt="SoWork-Brainstorm-Kit-color" src="https://github.com/user-attachments/assets/a21fbadb-9e1c-4e6c-8bd5-2c5258c27d52" />
 
 Drop one text file into an AI chat and name a topic. A cast of famous **fictional** personas proposes ideas, challenges each other's proposals, and hands you a practical plan. You just say **"Continue," "Swap the cast," or "You decide."**
 
