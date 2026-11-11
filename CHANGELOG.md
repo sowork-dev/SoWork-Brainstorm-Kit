@@ -5,6 +5,7 @@
 ## Unreleased
 
 - Licensed original material under MIT; third-party materials remain excluded and credited in SOURCES.md.
+- Added `skills/brainstorm-council/SKILL.md`, a condensed skill entry point for Claude (the text packs are unchanged).
 - Rewrote the English README opening: problem-first headline, 30-second try-it flow, labeled illustration; disclaimers moved to the FAQ.
 
 ## v0.4.0 — SoWork naming, open casts, recorded model trials
