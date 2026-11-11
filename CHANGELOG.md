@@ -2,6 +2,11 @@
 
 **English · [繁體中文](CHANGELOG.zh-TW.md)**
 
+## Unreleased
+
+- Licensed original material under MIT; third-party materials remain excluded and credited in SOURCES.md.
+- Rewrote the English README opening: problem-first headline, 30-second try-it flow, labeled illustration; disclaimers moved to the FAQ.
+
 ## v0.4.0 — SoWork naming, open casts, recorded model trials
 
 - Renamed the repository to **SoWork-Brainstorm-Kit**, with refreshed bilingual landing pages and community contribution entrypoints.

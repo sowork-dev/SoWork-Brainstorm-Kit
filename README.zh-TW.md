@@ -4,7 +4,7 @@
 
 **[English](README.md) · 繁體中文**
 
-[![Validate text bundle](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/actions/workflows/validate.yml/badge.svg)](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/actions/workflows/validate.yml)
+[![Validate text bundle](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/actions/workflows/validate.yml/badge.svg)](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/actions/workflows/validate.yml)
 **v0.4.0 · 公開試用稿 · 純文字工作流程**
 
 丟一句題目，讓 AI 主持一場動腦會議。你可以要求**任何主題或組別**、指定想找的人，也可以全部交給 AI 配組。它負責提案、讓不同視角互相挑戰改進，再推薦方向；你只需說**「繼續」「換組」「你決定」**。
@@ -13,7 +13,7 @@
 
 [直接開始](#直接開始) · [可以拿來做什麼](#可以拿來做什麼) · [示例與實測證據](#示例與實測證據) · [常見問題](#常見問題) · [發展路線](docs/roadmap.zh-en.md)
 
-> 角色是同一 AI 對話中的虛構演繹，非本人、史實引言、背書或獨立部署的代理。這不是原生插件。[全庫授權尚待決定](LICENSE)；ChatGPT 網頁端驗收尚未完成。
+> 角色是同一 AI 對話中的虛構演繹，非本人、史實引言、背書或獨立部署的代理。這不是原生插件。授權為 [MIT](LICENSE)（第三方素材除外）；ChatGPT 網頁端驗收尚未完成。
 
 ## 目錄
 
@@ -44,9 +44,9 @@
 **試用文字包不用本機安裝、Python 或 API key。** 你需要一個確實能讀取文字附件的 AI 工具／帳號；該工具本身的存取條件仍適用。
 
 1. 下載一份 v0.4.0 語言包：
-   - **[繁體中文 · START-HERE.txt](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/releases/download/v0.4.0/START-HERE.txt)**
-   - **[English · START-HERE.en.txt](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/releases/download/v0.4.0/START-HERE.en.txt)**
-   - [版本說明與下載檔](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/releases/tag/v0.4.0)
+   - **[繁體中文 · START-HERE.txt](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/releases/download/v0.4.0/START-HERE.txt)**
+   - **[English · START-HERE.en.txt](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/releases/download/v0.4.0/START-HERE.en.txt)**
+   - [版本說明與下載檔](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/releases/tag/v0.4.0)
 2. 新開 AI 對話，上傳**一份**完整語言包，請 AI 確認真的讀到內容，而不只是看到檔名。
 3. 貼下方這段，換成你的題目：
 
@@ -167,9 +167,9 @@
 
 工具包不能替 AI 供應商保證保密、保存設定或帳號政策。優先用虛構、匿名題目；不要在公開 Issue 或 PR 放客戶資料、個資、私人網址、帳密或原始私人對話。見[安全與隱私](SECURITY.zh-TW.md)。
 
-**可以依 MIT 或 Creative Commons 再散布、商用嗎？**
+**可以再散布、商用嗎？**
 
-尚未選定全庫再利用授權。這是公開可讀試用稿，不是 MIT／CC 授權版。擴大再散布與商用條件待作者決定，第三方參考資料仍有各自權利。見 [LICENSE](LICENSE)。
+可以。原創內容採 [MIT 授權](LICENSE)；第三方方法名稱、商標、網站與原教案仍屬各自權利人，來源見 [SOURCES.md](SOURCES.md)。虛構角色只是編輯用的思考視角，不代表或背書所指涉的真實人物。
 
 ## 檔案導覽
 
@@ -184,7 +184,7 @@
 
 ## 貢獻與驗證
 
-歡迎**可重現的小型行為回報、翻譯修訂、有來源的方法更正與聚焦測試**。先看[貢獻方式](CONTRIBUTING.zh-TW.md)、[社群守則](CODE_OF_CONDUCT.md)，或[開一張 Issue](https://github.com/contentincubator2-ops/SoWork-Brainstorm-Kit/issues/new/choose)。用虛構案例即可，不要上傳私人工作會議。
+歡迎**可重現的小型行為回報、翻譯修訂、有來源的方法更正與聚焦測試**。先看[貢獻方式](CONTRIBUTING.zh-TW.md)、[社群守則](CODE_OF_CONDUCT.md)，或[開一張 Issue](https://github.com/sowork-dev/SoWork-Brainstorm-Kit/issues/new/choose)。用虛構案例即可，不要上傳私人工作會議。
 
 本機維護使用 Python 3.10+，標準函式庫即可：
 
@@ -199,4 +199,4 @@ python3 scripts/validate.py
 
 概念與產品方向：**CJ Wang**。[方法來源](SOURCES.md)與[人物來源](personas/SOURCES.md)分別列示。公開背景資料與作者創造的思考機制不同；即興對話不是歷史證據。不可編名言、大量模仿受版權保護作品，也不能把提案寫成已發生的活動或成果。
 
-[公開資料政策](docs/sanitization-policy.md) · [安全](SECURITY.zh-TW.md) · [授權待決](LICENSE)
+[公開資料政策](docs/sanitization-policy.md) · [安全](SECURITY.zh-TW.md) · [MIT 授權](LICENSE)

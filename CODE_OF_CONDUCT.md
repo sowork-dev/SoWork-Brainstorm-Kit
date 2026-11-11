@@ -14,7 +14,7 @@ Beginners, experienced facilitators, developers, and translators are welcome. En
 - Use public or synthetic examples. Protect participants, clients, and other contributors.／使用公開或虛構案例，保護參與者、客戶與貢獻者。
 - Separate fictional personas from actual people, sourced facts, and endorsements.／區分虛構角色、真人、已查證事實與背書。
 - Report evidence honestly: do not fabricate transcripts, test results, quotations, or adoption claims.／如實呈現證據，不捏造逐字稿、測試結果、引言或採用成績。
-- Respect attribution, third-party rights, and the project's pending license decision.／尊重來源、第三方權利及全庫授權待決狀態。
+- Respect attribution, third-party rights, and the project's MIT license terms.／尊重來源、第三方權利及專案的 MIT 授權條款。
 
 ## Unacceptable behavior｜不接受的行為
 

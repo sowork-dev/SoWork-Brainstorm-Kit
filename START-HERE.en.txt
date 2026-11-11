@@ -899,15 +899,38 @@ The repository follows a public method index while authoring its own openings, f
 
 ---
 
-# Licensing notice | Public preview
+# License | MIT
 
-Licensing decision pending — public preview
+MIT License
 
-A project-wide redistribution or relicensing license has not been selected for this preview. This repository must not be described as MIT-licensed or CC-licensed.
+Copyright (c) 2026 SoWork.ai (CJ Wang)
 
-Third-party method names, trademarks, websites and original teaching materials are separately credited in SOURCES.md. Their inclusion as references does not claim endorsement or grant rights to those third-party materials.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the original material in this repository (instructions, facilitator
+protocol, persona and starter-group definitions, templates, scripts, and
+English and Traditional Chinese text packs) and associated documentation files
+(the "Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of the Software, and to permit persons to whom
+the Software is furnished to do so, subject to the following conditions:
 
-The intended preview is a downloadable facilitation text pack. Broader reuse, redistribution and commercial licensing terms remain subject to the author's confirmation.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Third-party materials are not covered by this license. Third-party method
+names, trademarks, websites and original teaching materials are credited in
+SOURCES.md and remain subject to their own rights; referencing them does not
+claim endorsement or grant rights to them. The fictional personas are
+editorial thinking lenses and do not represent, quote or endorse the real
+people or characters they reference.
 
 ---
 
