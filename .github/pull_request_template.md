@@ -22,7 +22,7 @@ Check only what you verified. If an item does not apply, explain briefly below.
 - [ ] Arbitrary themes/people and explicit cast counts remain supported within actual model limits; three is not a hard cap.／任意主題／人物與指定人數不退化成固定菜單，三人不是上限，並尊重模型限制。
 - [ ] Cast swaps and follow-ups preserve the topic and constraints.／換組與追問保留題目和限制。
 - [ ] Historical references and fictional editorial lenses stay separate; no invented quotations, endorsements, or real participant claims.／歷史來源與虛構視角分開，不編名言、背書或真人參與。
-- [ ] Third-party provenance/rights are stated; no unapproved project-wide license is introduced.／交代第三方來源與權利，不擅自新增全庫授權。
+- [ ] Third-party provenance/rights are stated; contributions are offered under the project MIT license.／交代第三方來源與權利，貢獻以專案 MIT 授權提供。
 - [ ] Documentation links resolve; changed runtime sources have corresponding built packs.／文件連結可解析，執行來源變更有對應文字包。
 - [ ] `python3 scripts/build.py` and `python3 scripts/validate.py` were run, or exceptions are explained.／已執行建置與驗證，或說明例外。
 - [ ] Evidence names the actual engine/route; prompt evaluation is not presented as ChatGPT web/file-upload acceptance.／證據如實標明引擎與路徑，不把提示評估寫成 ChatGPT 網頁／附件驗收。
@@ -31,5 +31,5 @@ Check only what you verified. If an item does not apply, explain briefly below.
 
 ## Sources and permitted scope｜來源與允許範圍
 
-Use public sources and short summaries, not private documents or copied third-party collections. The repository-wide license decision remains pending.
-請用公開來源與簡短摘要，不附私人文件或複製第三方整套內容。全庫授權仍待決定。
+Use public sources and short summaries, not private documents or copied third-party collections. Original material is MIT-licensed; third-party material keeps its own rights.
+請用公開來源與簡短摘要，不附私人文件或複製第三方整套內容。原創內容為 MIT 授權；第三方素材保留各自權利。
