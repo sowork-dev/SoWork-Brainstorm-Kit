@@ -57,7 +57,7 @@ def render_bundle(root=ROOT, language='zh-TW'):
         teaching_heading = '# TEACHING: human practice only when explicitly selected'
         teaching_summary = 'Only an explicit request to practice brainstorming or run a real-human workshop activates TEACHING. Clarify the practice, recommend a method and wait for agreement, give one human task at a time, preserve real input, then compare and summarize. Full teaching guidance remains in the repository; the reference cards below supply the individual exercises.'
         card_guard = 'Mode guard: this is a reference card. In LAZY_COUNCIL, the AI cast performs the ideation; human homework and waiting apply only to explicitly selected TEACHING.'
-        license_heading = '# Licensing notice | Public preview'
+        license_heading = '# License | MIT'
         closing = '## Final reminder\nLAZY_COUNCIL is the default. Human-homework wording in reference cards applies only to TEACHING. Do not ask the ordinary council user to write five or ten ideas first. Generate character proposals, cross-improvements, and a synthesis, then offer low-effort controls.'
     else:
         opening = [
@@ -70,7 +70,7 @@ def render_bundle(root=ROOT, language='zh-TW'):
         teaching_heading = '# TEACHING 教學模式（僅明確選用時生效）'
         teaching_summary = '只有明確要求練習動腦或帶真人工作坊才啟用：確認練習題目，推薦並等真人同意，一次給一個真人任務，保存真實輸入，再比較與收尾。完整教學規約保留在 repo；以下參考卡提供各項練習。普通懶人模式不可因此要求用戶交點子作業。'
         card_guard = '模式標示：這是方法參考卡。LAZY_COUNCIL 由 AI 角色執行發想；只有明確選擇 TEACHING 才套用真人作業與等待。'
-        license_heading = '# 授權待決聲明｜公開試用稿；未新增再散布或商用授權'
+        license_heading = '# 授權｜MIT（原創內容；第三方素材不在此授權範圍）'
         closing = '## 最後提醒\n以 LAZY_COUNCIL 為預設，方法卡的人類作業措辭只適用 TEACHING；不要退回要求用戶先列五至十個點子。有題目就用角色提案、交叉接球並整合，最後讓用戶輕鬆選擇。'
     parts = [
         f'# SoWork-Brainstorm-Kit | v{version} preview | {language}',

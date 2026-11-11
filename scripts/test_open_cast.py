@@ -6,6 +6,27 @@ import unittest
 from build import ROOT, render_bundle
 
 
+# Recorded trials were run on the v0.4.0 packs, whose only later difference is the
+# license section (MIT adoption). Reconstruct the v0.4.0 pack by swapping that one
+# section back, so the recorded hashes still prove the pack under test is otherwise identical.
+LEGACY_LICENSE_TEXT = "Licensing decision pending — public preview\n\nA project-wide redistribution or relicensing license has not been selected for this preview. This repository must not be described as MIT-licensed or CC-licensed.\n\nThird-party method names, trademarks, websites and original teaching materials are separately credited in SOURCES.md. Their inclusion as references does not claim endorsement or grant rights to those third-party materials.\n\nThe intended preview is a downloadable facilitation text pack. Broader reuse, redistribution and commercial licensing terms remain subject to the author's confirmation.\n"
+LEGACY_LICENSE_HEADINGS = {
+    'en': '# Licensing notice | Public preview',
+    'zh-TW': '# \u6388\u6b0a\u5f85\u6c7a\u8072\u660e\uff5c\u516c\u958b\u8a66\u7528\u7a3f\uff1b\u672a\u65b0\u589e\u518d\u6563\u5e03\u6216\u5546\u7528\u6388\u6b0a',
+}
+CURRENT_LICENSE_HEADING_PREFIX = ('# License | MIT', '# \u6388\u6b0a\uff5cMIT')
+
+
+def recorded_bundle_bytes(path, language):
+    text = path.read_text(encoding='utf-8')
+    parts = text.split('\n\n---\n\n')
+    hits = [i for i, part in enumerate(parts) if part.startswith(CURRENT_LICENSE_HEADING_PREFIX)]
+    if len(hits) != 1:
+        return text.encode('utf-8')  # pack has no current-license section: compare as-is
+    parts[hits[0]] = (LEGACY_LICENSE_HEADINGS[language] + '\n\n' + LEGACY_LICENSE_TEXT).strip()
+    return '\n\n---\n\n'.join(parts).encode('utf-8')
+
+
 class OpenCastContractTests(unittest.TestCase):
     def test_both_protocols_explicitly_allow_new_themes_and_exact_casts(self):
         for locale in (ROOT, ROOT / 'locales/en'):
@@ -32,7 +53,7 @@ class OpenCastContractTests(unittest.TestCase):
         suite = json.loads(suite_bytes)
         for case in suite['cases']:
             data = json.loads((ROOT / 'examples/test-runs' / (case['id'] + '.json')).read_text())
-            bundle_bytes = (ROOT / case['bundle']).read_bytes()
+            bundle_bytes = recorded_bundle_bytes(ROOT / case['bundle'], 'en' if case['bundle'].endswith('.en.txt') else 'zh-TW')
             self.assertEqual(data['bundle_sha256'], hashlib.sha256(bundle_bytes).hexdigest())
             self.assertEqual(data['suite_sha256'], hashlib.sha256(suite_bytes).hexdigest())
             self.assertEqual(len(data['turns']), len(case['turns']))
