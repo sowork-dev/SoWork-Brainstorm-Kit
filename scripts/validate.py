@@ -93,7 +93,9 @@ class PackageTests(unittest.TestCase):
     def test_release_version_is_consistent(self):
         version = json.loads((ROOT / 'version.json').read_text())['version']
         self.assertIn('v' + version, (ROOT / 'START-HERE.txt').read_text())
-        self.assertIn('/v' + version + '/START-HERE.txt', (ROOT / 'README.md').read_text())
+        readme = (ROOT / 'README.md').read_text()
+        # README may link either the versioned release asset or the file on main (no GitHub Release is published yet).
+        self.assertTrue(('/v' + version + '/START-HERE.txt') in readme or '/raw/main/START-HERE.txt' in readme)
 
     def test_english_method_ids_and_source_closure(self):
         english = json.loads((ROOT / 'locales/en/methods/catalog.json').read_text())

@@ -903,7 +903,7 @@ The repository follows a public method index while authoring its own openings, f
 
 MIT License
 
-Copyright (c) 2026 SoWork.ai (CJ Wang)
+Copyright (c) 2026 摘星數據行銷顧問股份有限公司 (SoWork.ai)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of the original material in this repository (instructions, facilitator
