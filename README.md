@@ -49,7 +49,13 @@ Full examples: [walkthrough](locales/en/examples/persona-council.md) · [real mo
 
 ## Use it as a Claude skill
 
-Prefer a reusable skill over attaching a file each time? Copy the folder [`skills/brainstorm-council`](skills/brainstorm-council/SKILL.md) into your Claude skills directory (for Claude Code: `~/.claude/skills/brainstorm-council/`), or zip it and upload it under Settings > Capabilities > Skills in Claude. It is a condensed version of the facilitator protocol; the full text pack above stays the reference for methods and personas.
+Prefer a reusable skill over attaching a file each time? Install it with one command (works with Claude Code and other agents that support Agent Skills):
+
+```sh
+npx skills add sowork-dev/SoWork-Brainstorm-Kit
+```
+
+Or copy the folder [`skills/brainstorm-council`](skills/brainstorm-council/SKILL.md) into your Claude skills directory (for Claude Code: `~/.claude/skills/brainstorm-council/`), or zip it and upload it under Settings > Capabilities > Skills in Claude. It is a condensed version of the facilitator protocol; the full text pack above stays the reference for methods and personas.
 
 ## Who it's for
 
